@@ -6,4 +6,4 @@ Add this library to your extensions project to allow compiler and IDE "know" abo
 
 For example, in Eclipse you can add this library to your build path in Properties ⇒ Java Build Path ⇒ Libraries. Make sure the "Export" checkbox is not set in "Order and Export" tab.
 
-API reference is available [here](mishiranu.github.io/Dashchan/doc/). You can attach JavaDoc from this location: `http://mishiranu.github.io/Dashchan/doc/reference`.
+API reference is available [here](http://mishiranu.github.io/Dashchan/doc/). You can attach JavaDoc from this location: `http://mishiranu.github.io/Dashchan/doc/reference`.
