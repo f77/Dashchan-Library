@@ -90,7 +90,7 @@ public class CommentEditor
 	 * <p>This editor has the following configuration:</p>
 	 * 
 	 * <p><table>
-	 * <tr><th>What</th><th>Open</th><th>Close</th></tr>
+	 * <tr><th>What</th><th>Open</th><th>Close</th><th>Flags</th></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_BOLD}</td><td>{@code **}</td><td>{@code **}</td><td>{@code one line}</td></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_ITALIC}</td><td>{@code *}</td><td>{@code *}</td><td>{@code one line}</td></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_SPOILER}</td><td>{@code %%}</td><td>{@code %%}</td><td>{@code one line}</td></tr>
