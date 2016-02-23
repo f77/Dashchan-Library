@@ -116,6 +116,9 @@ public class ChanLocator
 	 * <p>Declares host as chan host. This host might be default host in {@link #buildPath(String...)} and
 	 * {@link #buildQuery(String, String...)} methods. If you declare multiple hosts, user can choice one of them
 	 * in preferences. The first declared host will be chosen by default.</p>
+	 * 
+	 * <p>For example, a chan has 3 addresses: {@code addr1.com}, {@code addr2.com}, {@code addr3.com}. If user choose
+	 * {@code addr2.com} in preferences, URIs with the rest addresses will be converted to {@code addr2.com}.</p>
 	 */
 	public final void addChanHost(String host)
 	{
@@ -123,8 +126,17 @@ public class ChanLocator
 	}
 	
 	/**
-	 * <p>Declares host as chan host. Unlike {@link #addChanHost(String)} user can't choice this host in preferences.
-	 * This method is used for special hosts like JSON API or host for static data, for example.</p>
+	 * <p>Declares host as chan host. Unlike {@link #addChanHost(String)} user can't choice this host in preferences,
+	 * but it still can be converted. For example, it can be useful for old domains that don't work now.</p>
+	 */
+	public final void addConvertableChanHost(String host)
+	{
+		
+	}
+	
+	/**
+	 * <p>Declares host as chan host. Unlike {@link #addChanHost(String)} user can't choice this host in preferences
+	 * and and can't be converted. For example, it can be useful for special hosts like JSON API or static data.</p>
 	 */
 	public final void addSpecialChanHost(String host)
 	{
