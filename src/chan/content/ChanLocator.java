@@ -131,7 +131,7 @@ public class ChanLocator
 	 */
 	public final void addConvertableChanHost(String host)
 	{
-		
+		throw new IllegalAccessError();
 	}
 	
 	/**
