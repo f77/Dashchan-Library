@@ -69,6 +69,7 @@ public class CommentEditor
 	 * <tr><td>{@link ChanMarkup#TAG_BOLD}</td><td>{@code [b]}</td><td>{@code [/b]}</td></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_ITALIC}</td><td>{@code [i]}</td><td>{@code [/i]}</td></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_UNDERLINE}</td><td>{@code [u]}</td><td>{@code [/u]}</td></tr>
+	 * <tr><td>{@link ChanMarkup#TAG_OVERLINE}</td><td>{@code [o]}</td><td>{@code [/o]}</td></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_STRIKE}</td><td>{@code [s]}</td><td>{@code [/s]}</td></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_SUBSCRIPT}</td><td>{@code [sub]}</td><td>{@code [/sub]}</td></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_SUPERSCRIPT}</td><td>{@code [sup]}</td><td>{@code [/sup]}</td></tr>

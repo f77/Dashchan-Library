@@ -5,7 +5,6 @@ import java.util.List;
 
 import android.graphics.Bitmap;
 import android.net.Uri;
-
 import chan.content.model.Board;
 import chan.content.model.BoardCategory;
 import chan.content.model.Post;
@@ -265,7 +264,8 @@ public class ChanPerformer
 	 * 
 	 * <p>This method must return {@link ReadCaptchaResult} with captcha data.</p>
 	 * 
-	 * <p>If your chan uses custom captcha, the result must hold {@link ReadCaptchaResult#image}.</p>
+	 * <p>If your chan uses custom captcha, you must specify a resulting image using
+	 * {@link ReadCaptchaResult#setImage(Bitmap)}.</p>
 	 * 
 	 * <p>In the case of Yandex Captcha, resulting {@code captchaData} must contain challenge string by
 	 * {@link CaptchaData#CHALLENGE}. key</p>
@@ -450,6 +450,18 @@ public class ChanPerformer
 		{
 			throw new IllegalAccessError();
 		}
+		
+		/**
+		 * <p>Stores {@code validator} in this cache. By default client will call {@link HttpHolder#getValidator()}
+		 * after the last request. This can be useful if you want to store validator from intermediate request.</p>
+		 * 
+		 * @param validator {@link HttpValidator} instance.
+		 * @return This object.
+		 */
+		public ReadThreadsResult setValidator(HttpValidator validator)
+		{
+			throw new IllegalAccessError();
+		}
 	}
 	
 	/**
@@ -533,6 +545,18 @@ public class ChanPerformer
 		 * @param posts Collection of {@link Post}.
 		 */
 		public ReadPostsResult(Collection<Post> posts)
+		{
+			throw new IllegalAccessError();
+		}
+		
+		/**
+		 * <p>Stores {@code validator} in this cache. By default client will call {@link HttpHolder#getValidator()}
+		 * after the last request. This can be useful if you want to store validator from intermediate request.</p>
+		 * 
+		 * @param validator {@link HttpValidator} instance.
+		 * @return This object.
+		 */
+		public ReadPostsResult setValidator(HttpValidator validator)
 		{
 			throw new IllegalAccessError();
 		}
@@ -834,6 +858,18 @@ public class ChanPerformer
 		{
 			throw new IllegalAccessError();
 		}
+		
+		/**
+		 * <p>Stores {@code validator} in this cache. By default client will call {@link HttpHolder#getValidator()}
+		 * after the last request. This can be useful if you want to store validator from intermediate request.</p>
+		 * 
+		 * @param validator {@link HttpValidator} instance.
+		 * @return This object.
+		 */
+		public ReadPostsCountResult setValidator(HttpValidator validator)
+		{
+			throw new IllegalAccessError();
+		}
 	}
 	
 	/**
@@ -1027,32 +1063,10 @@ public class ChanPerformer
 	public static class ReadCaptchaResult
 	{
 		/**
-		 * <p>Resulting captcha state.</p>
-		 */
-		public final CaptchaState captchaState;
-		
-		/**
-		 * <p>Resulting captcha data map.</p>
-		 */
-		public final CaptchaData captchaData;
-		
-		/**
-		 * <p>Captcha validity. With this field you can override captcha validity from configuration. It might be useful
-		 * when captcha valid in thread, but with captcha pass captcha valid in all chan for example.</p>
-		 */
-		public ChanConfiguration.Captcha.Validity validity;
-		
-		/**
-		 * <p>Resulting captcha image. You must set this field with {@link CaptchaState#CAPTCHA} result
-		 * and captcha is custom.</p>
-		 */
-		public Bitmap image;
-		
-		/**
 		 * <p>Constructor for {@link ReadCaptchaResult}.</p>
 		 * 
 		 * @param captchaState Resulting captcha state.
-		 * @param captchaData Resulting captcha data.
+		 * @param captchaData Resulting captcha data map.
 		 */
 		public ReadCaptchaResult(CaptchaState captchaState, CaptchaData captchaData)
 		{
@@ -1060,13 +1074,24 @@ public class ChanPerformer
 		}
 		
 		/**
-		 * <p>Constructor for {@link ReadCaptchaResult}. This constructor allows to make new object and set image.</p>
+		 * <p>Overrides captcha validity from configuration. It might be useful when captcha valid in thread,
+		 * but with captcha pass captcha valid in all chan for example.</p>
 		 * 
-		 * @param captchaState Resulting captcha state.
-		 * @param captchaData Resulting captcha data.
-		 * @param image Resulting captcha image.
+		 * @param validity Captcha validity.
+		 * @return This object.
 		 */
-		public ReadCaptchaResult(CaptchaState captchaState, CaptchaData captchaData, Bitmap image)
+		public ReadCaptchaResult setValidity(ChanConfiguration.Captcha.Validity validity)
+		{
+			throw new IllegalAccessError();
+		}
+		
+		/**
+		 * <p>Stores resulting captcha image. You must set this field with {@link CaptchaState#CAPTCHA} result.</p>
+		 * 
+		 * @param image Captcha image bitmap.
+		 * @return This object.
+		 */
+		public ReadCaptchaResult setImage(Bitmap image)
 		{
 			throw new IllegalAccessError();
 		}

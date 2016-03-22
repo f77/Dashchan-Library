@@ -50,6 +50,11 @@ public abstract class ChanMarkup
 	public static final int TAG_UNDERLINE;
 	
 	/**
+	 * Overline tag constant value.
+	 */
+	public static final int TAG_OVERLINE;
+	
+	/**
 	 * Strikethrough tag constant value.
 	 */
 	public static final int TAG_STRIKE;
