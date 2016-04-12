@@ -560,6 +560,17 @@ public class ChanPerformer
 		{
 			throw new IllegalAccessError();
 		}
+		
+		/**
+		 * <p>Allow client to handle result as a full thread even when partial result requested.</p>
+		 * 
+		 * @param fullThread True if client must handle result as full thread, false otherwise.
+		 * @return This object.
+		 */
+		public ReadPostsResult setFullThread(boolean fullThread)
+		{
+			throw new IllegalAccessError();
+		}
 	}
 	
 	/**

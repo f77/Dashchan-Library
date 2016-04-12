@@ -403,6 +403,12 @@ public class ChanConfiguration
 		public int maxCommentLength;
 		
 		/**
+		 * <p>Characters encoding in comment. Use this to make client count number of bytes in your encoding
+		 * instead of number of chars.</p>
+		 */
+		public String maxCommentLengthEncoding;
+		
+		/**
 		 * <p>Maximum number of attachments.</p>
 		 */
 		public int attachmentCount;
