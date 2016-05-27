@@ -37,4 +37,11 @@ public interface RequestEntity
 	 * @throws IOException if an error occurs while writing to given {@code output}. 
 	 */
 	public abstract void write(OutputStream output) throws IOException;
+	
+	/**
+	 * <p>Returns a deep copy of this {@code RequestEntity} instance.</p>
+	 * 
+	 * @return Copy of this entity.
+	 */
+	public abstract RequestEntity copy();
 }

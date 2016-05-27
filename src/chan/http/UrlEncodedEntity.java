@@ -59,4 +59,10 @@ public class UrlEncodedEntity implements RequestEntity
 	{
 		throw new IllegalAccessError();
 	}
+	
+	@Override
+	public RequestEntity copy()
+	{
+		throw new IllegalAccessError();
+	}
 }

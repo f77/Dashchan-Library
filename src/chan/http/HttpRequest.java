@@ -236,6 +236,16 @@ public class HttpRequest
 	}
 	
 	/**
+	 * <p>Removes all headers added before.</p>
+	 * 
+	 * @return This builder.
+	 */
+	public HttpRequest clearHeaders()
+	{
+		throw new IllegalAccessError();
+	}
+	
+	/**
 	 * <p>Add a cookie with given {@code name} and {@code value}.</p>
 	 * 
 	 * @param name Cookie name.
@@ -268,6 +278,26 @@ public class HttpRequest
 	 * @see CookieBuilder
 	 */
 	public HttpRequest addCookie(CookieBuilder builder)
+	{
+		throw new IllegalAccessError();
+	}
+	
+	/**
+	 * <p>Removes all cookies added before.</p>
+	 * 
+	 * @return This builder.
+	 */
+	public HttpRequest clearCookies()
+	{
+		throw new IllegalAccessError();
+	}
+	
+	/**
+	 * <p>Returns a deep copy of this builder. Request entities will be copied shallowly!</p>
+	 * 
+	 * @return Copy of builder.
+	 */
+	public HttpRequest copy()
 	{
 		throw new IllegalAccessError();
 	}

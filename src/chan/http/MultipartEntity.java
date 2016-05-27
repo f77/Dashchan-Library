@@ -71,4 +71,10 @@ public class MultipartEntity implements RequestEntity
 	{
 		throw new IllegalAccessError();
 	}
+	
+	@Override
+	public RequestEntity copy()
+	{
+		throw new IllegalAccessError();
+	}
 }
