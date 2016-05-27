@@ -1,0 +1,12 @@
+*
+!/bin
+!/bin/dashchanlibrary.jar
+!/src
+!/src/**
+!/.classpath
+!/.gitignore
+!/.project
+!/AndroidManifest.xml
+!/LICENSE
+!/project.properties
+!/README.md
