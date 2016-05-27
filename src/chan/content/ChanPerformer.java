@@ -1,10 +1,13 @@
 package chan.content;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Collection;
 import java.util.List;
 
 import android.graphics.Bitmap;
 import android.net.Uri;
+
 import chan.content.model.Board;
 import chan.content.model.BoardCategory;
 import chan.content.model.Post;
@@ -1202,7 +1205,7 @@ public class ChanPerformer
 		public final String password;
 		
 		/**
-		 * <p>Array of atachments argument. Equals {@code null} if empty.</p>
+		 * <p>Array of attachments argument. Equals {@code null} if empty.</p>
 		 */
 		public final Attachment[] attachments;
 		
@@ -1269,6 +1272,40 @@ public class ChanPerformer
 			 * @param name Field name.
 			 */
 			public void addToEntity(MultipartEntity entity, String name)
+			{
+				throw new IllegalAccessError();
+			}
+			
+			/**
+			 * <p>Returns attachment file name.</p>
+			 */
+			public String getFileName()
+			{
+				throw new IllegalAccessError();
+			}
+			
+			/**
+			 * <p>Returns attachment mime type.</p>
+			 */
+			public String getMimeType()
+			{
+				throw new IllegalAccessError();
+			}
+			
+			/**
+			 * <p>Opens {@code InputStream} for this attachment.</p>
+			 * 
+			 * @throws IOException If an error occurs while initializing a stream. 
+			 */
+			public InputStream openInputSteam() throws IOException
+			{
+				throw new IllegalAccessError();
+			}
+			
+			/**
+			 * <p>Returns attachment file size.</p>
+			 */
+			public long getSize()
 			{
 				throw new IllegalAccessError();
 			}
