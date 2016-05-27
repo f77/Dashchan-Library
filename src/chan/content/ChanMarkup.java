@@ -85,6 +85,11 @@ public abstract class ChanMarkup
 	public static final int TAG_CODE;
 	
 	/**
+	 * Ascii art tag constant value.
+	 */
+	public static final int TAG_ASCII_ART;
+	
+	/**
 	 * Code tag constant value.
 	 */
 	public static final int TAG_HEADING;
@@ -158,7 +163,7 @@ public abstract class ChanMarkup
 	
 	/**
 	 * <p>Marks given {@code tagName} as tag that may contain color attribute or CSS style. Parser will handle
-	 * this cases automatically.</p>
+	 * these cases automatically.</p>
 	 * 
 	 * @param tagName Tag to handle.
 	 */
@@ -168,26 +173,108 @@ public abstract class ChanMarkup
 	}
 	
 	/**
-	 * <p>Marks given {@code tagName} as block tag. If block is {@code spaced}, parser will add a line around block.
-	 * There are some tags which are block: "blockquote", "p", etc. Some of them are spaced by default.</p>
+	 * <p>Marks given {@code tagName} as tag that may contain color attribute or CSS style if tag contains
+	 * {@code cssClass} in class attribute. Parser will handle these cases automatically.</p>
 	 * 
 	 * @param tagName Tag to handle.
-	 * @param spaced True to enable spacing.
+	 * @param cssClass Tag CSS class.
 	 */
-	public void addBlock(String tagName, boolean spaced)
+	public void addColorable(String tagName, String cssClass)
 	{
 		throw new IllegalAccessError();
 	}
 	
 	/**
-	 * <p>Marks given {@code tagName} as preformatted. In this mode all spaces and line breaks
-	 * will be taken into account. This action is default for "pre" tag.</p>
+	 * <p>Marks given {@code tagName} as tag that may contain color attribute or CSS style if tag contains
+	 * {@code attribute} that exactly equals {@code value}. Parser will handle these cases automatically.</p>
 	 * 
 	 * @param tagName Tag to handle.
+	 * @param attribute Tag attribute.
+	 * @param value Attribute value.
 	 */
-	public void addPreformatted(String tagName)
+	public void addColorable(String tagName, String attribute, String value)
 	{
-		
+		throw new IllegalAccessError();
+	}
+	
+	/**
+	 * <p>Marks given {@code tagName} as block tag. For {@code spaced} blocks parser will add empty lines around.</p>
+	 * 
+	 * @param tagName Tag to handle.
+	 * @param block True to enable block tag.
+	 * @param spaced True to enable spacing.
+	 */
+	public void addBlock(String tagName, boolean block, boolean spaced)
+	{
+		throw new IllegalAccessError();
+	}
+	
+	/**
+	 * <p>Marks given {@code tagName} as block tag if tag contains {@code cssClass} in class attribute.
+	 * For {@code spaced} blocks parser will add empty lines around.</p>
+	 * 
+	 * @param tagName Tag to handle.
+	 * @param cssClass Tag CSS class.
+	 * @param block True to enable block tag.
+	 * @param spaced True to enable spacing.
+	 */
+	public void addBlock(String tagName, String cssClass, boolean block, boolean spaced)
+	{
+		throw new IllegalAccessError();
+	}
+	
+	/**
+	 * <p>Marks given {@code tagName} as block tag if tag contains {@code attribute} that exactly equals {@code value}.
+	 * For {@code spaced} blocks parser will add empty lines around.</p>
+	 * 
+	 * @param tagName Tag to handle.
+	 * @param attribute Tag attribute.
+	 * @param value Attribute value.
+	 * @param block True to enable block tag.
+	 * @param spaced True to enable spacing.
+	 */
+	public void addBlock(String tagName, String attribute, String value, boolean block, boolean spaced)
+	{
+		throw new IllegalAccessError();
+	}
+	
+	/**
+	 * <p>Marks given {@code tagName} as preformatted. In this mode all tabs, spaces and line breaks
+	 * will be taken into account.</p>
+	 * 
+	 * @param tagName Tag to handle.
+	 * @param block True to enable preformatted tag.
+	 */
+	public void addPreformatted(String tagName, boolean preformatted)
+	{
+		throw new IllegalAccessError();
+	}
+	
+	/**
+	 * <p>Marks given {@code tagName} as preformatted if tag contains {@code cssClass} in class attribute.
+	 * In this mode all tabs, spaces and line breaks will be taken into account.</p>
+	 * 
+	 * @param tagName Tag to handle.
+	 * @param cssClass Tag CSS class.
+	 * @param block True to enable preformatted tag.
+	 */
+	public void addPreformatted(String tagName, String cssClass, boolean preformatted)
+	{
+		throw new IllegalAccessError();
+	}
+	
+	/**
+	 * <p>Marks given {@code tagName} as preformatted if tag contains {@code attribute} that exactly
+	 * equals {@code value}. In this mode all tabs, spaces and line breaks will be taken into account.</p>
+	 * 
+	 * @param tagName Tag to handle.
+	 * @param attribute Tag attribute.
+	 * @param value Attribute value.
+	 * @param block True to enable preformatted tag.
+	 */
+	public void addPreformatted(String tagName, String attribute, String value, boolean preformatted)
+	{
+		throw new IllegalAccessError();
 	}
 	
 	/**

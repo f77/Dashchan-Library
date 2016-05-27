@@ -75,6 +75,7 @@ public class CommentEditor
 	 * <tr><td>{@link ChanMarkup#TAG_SUPERSCRIPT}</td><td>{@code [sup]}</td><td>{@code [/sup]}</td></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_SPOILER}</td><td>{@code [spoiler]}</td><td>{@code [/spoiler]}</td></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_CODE}</td><td>{@code [code]}</td><td>{@code [/code]}</td></tr>
+	 * <tr><td>{@link ChanMarkup#TAG_ASCII_ART}</td><td>{@code [aa]}</td><td>{@code [/aa]}</td></tr>
 	 * </table></p>
 	 */
 	public static class BulletinBoardCodeCommentEditor extends CommentEditor
