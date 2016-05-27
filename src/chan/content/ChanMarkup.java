@@ -15,9 +15,15 @@ import chan.text.CommentEditor;
  * <li>{@link ChanMarkup#addTag(String, int)}</li>
  * <li>{@link ChanMarkup#addTag(String, String, int)}</li>
  * <li>{@link ChanMarkup#addTag(String, String, String, int)}</li>
- * <li>{@link ChanMarkup#addBlock(String, boolean)}</li>
- * <li>{@link ChanMarkup#addPreformatted(String)}</li>
+ * <li>{@link ChanMarkup#addBlock(String, boolean, boolean)}</li>
+ * <li>{@link ChanMarkup#addBlock(String, String, boolean, boolean)}</li>
+ * <li>{@link ChanMarkup#addBlock(String, String, String, boolean, boolean)}</li>
+ * <li>{@link ChanMarkup#addPreformatted(String, boolean)}</li>
+ * <li>{@link ChanMarkup#addPreformatted(String, String, boolean)}</li>
+ * <li>{@link ChanMarkup#addPreformatted(String, String, String, boolean)}</li>
  * <li>{@link ChanMarkup#addColorable(String)}</li>
+ * <li>{@link ChanMarkup#addColorable(String, String)}</li>
+ * <li>{@link ChanMarkup#addColorable(String, String, String)}</li>
  * </ul>
  */
 public abstract class ChanMarkup
@@ -243,7 +249,7 @@ public abstract class ChanMarkup
 	 * will be taken into account.</p>
 	 * 
 	 * @param tagName Tag to handle.
-	 * @param block True to enable preformatted tag.
+	 * @param preformatted True to enable preformatted tag.
 	 */
 	public void addPreformatted(String tagName, boolean preformatted)
 	{
@@ -256,7 +262,7 @@ public abstract class ChanMarkup
 	 * 
 	 * @param tagName Tag to handle.
 	 * @param cssClass Tag CSS class.
-	 * @param block True to enable preformatted tag.
+	 * @param preformatted True to enable preformatted tag.
 	 */
 	public void addPreformatted(String tagName, String cssClass, boolean preformatted)
 	{
@@ -270,7 +276,7 @@ public abstract class ChanMarkup
 	 * @param tagName Tag to handle.
 	 * @param attribute Tag attribute.
 	 * @param value Attribute value.
-	 * @param block True to enable preformatted tag.
+	 * @param preformatted True to enable preformatted tag.
 	 */
 	public void addPreformatted(String tagName, String attribute, String value, boolean preformatted)
 	{
