@@ -1088,6 +1088,29 @@ public class ChanPerformer
 		}
 		
 		/**
+		 * <p>Overrides captcha type. It might be useful when chan requires a captcha with specific type.</p>
+		 * 
+		 * @param captchaType Captcha type.
+		 * @return This object.
+		 */
+		public ReadCaptchaResult setCaptchaType(String captchaType)
+		{
+			throw new IllegalAccessError();
+		}
+		
+		/**
+		 * <p>Overrides captcha input mode from configuration. It might be useful when captcha becomes harder than usual
+		 * and user will have to enter a letters instead of numbers, for example.</p>
+		 * 
+		 * @param input Captcha input mode.
+		 * @return This object.
+		 */
+		public ReadCaptchaResult setInput(ChanConfiguration.Captcha.Input input)
+		{
+			throw new IllegalAccessError();
+		}
+		
+		/**
 		 * <p>Overrides captcha validity from configuration. It might be useful when captcha valid in thread,
 		 * but with captcha pass captcha valid in all chan for example.</p>
 		 * 
@@ -1106,6 +1129,17 @@ public class ChanPerformer
 		 * @return This object.
 		 */
 		public ReadCaptchaResult setImage(Bitmap image)
+		{
+			throw new IllegalAccessError();
+		}
+		
+		/**
+		 * <p>Use this method to make image field larger for user.</p>
+		 * 
+		 * @param large True if captcha image is large.
+		 * @return This object.
+		 */
+		public ReadCaptchaResult setLarge(boolean large)
 		{
 			throw new IllegalAccessError();
 		}
