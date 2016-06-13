@@ -64,7 +64,7 @@ public class CommentEditor
 	 * 
 	 * <p>This editor has the following configuration:</p>
 	 * 
-	 * <p><table>
+	 * <table summary="">
 	 * <tr><th>What</th><th>Open</th><th>Close</th></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_BOLD}</td><td>{@code [b]}</td><td>{@code [/b]}</td></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_ITALIC}</td><td>{@code [i]}</td><td>{@code [/i]}</td></tr>
@@ -76,7 +76,7 @@ public class CommentEditor
 	 * <tr><td>{@link ChanMarkup#TAG_SPOILER}</td><td>{@code [spoiler]}</td><td>{@code [/spoiler]}</td></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_CODE}</td><td>{@code [code]}</td><td>{@code [/code]}</td></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_ASCII_ART}</td><td>{@code [aa]}</td><td>{@code [/aa]}</td></tr>
-	 * </table></p>
+	 * </table>
 	 */
 	public static class BulletinBoardCodeCommentEditor extends CommentEditor
 	{
@@ -91,13 +91,13 @@ public class CommentEditor
 	 * 
 	 * <p>This editor has the following configuration:</p>
 	 * 
-	 * <p><table>
+	 * <table summary="">
 	 * <tr><th>What</th><th>Open</th><th>Close</th><th>Flags</th></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_BOLD}</td><td>{@code **}</td><td>{@code **}</td><td>{@code one line}</td></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_ITALIC}</td><td>{@code *}</td><td>{@code *}</td><td>{@code one line}</td></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_SPOILER}</td><td>{@code %%}</td><td>{@code %%}</td><td>{@code one line}</td></tr>
 	 * <tr><td>{@link ChanMarkup#TAG_CODE}</td><td>{@code `}</td><td>{@code `}</td><td>{@code one line}</td></tr>
-	 * </table></p>
+	 * </table>
 	 * 
 	 * <p>Also this editor can handle {@link ChanMarkup#TAG_STRIKE} with appending multiple {@code ^H}
 	 * after end selection position.</p>

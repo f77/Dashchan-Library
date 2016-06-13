@@ -1,0 +1,187 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
+
+	dependencies {
+		classpath 'com.android.tools.build:gradle:2.1.0'
+		classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:+'
+		classpath 'com.github.dcendents:android-maven-gradle-plugin:+'
+	}
+}
+
+allprojects {
+	repositories {
+		jcenter()
+	}
+}
+
+apply plugin: 'com.android.library'
+
+def Properties privateProperties = new Properties()
+
+if (new File("private.properties").exists()) {
+	privateProperties.load(new FileInputStream(file("private.properties")))
+}
+
+android {
+	compileSdkVersion 23
+	buildToolsVersion '23.0.3'
+
+	sourceSets.main {
+		manifest.srcFile 'AndroidManifest.xml'
+		java.srcDirs = ['src']
+		resources.srcDirs = ['src']
+		aidl.srcDirs = ['src']
+		renderscript.srcDirs = ['src']
+		res.srcDirs = ['res']
+		assets.srcDirs = ['assets']
+	}
+
+	buildTypes {
+		release {
+			minifyEnabled false
+		}
+	}
+
+	variantFilter { variant ->
+		if (variant.buildType.name != com.android.builder.core.BuilderConstants.RELEASE) {
+			variant.ignore = true
+		}
+	}
+
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_7
+		targetCompatibility JavaVersion.VERSION_1_7
+	}
+}
+
+android.libraryVariants.all { variant ->
+	def name = variant.buildType.name
+	def task = project.tasks.create 'jarRelease', Jar
+	task.dependsOn variant.javaCompile
+	task.from variant.javaCompile.destinationDir
+	task.exclude '**/BuildConfig.class'
+	task.exclude '**/R.class'
+	task.exclude '**/R$*.class'
+	artifacts.add('archives', task);
+}
+
+task javadocDoclavaCleanup(type: Delete) {
+	delete 'build/docs/javadoc/assets'
+}
+
+task javadocDoclavaCopyAssets(type: Copy) {
+	from 'doclava-assets'
+	into 'build/docs/javadoc'
+}
+
+task javadocGenerate(type: Javadoc) {
+	source = android.sourceSets.main.java.srcDirs
+	classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+
+	if (new File('doclava.jar').exists()) {
+		options.doclet = 'com.google.doclava.Doclava'
+		options.docletpath = [file('doclava.jar')]
+		options.addStringOption('title', 'Dashchan API Reference')
+		title = null
+		finalizedBy javadocDoclavaCleanup
+		finalizedBy javadocDoclavaCopyAssets
+	}
+}
+
+task javadocJar(type: Jar, dependsOn: javadocGenerate) {
+	from javadocGenerate.destinationDir
+	classifier = 'javadoc'
+}
+
+task sourcesJar(type: Jar) {
+	from android.sourceSets.main.java.srcDirs
+	classifier = 'sources'
+}
+
+artifacts {
+	archives javadocJar
+	archives sourcesJar
+}
+
+def bintrayUser = privateProperties.getProperty('bintray.user')
+def bintrayApiKey = privateProperties.getProperty('bintray.apikey')
+
+if (bintrayUser != null && bintrayApiKey != null) {
+	ext {
+		publishedGroupId = 'com.github.mishiranu'
+		libraryVersion = '1.0'
+
+		libraryDescription = 'Dashchan public API.\nUse "provided" instead of "compile" to add this library!'
+		gitUrl = 'https://github.com/Mishiranu/DashchanLibrary'
+
+		developerId = 'mishiranu'
+		developerName = 'Fukurou Mishiranu'
+		developerEmail = 'fukurou.mishiranu@gmail.com'
+
+		licenseName = 'The Apache Software License, Version 2.0'
+		licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+		allLicenses = ['Apache-2.0']
+	}
+
+	apply plugin: 'com.jfrog.bintray'
+
+	version = libraryVersion
+
+	bintray {
+		user = bintrayUser
+		key = bintrayApiKey
+
+		configurations = ['archives']
+		pkg {
+			repo = publishedGroupId
+			name = rootProject.name
+			desc = libraryDescription
+			vcsUrl = gitUrl
+			licenses = allLicenses
+			publish = true
+			publicDownloadNumbers = true
+			version.desc = libraryDescription
+		}
+	}
+
+	apply plugin: 'com.github.dcendents.android-maven'
+
+	group = publishedGroupId
+
+	install {
+		repositories.mavenInstaller {
+			pom {
+				project {
+					packaging 'jar'
+					groupId publishedGroupId
+					artifactId rootProject.name
+
+					name rootProject.name
+					description libraryDescription
+
+					licenses {
+						license {
+							name licenseName
+							url licenseUrl
+						}
+					}
+
+					developers {
+						developer {
+							id developerId
+							name developerName
+							email developerEmail
+						}
+					}
+
+					scm {
+						connection gitUrl
+						developerConnection gitUrl
+					}
+				}
+			}
+		}
+	}
+}

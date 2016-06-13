@@ -22,8 +22,6 @@ public class HttpResponse
 	
 	/**
 	 * <p>Sets encoding for this instance. UTF-8 is used by default.</p>
-	 * 
-	 * @return charsetName Charset name.
 	 */
 	public void setEncoding(String charsetName)
 	{

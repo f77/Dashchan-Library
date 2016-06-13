@@ -24,7 +24,7 @@ import android.util.Pair;
  * <li>{@link #OPTION_ALLOW_USER_AUTHORIZATION}</li>
  * </ul>
  * 
- * <p><h3>Static configuration</h3></p>
+ * <h3>Static configuration</h3>
  * 
  * <p>This configuration remains in RAM only while client is launched. You must configure these settings
  * during construction.</p>
@@ -42,7 +42,7 @@ import android.util.Pair;
  * 
  * <p>You can add supported captchas using {@link #addCaptchaType(String)}.</p>
  * 
- * <p><h3>Dynamic configuration</h3></p>
+ * <h3>Dynamic configuration</h3>
  * 
  * <p>This configuration can be written to client's preferences and read every time client launches.</p>
  * 
@@ -58,10 +58,10 @@ import android.util.Pair;
  * <p>You can store any another properties using {@link #set(String, String, boolean)},
  * {@link #set(String, String, int)} and {@link #set(String, String, String)} methods.</p>
  * 
- * <p>You can get stored properties using {@link #get(String, String, boolean),
+ * <p>You can get stored properties using {@link #get(String, String, boolean)},
  * {@link #get(String, String, int)} and {@link #get(String, String, String)} methods.</p>
  * 
- * <p><h3>Additional features</h3></p>
+ * <h3>Additional features</h3>
  * 
  * <p>You can store cookies using {@link #storeCookie(String, String, String)}. Later you can get it using
  * {@link #getCookie(String)}. User can clear cookies in application preferences.</p>
@@ -71,7 +71,7 @@ import android.util.Pair;
  * <p>You can add additional preferences to chan preferences screen using
  * {@link #addCustomPreference(String, boolean)} and {@link #obtainCustomPreferenceConfiguration(String)}.</p>
  * 
- * <p><h3>Configuring actions</h3></p>
+ * <h3>Configuring actions</h3>
  * 
  * <p>You can configure board features using {@link #obtainBoardConfiguration(String)}.</p>
  * 
@@ -233,7 +233,7 @@ public class ChanConfiguration
 		/**
 		 * <p>Set {@code true} to allow user to read catalog.</p>
 		 * 
-		 * @see ChanPerformer#readThreads(chan.content.ChanPerformer.ReadThreadsData)
+		 * @see ChanPerformer#onReadThreads(chan.content.ChanPerformer.ReadThreadsData)
 		 */
 		public boolean allowCatalog;
 		
@@ -455,7 +455,7 @@ public class ChanConfiguration
 	/**
 	 * <p>Deleting configuration holder.</p>
 	 * 
-	 * @see ChanPerformer.DeletePostsData
+	 * @see ChanPerformer.SendDeletePostsData
 	 */
 	public static class Deleting
 	{
@@ -478,7 +478,7 @@ public class ChanConfiguration
 	/**
 	 * <p>Reporting configuration holder.</p>
 	 * 
-	 * @see ChanPerformer.SendReportData
+	 * @see ChanPerformer.SendReportPostsData
 	 */
 	public static class Reporting
 	{
@@ -534,7 +534,7 @@ public class ChanConfiguration
 	/**
 	 * <p>Archivation configuration holder.</p>
 	 * 
-	 * @see ChanPerformer.AddToArchiveData
+	 * @see ChanPerformer.SendAddToArchiveData
 	 */
 	public static class Archivation
 	{

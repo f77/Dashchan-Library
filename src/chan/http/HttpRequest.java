@@ -9,8 +9,6 @@ public class HttpRequest
 {
 	/**
 	 * <p>Client's preset with timeout settings, listeners, etc.</p>
-	 * 
-	 * @see HttpRequest#with(Preset)
 	 */
 	public static interface Preset
 	{

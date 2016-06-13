@@ -77,7 +77,7 @@ public class ChanLocator
 		public static final int TARGET_POSTS;
 		
 		/**
-		 * <p>Target to list of search results. You <strong>must<strong> enable
+		 * <p>Target to list of search results. You <strong>must</strong> enable
 		 * {@link ChanConfiguration.Board#allowSearch} option for specified board to use this target.</p>
 		 */
 		public static final int TARGET_SEARCH;

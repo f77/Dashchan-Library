@@ -1,12 +1,9 @@
-*
-!/bin
-!/bin/dashchanlibrary.jar
+/*
 !/src
-!/src/**
-!/.classpath
+!/doclava-assets
 !/.gitignore
-!/.project
 !/AndroidManifest.xml
-!/LICENSE
-!/project.properties
+!/build.gradle
+!/doclava.jar
 !/README.md
+!/settings.gradle

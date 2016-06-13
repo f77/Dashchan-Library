@@ -34,7 +34,8 @@ import chan.http.MultipartEntity;
  * 
  * <p>Depending one the {@link ChanConfiguration.Board} configuration you must implement the following methods:</p>
  * 
- * <p><table><tr><th>Option</th><th>Method</th></tr>
+ * <table summary="">
+ * <tr><th>Option</th><th>Method</th></tr>
  * <tr><td>{@link ChanConfiguration.Board#allowSearch}</td>
  * <td>{@link #onReadSearchPosts(ReadSearchPostsData)}</td></tr>
  * <tr><td>{@link ChanConfiguration.Board#allowCatalog}</td>
@@ -48,11 +49,13 @@ import chan.http.MultipartEntity;
  * <tr><td>{@link ChanConfiguration.Board#allowDeleting}</td>
  * <td>{@link #onSendDeletePosts(SendDeletePostsData)}</td></tr>
  * <tr><td>{@link ChanConfiguration.Board#allowReporting}</td>
- * <td>{@link #onSendReportPosts(SendReportPostsData)}</td></tr></table></p>
+ * <td>{@link #onSendReportPosts(SendReportPostsData)}</td></tr>
+ * </table>
  * 
  * <p>If you configure some options, you also must implement the following methods:</p>
  * 
- * <p><table><tr><th>Option</th><th>Method</th></tr>
+ * <table summary="">
+ * <tr><th>Option</th><th>Method</th></tr>
  * <tr><td>{@link ChanConfiguration#OPTION_READ_SINGLE_POST}</td>
  * <td>{@link #onReadSinglePost(ReadSinglePostData)}</td></tr>
  * <tr><td>{@link ChanConfiguration#OPTION_READ_POSTS_COUNT}</td>
@@ -64,7 +67,8 @@ import chan.http.MultipartEntity;
  * <tr><td>{@link ChanConfiguration#OPTION_ALLOW_CAPTCHA_PASS}</td>
  * <td>{@link #onCheckAuthorization(CheckAuthorizationData)}</td></tr>
  * <tr><td>{@link ChanConfiguration#OPTION_ALLOW_USER_AUTHORIZATION}</td>
- * <td>{@link #onCheckAuthorization(CheckAuthorizationData)}</td></tr></table></p>
+ * <td>{@link #onCheckAuthorization(CheckAuthorizationData)}</td></tr>
+ * </table>
  */
 public class ChanPerformer
 {
