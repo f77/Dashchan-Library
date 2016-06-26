@@ -5,7 +5,7 @@ import chan.content.ChanPerformer;
 /**
  * <p>Thrown by HTTP client and {@link ChanPerformer} methods.</p>
  */
-public class HttpException extends Exception
+public final class HttpException extends Exception
 {
 	private static final long serialVersionUID = 1L;
 	
@@ -13,9 +13,9 @@ public class HttpException extends Exception
 	 * <p>Constructor for a {@link HttpException} with response code and message.</p>
 	 * 
 	 * @param responseCode Response code.
-	 * @param detailMessage Response message.
+	 * @param responseText Response message.
 	 */
-	public HttpException(int responseCode, String detailMessage)
+	public HttpException(int responseCode, String responseText)
 	{
 		throw new IllegalAccessError();
 	}

@@ -424,7 +424,7 @@ public class ChanPerformer
 	/**
 	 * <p>Result holder for {@link #onReadThreads(ReadThreadsData)}.</p>
 	 */
-	public static class ReadThreadsResult
+	public static final class ReadThreadsResult
 	{
 		/**
 		 * <p>Constructor for {@link ReadThreadsResult}.</p>
@@ -522,7 +522,7 @@ public class ChanPerformer
 	/**
 	 * <p>Result holder for {@link #onReadPosts(ReadPostsData)}.</p>
 	 */
-	public static class ReadPostsResult
+	public static final class ReadPostsResult
 	{
 		/**
 		 * <p>Constructor for {@link ReadPostsResult}.</p>
@@ -610,7 +610,7 @@ public class ChanPerformer
 	/**
 	 * <p>Result holder for {@link #onReadSinglePost(ReadSinglePostData)}.</p>
 	 */
-	public static class ReadSinglePostResult
+	public static final class ReadSinglePostResult
 	{
 		/**
 		 * <p>Constructor for {@link ReadSinglePostResult}.</p>
@@ -653,7 +653,7 @@ public class ChanPerformer
 	/**
 	 * <p>Result holder for {@link #onReadSearchPosts(ReadSearchPostsData)}.</p>
 	 */
-	public static class ReadSearchPostsResult
+	public static final class ReadSearchPostsResult
 	{
 		/**
 		 * <p>Constructor for {@link ReadSearchPostsResult}.</p>
@@ -696,7 +696,7 @@ public class ChanPerformer
 	/**
 	 * <p>Result holder for {@link #onReadBoards(ReadBoardsData)}.</p>
 	 */
-	public static class ReadBoardsResult
+	public static final class ReadBoardsResult
 	{
 		/**
 		 * <p>Constructor for {@link ReadBoardsResult}.</p>
@@ -739,7 +739,7 @@ public class ChanPerformer
 	/**
 	 * <p>Result holder for {@link #onReadUserBoards(ReadUserBoardsData)}.</p>
 	 */
-	public static class ReadUserBoardsResult
+	public static final class ReadUserBoardsResult
 	{
 		/**
 		 * <p>Constructor for {@link ReadUserBoardsResult}.</p>
@@ -807,7 +807,7 @@ public class ChanPerformer
 	/**
 	 * <p>Result holder for {@link #onReadThreadSummaries(ReadThreadSummariesData)}.</p>
 	 */
-	public static class ReadThreadSummariesResult
+	public static final class ReadThreadSummariesResult
 	{
 		/**
 		 * <p>Constructor for {@link ReadThreadSummariesResult}.</p>
@@ -865,7 +865,7 @@ public class ChanPerformer
 	/**
 	 * <p>Result holder for {@link #onReadPostsCount(ReadPostsCountData)}.</p>
 	 */
-	public static class ReadPostsCountResult
+	public static final class ReadPostsCountResult
 	{
 		/**
 		 * <p>Constructor for {@link ReadPostsCountResult}.</p>
@@ -915,7 +915,7 @@ public class ChanPerformer
 	/**
 	 * <p>Result holder for {@link #onReadContent(ReadContentData)}.</p>
 	 */
-	public static class ReadContentResult
+	public static final class ReadContentResult
 	{
 		/**
 		 * <p>Constructor for {@link ReadContentResult}.</p>
@@ -973,7 +973,7 @@ public class ChanPerformer
 	/**
 	 * <p>Result holder for {@link #onCheckAuthorization(CheckAuthorizationData)}.</p>
 	 */
-	public static class CheckAuthorizationResult
+	public static final class CheckAuthorizationResult
 	{
 		/**
 		 * <p>Constructor for {@link CheckAuthorizationResult}.</p>
@@ -1078,7 +1078,7 @@ public class ChanPerformer
 	/**
 	 * <p>Captcha result for {@link #onReadCaptcha(ReadCaptchaData)}.</p>
 	 */
-	public static class ReadCaptchaResult
+	public static final class ReadCaptchaResult
 	{
 		/**
 		 * <p>Constructor for {@link ReadCaptchaResult}.</p>
@@ -1347,18 +1347,6 @@ public class ChanPerformer
 			{
 				throw new IllegalAccessError();
 			}
-			
-			@Override
-			public boolean equals(Object o)
-			{
-				throw new IllegalAccessError();
-			}
-			
-			@Override
-			public int hashCode()
-			{
-				throw new IllegalAccessError();
-			}
 		}
 		
 		SendPostData()
@@ -1370,18 +1358,8 @@ public class ChanPerformer
 	/**
 	 * <p>Result for {@link #onSendPost(SendPostData)}.</p>
 	 */
-	public static class SendPostResult
+	public static final class SendPostResult
 	{
-		/**
-		 * <p>Resulting thread number.</p>
-		 */
-		public final String threadNumber;
-		
-		/**
-		 * <p>Resulting post number.</p>
-		 */
-		public final String postNumber;
-		
 		/**
 		 * <p>Constructor for {@link SendPostResult}.</p>
 		 * 
@@ -1439,7 +1417,7 @@ public class ChanPerformer
 	/**
 	 * <p>Result for {@link #onSendDeletePosts(SendDeletePostsData)}.</p>
 	 */
-	public static class SendDeletePostsResult
+	public static final class SendDeletePostsResult
 	{
 		
 	}
@@ -1494,7 +1472,7 @@ public class ChanPerformer
 	/**
 	 * <p>Result for {@link #onSendReportPosts(SendReportPostsData)}.</p>
 	 */
-	public static class SendReportPostsResult
+	public static final class SendReportPostsResult
 	{
 		
 	}
@@ -1539,18 +1517,8 @@ public class ChanPerformer
 	/**
 	 * <p>Result for {@link #onSendAddToArchive(SendAddToArchiveData)}.</p>
 	 */
-	public static class SendAddToArchiveResult
+	public static final class SendAddToArchiveResult
 	{
-		/**
-		 * <p>Resulting board name in archive.</p>
-		 */
-		public final String boardName;
-		
-		/**
-		 * <p>Resulting thread number in archive.</p>
-		 */
-		public final String threadNumber;
-		
 		/**
 		 * <p>Constructor for {@link SendAddToArchiveResult}.</p>
 		 * 
@@ -1573,7 +1541,7 @@ public class ChanPerformer
 	 * @param retry True if this is not the first request. If true, this will show "invalid captcha" toast for user.
 	 * @return {@link CaptchaData} with {@link CaptchaData#INPUT} or null if user has canceled an operation.
 	 */
-	public final CaptchaData requireUserCaptcha(String requirement, String boardName, String threadNumber,
+	protected final CaptchaData requireUserCaptcha(String requirement, String boardName, String threadNumber,
 			boolean retry)
 	{
 		throw new IllegalAccessError();
@@ -1588,7 +1556,7 @@ public class ChanPerformer
 	 * @param descriptionImage Description image (e.g. example image).
 	 * @return Index of chosen image, -1 if image wasn't chosen or null if user has canceled an operation.
 	 */
-	public final Integer requireUserImageSingleChoice(int selected, Bitmap[] images, String descriptionText,
+	protected final Integer requireUserImageSingleChoice(int selected, Bitmap[] images, String descriptionText,
 			Bitmap descriptionImage)
 	{
 		throw new IllegalAccessError();
@@ -1603,8 +1571,8 @@ public class ChanPerformer
 	 * @param descriptionImage Description image (e.g. example image).
 	 * @return Array of selected indexes or null if user has canceled an operation.
 	 */
-	public final boolean[] requireUserImageMultipleChoice(boolean[] selected, Bitmap[] images, String descriptionText,
-			Bitmap descriptionImage)
+	protected final boolean[] requireUserImageMultipleChoice(boolean[] selected, Bitmap[] images,
+			String descriptionText, Bitmap descriptionImage)
 	{
 		throw new IllegalAccessError();
 	}

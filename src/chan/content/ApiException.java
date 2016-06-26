@@ -3,7 +3,7 @@ package chan.content;
 /**
  * <p>Thrown by sending methods from {@link ChanPerformer}.</p>
  */
-public class ApiException extends Exception
+public final class ApiException extends Exception
 {
 	private static final long serialVersionUID = 1L;
 	
@@ -229,7 +229,7 @@ public class ApiException extends Exception
 	/**
 	 * <p>{@link #SEND_ERROR_BANNED} extra holder.</p>
 	 */
-	public static class BanExtra
+	public static final class BanExtra
 	{
 		/**
 		 * <p>Sets ban ID.</p>
@@ -279,7 +279,7 @@ public class ApiException extends Exception
 	/**
 	 * <p>{@link #SEND_ERROR_SPAM_LIST} extra holder.</p>
 	 */
-	public static class WordsExtra
+	public static final class WordsExtra
 	{
 		/**
 		 * <p>Adds a rejected word from message.</p>

@@ -3,7 +3,7 @@ package chan.content;
 /**
  * <p>Thrown then unknown or incorrect data read. This exceptions is thrown by {@link ChanPerformer} methods.</p>
  */
-public class InvalidResponseException extends Exception
+public final class InvalidResponseException extends Exception
 {
 	private static final long serialVersionUID = 1L;
 	

@@ -222,7 +222,7 @@ public class ChanConfiguration
 	/**
 	 * <p>Board configuration holder.</p>
 	 */
-	public static class Board
+	public static final class Board
 	{
 		/**
 		 * <p>Set {@code true} to allow user to search for threads and posts. You must implement
@@ -274,7 +274,7 @@ public class ChanConfiguration
 	/**
 	 * <p>Captcha configuration holder.</p>
 	 */
-	public static class Captcha
+	public static final class Captcha
 	{
 		/**
 		 * <p>Captcha input mode.</p>
@@ -353,7 +353,7 @@ public class ChanConfiguration
 	 * 
 	 * @see ChanPerformer.SendPostData
 	 */
-	public static class Posting
+	public static final class Posting
 	{
 		/**
 		 * <p>Set {@code true} to enable names. You will receive user's input from
@@ -457,7 +457,7 @@ public class ChanConfiguration
 	 * 
 	 * @see ChanPerformer.SendDeletePostsData
 	 */
-	public static class Deleting
+	public static final class Deleting
 	{
 		/**
 		 * <p>Set {@code true} to allow user to enter password.</p>
@@ -480,7 +480,7 @@ public class ChanConfiguration
 	 * 
 	 * @see ChanPerformer.SendReportPostsData
 	 */
-	public static class Reporting
+	public static final class Reporting
 	{
 		/**
 		 * <p>Set {@code true} to allow user to enter comment.</p>
@@ -518,7 +518,7 @@ public class ChanConfiguration
 	 * 
 	 * @see ChanPerformer.CheckAuthorizationData
 	 */
-	public static class Authorization
+	public static final class Authorization
 	{
 		/**
 		 * <p>Number of text field to perform authentication.</p>
@@ -536,7 +536,7 @@ public class ChanConfiguration
 	 * 
 	 * @see ChanPerformer.SendAddToArchiveData
 	 */
-	public static class Archivation
+	public static final class Archivation
 	{
 		/**
 		 * <p>List of allowed chan hosts for archivation.</p>
@@ -561,7 +561,7 @@ public class ChanConfiguration
 	/**
 	 * <p>Statistics configuration holder.</p>
 	 */
-	public static class Statistics
+	public static final class Statistics
 	{
 		/**
 		 * <p>Count threads viewed. True by default.</p>
@@ -582,7 +582,7 @@ public class ChanConfiguration
 	/**
 	 * <p>Custom preference configuration holder.</p>
 	 */
-	public static class CustomPreference
+	public static final class CustomPreference
 	{
 		/**
 		 * <p>Custom preference title.</p>

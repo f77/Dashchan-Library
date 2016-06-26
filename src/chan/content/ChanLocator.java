@@ -64,7 +64,7 @@ public class ChanLocator
 	/**
 	 * <p>Navigation data holder. Used in {@link #handleUriClickSpecial(Uri)} method.</p>
 	 */
-	public static class NavigationData
+	public static final class NavigationData
 	{
 		/**
 		 * <p>Target to list of threads.</p>

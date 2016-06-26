@@ -5,7 +5,7 @@ package chan.content;
  * {@link ChanPerformer#onReadPosts(chan.content.ChanPerformer.ReadPostsData)} when server returned data for
  * another thread or another data that might be considered as redirect to another thread.</p>
  */
-public class ThreadRedirectException extends Exception
+public final class ThreadRedirectException extends Exception
 {
 	private static final long serialVersionUID = 1L;
 	

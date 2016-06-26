@@ -104,7 +104,7 @@ public final class EmbeddedAttachment implements Attachment
 	 * </ul>
 	 * 
 	 * <p>You can pass any string as {@code data} argument that contains links from the list above including strings
-	 * with {@code <embed>} or {@code <iframe>} HTML tags. Application will try to find links by itself.</p>
+	 * with {@code embed} or {@code iframe} HTML tags. Application will try to find links by itself.</p>
 	 * 
 	 * @param data String with URI.
 	 * @return {@link EmbeddedAttachment} instance or {@code null} if embedded link is not supported.

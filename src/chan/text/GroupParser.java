@@ -10,7 +10,7 @@ package chan.text;
  * <p>In group mode parser will handle all text inside started tag. Then it call
  * {@link Callback#onGroupComplete(GroupParser, String)} with all text inside tag.</p>
  */
-public class GroupParser
+public final class GroupParser
 {
 	/**
 	 * <p>Callback for {@link GroupParser}.</p>

@@ -9,7 +9,7 @@ public class ParseException extends Exception
 	private static final long serialVersionUID = 1L;
 	
 	/**
-	 * <p>Default constructor for an {@link ParseException}.</p>
+	 * <p>Default constructor for a {@link ParseException}.</p>
 	 */
 	public ParseException()
 	{
@@ -17,7 +17,7 @@ public class ParseException extends Exception
 	}
 	
 	/**
-	 * <p>Constructor for an {@link ParseException} with specified cause.</p>
+	 * <p>Constructor for a {@link ParseException} with specified cause.</p>
 	 * 
 	 * @param throwable The cause of this exception.
 	 */

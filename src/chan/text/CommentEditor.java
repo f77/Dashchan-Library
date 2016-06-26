@@ -19,7 +19,7 @@ public class CommentEditor
 	 * @param open Open tag string.
 	 * @param close Close tag string.
 	 */
-	public void addTag(int what, String open, String close)
+	public final void addTag(int what, String open, String close)
 	{
 		throw new IllegalAccessError();
 	}
@@ -32,7 +32,7 @@ public class CommentEditor
 	 * @param close Close tag string.
 	 * @param flags Tag handling flags.
 	 */
-	public void addTag(int what, String open, String close, int flags)
+	public final void addTag(int what, String open, String close, int flags)
 	{
 		throw new IllegalAccessError();
 	}
@@ -43,7 +43,7 @@ public class CommentEditor
 	 * 
 	 * @param mark Unordered list mark.
 	 */
-	public void setUnorderedListMark(String mark)
+	public final void setUnorderedListMark(String mark)
 	{
 		throw new IllegalAccessError();
 	}
@@ -54,7 +54,7 @@ public class CommentEditor
 	 * 
 	 * @param mark Ordered list mark.
 	 */
-	public void setOrderedListMark(String mark)
+	public final void setOrderedListMark(String mark)
 	{
 		throw new IllegalAccessError();
 	}

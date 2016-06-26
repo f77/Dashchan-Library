@@ -5,7 +5,7 @@ import android.net.Uri;
 /**
  * <p>HTTP request builder and executor.</p>
  */
-public class HttpRequest
+public final class HttpRequest
 {
 	/**
 	 * <p>Client's preset with timeout settings, listeners, etc.</p>

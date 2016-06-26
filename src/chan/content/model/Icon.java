@@ -9,7 +9,7 @@ import android.net.Uri;
 /**
  * <p>Model containing post icon.</p>
  */
-public class Icon implements Serializable
+public final class Icon implements Serializable
 {
 	private static final long serialVersionUID = 1L;
 	

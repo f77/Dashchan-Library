@@ -3,7 +3,7 @@ package chan.http;
 /**
  * <p>Provides easy cookie building.</p>
  */
-public class CookieBuilder
+public final class CookieBuilder
 {
 	/**
 	 * <p>Append cookie with given {@code name} and {@code value}.</p>
