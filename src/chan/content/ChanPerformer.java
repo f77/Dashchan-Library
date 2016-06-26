@@ -640,6 +640,11 @@ public class ChanPerformer
 		public final String searchQuery;
 		
 		/**
+		 * <p>Page number argument.</p>
+		 */
+		public final int pageNumber;
+		
+		/**
 		 * <p>HTTP holder. You must use it when building new {@link HttpRequest}.</p>
 		 */
 		public final HttpHolder holder;
@@ -782,6 +787,11 @@ public class ChanPerformer
 		 * <p>Board name argument. May be null.</p>
 		 */
 		public final String boardName;
+		
+		/**
+		 * <p>Page number argument.</p>
+		 */
+		public final int pageNumber;
 		
 		/**
 		 * <p>Page type argument.</p>
