@@ -111,7 +111,7 @@ def bintrayApiKey = privateProperties.getProperty('bintray.apikey')
 if (bintrayUser != null && bintrayApiKey != null) {
 	ext {
 		publishedGroupId = 'com.github.mishiranu'
-		libraryVersion = '1.0'
+		libraryVersion = '1.1'
 
 		libraryDescription = 'Dashchan public API.\nUse "provided" instead of "compile" to add this library!'
 		gitUrl = 'https://github.com/Mishiranu/DashchanLibrary'
