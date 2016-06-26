@@ -164,17 +164,6 @@ public class ChanLocator
 	}
 	
 	/**
-	 * <p>Returns whether host is chan host. By default this method will return true for all hosts declared with
-	 * {@link #addChanHost(String)} or {@link #addSpecialChanHost(String)} methods.</p>
-	 * 
-	 * @return True if host is chan host.
-	 */
-	public boolean isChanHost(String host)
-	{
-		throw new IllegalAccessError();
-	}
-	
-	/**
 	 * <p>Returns whether URI's host is chan host or URI is relative (URI without scheme and host). This method will
 	 * return true for all URI's with hosts declared with {@link #addChanHost(String)} or
 	 * {@link #addSpecialChanHost(String)} methods and all relative URIs.</p>
@@ -454,19 +443,6 @@ public class ChanLocator
 	 * @return First found value in string by group index.
 	 */
 	public final String getGroupValue(String from, Pattern pattern, int groupIndex)
-	{
-		throw new IllegalAccessError();
-	}
-	
-	/**
-	 * <p>Finds given pattern in string and returns group by index.</p>
-	 * 
-	 * @param from String to inspect.
-	 * @param pattern Pattern to find.
-	 * @param groupIndex Index of group.
-	 * @return All found values in string by group index.
-	 */
-	public final String[] getGroupValues(String from, Pattern pattern, int groupIndex)
 	{
 		throw new IllegalAccessError();
 	}

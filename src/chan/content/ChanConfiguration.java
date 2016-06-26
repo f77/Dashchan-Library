@@ -19,7 +19,6 @@ import android.util.Pair;
  * <li>{@link #OPTION_READ_SINGLE_POST}</li>
  * <li>{@link #OPTION_READ_POSTS_COUNT}</li>
  * <li>{@link #OPTION_READ_USER_BOARDS}</li>
- * <li>{@link #OPTION_READ_POPULAR_THREADS}</li>
  * <li>{@link #OPTION_ALLOW_CAPTCHA_PASS}</li>
  * <li>{@link #OPTION_ALLOW_USER_AUTHORIZATION}</li>
  * </ul>
@@ -134,15 +133,6 @@ public class ChanConfiguration
 	 * {@link ChanPerformer#onReadUserBoards(chan.content.ChanPerformer.ReadUserBoardsData)}.</p>
 	 */
 	public static final String OPTION_READ_USER_BOARDS;
-	
-	/**
-	 * <p>Allows client to download popular threads.</p>
-	 * 
-	 * <p>If you enable this option, you <strong>must</strong> implement
-	 * {@link ChanPerformer#onReadThreadSummaries(chan.content.ChanPerformer.ReadThreadSummariesData)} of
-	 * {@link ChanPerformer.ReadThreadSummariesData#TYPE_POPULAR_THREADS} type.</p>
-	 */
-	public static final String OPTION_READ_POPULAR_THREADS;
 	
 	/**
 	 * <p>Allows user to enter authorization data and skip the captcha.

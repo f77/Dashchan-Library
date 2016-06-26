@@ -62,8 +62,6 @@ import chan.http.MultipartEntity;
  * <td>{@link #onReadPostsCount(ReadPostsCountData)}</td></tr>
  * <tr><td>{@link ChanConfiguration#OPTION_READ_USER_BOARDS}</td>
  * <td>{@link #onReadUserBoards(ReadUserBoardsData)}</td></tr>
- * <tr><td>{@link ChanConfiguration#OPTION_READ_POPULAR_THREADS}</td>
- * <td>{@link #onReadThreadSummaries(ReadThreadSummariesData)}</td></tr>
  * <tr><td>{@link ChanConfiguration#OPTION_ALLOW_CAPTCHA_PASS}</td>
  * <td>{@link #onCheckAuthorization(CheckAuthorizationData)}</td></tr>
  * <tr><td>{@link ChanConfiguration#OPTION_ALLOW_USER_AUTHORIZATION}</td>
@@ -196,7 +194,6 @@ public class ChanPerformer
 	 * 
 	 * <ul>
 	 * <li>{@link ChanConfiguration.Board#allowArchive} enabled</li>
-	 * <li>{@link ChanConfiguration#OPTION_READ_POPULAR_THREADS} enabled</li>
 	 * </ul>
 	 * 
 	 * @param data {@link ReadThreadSummariesData} instance with arguments.
@@ -777,11 +774,6 @@ public class ChanPerformer
 		 * <p>Archived threads page type.</p>
 		 */
 		public static final int TYPE_ARCHIVED_THREADS;
-		
-		/**
-		 * <p>Popular threads page type.</p>
-		 */
-		public static final int TYPE_POPULAR_THREADS;
 		
 		/**
 		 * <p>Board name argument. May be null.</p>

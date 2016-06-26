@@ -5,7 +5,7 @@ import chan.content.ChanLocator;
 
 /**
  * <p>Model containing thread summary: board name, thread number and short description.
- * This model is used on popular threads page, for example.</p>
+ * This model is used in archived threads page, for example.</p>
  */
 public final class ThreadSummary
 {
