@@ -1550,6 +1550,36 @@ public class ChanPerformer
 	}
 	
 	/**
+	 * <p>Suspends this thread and shows items dialog for user. User can choose only one item.</p>
+	 * 
+	 * @param selected Default selected index, may be -1.
+	 * @param items Array of items.
+	 * @param descriptionText Description text (e.g. "Select all burgers").
+	 * @param descriptionImage Description image (e.g. example image).
+	 * @return Index of chosen item, -1 if item wasn't chosen or {@code null} if user has canceled an operation.
+	 */
+	protected final Integer requireUserItemSingleChoice(int selected, CharSequence[] items, String descriptionText,
+			Bitmap descriptionImage)
+	{
+		throw new IllegalAccessError();
+	}
+	
+	/**
+	 * <p>Suspends this thread and shows items dialog for user. User can choose multiple items.</p>
+	 * 
+	 * @param selected Array of default selected indexes, {@code true} for selected, may be null.
+	 * @param items Array of items.
+	 * @param descriptionText Description text (e.g. "Select all burgers").
+	 * @param descriptionImage Description image (e.g. example image).
+	 * @return Array of selected indexes or {@code null} if user has canceled an operation.
+	 */
+	protected final boolean[] requireUserItemMultipleChoice(boolean[] selected, CharSequence[] items,
+			String descriptionText, Bitmap descriptionImage)
+	{
+		throw new IllegalAccessError();
+	}
+	
+	/**
 	 * <p>Suspends this thread and shows images dialog for user. User can choose only one image.</p>
 	 * 
 	 * @param selected Default selected index, may be -1.
