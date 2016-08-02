@@ -2,6 +2,8 @@ package chan.http;
 
 import android.net.Uri;
 
+import java.io.OutputStream;
+
 /**
  * <p>HTTP request builder and executor.</p>
  */
@@ -240,6 +242,18 @@ public final class HttpRequest
 	 * @return This builder.
 	 */
 	public HttpRequest setDelay(int delay)
+	{
+		throw new IllegalAccessError();
+	}
+	
+	/**
+	 * <p>Sets the output stream as the destination of response. In this case {@link #read()} method
+	 * will return {@code null} value.</p>
+	 *
+	 * @param outputStream Output stream.
+	 * @return This builder.
+	 */
+	public HttpRequest setOutputStream(OutputStream outputStream)
 	{
 		throw new IllegalAccessError();
 	}
