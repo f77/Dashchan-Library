@@ -8,13 +8,8 @@ import android.net.Uri;
 /**
  * <p>HTTP connection holder.</p>
  */
-public class HttpHolder
+public final class HttpHolder
 {
-	HttpHolder()
-	{
-		
-	}
-	
 	/**
 	 * <p>Disconnect from server.</p>
 	 */
