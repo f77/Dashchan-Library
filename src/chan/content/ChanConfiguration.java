@@ -162,8 +162,6 @@ public class ChanConfiguration
 	 */
 	public static final String OPTION_ALLOW_USER_AUTHORIZATION;
 	
-	public static final String CAPTCHA_TYPE_YANDEX_NUMERIC;
-	public static final String CAPTCHA_TYPE_YANDEX_TEXTUAL;
 	public static final String CAPTCHA_TYPE_RECAPTCHA_1;
 	public static final String CAPTCHA_TYPE_RECAPTCHA_2;
 	public static final String CAPTCHA_TYPE_MAILRU;
@@ -834,8 +832,8 @@ public class ChanConfiguration
 	 * Client will obtain configuration of custom captchas with {@link #obtainCustomCaptchaConfiguration(String)}.</p>
 	 * 
 	 * <p>There is a list of default captcha types: {@link #CAPTCHA_TYPE_RECAPTCHA_1},
-	 * {@link #CAPTCHA_TYPE_RECAPTCHA_2}, {@link #CAPTCHA_TYPE_YANDEX_TEXTUAL}, {@link #CAPTCHA_TYPE_YANDEX_NUMERIC} and
-	 * {@link #CAPTCHA_TYPE_MAILRU}. Client is able to handle these captchas by itself.</p>
+	 * {@link #CAPTCHA_TYPE_RECAPTCHA_2} and {@link #CAPTCHA_TYPE_MAILRU}. Client is able to handle these
+	 * captchas by itself.</p>
 	 * 
 	 * @param captchaType Captcha type string.
 	 */
