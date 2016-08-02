@@ -43,7 +43,7 @@ public class ChanLocator
 	/**
 	 * <p>HTTPS mode, used in {@link #setHttpsMode(HttpsMode)} method.</p>
 	 */
-	public static enum HttpsMode
+	public enum HttpsMode
 	{
 		/**
 		 * <p>HTTPS is not used. All URI's will be built with HTTP scheme by default.</p>
@@ -59,7 +59,7 @@ public class ChanLocator
 		 * <p>User can change HTTPS mode in preferences.</p>
 		 */
 		CONFIGURABLE
-	};
+	}
 	
 	/**
 	 * <p>Navigation data holder. Used in {@link #handleUriClickSpecial(Uri)} method.</p>
@@ -288,7 +288,7 @@ public class ChanLocator
 	 */
 	public String createAttachmentForcedName(Uri fileUri)
 	{
-		return null;
+		throw new IllegalAccessError();
 	}
 	
 	/**

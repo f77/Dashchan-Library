@@ -15,7 +15,7 @@ public final class GroupParser
 	/**
 	 * <p>Callback for {@link GroupParser}.</p>
 	 */
-	public static interface Callback
+	public interface Callback
 	{
 		/**
 		 * <p>This method will be called in linear mode every time parser reaches new tag.</p>
@@ -64,7 +64,7 @@ public final class GroupParser
 	}
 	
 	/**
-	 * <p>Start a new parsing process.</p>
+	 * <p>Starts a new parsing process.</p>
 	 * 
 	 * @param source String to parse.
 	 * @param callback Callback to handle parsed data.

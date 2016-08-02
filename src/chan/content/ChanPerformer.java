@@ -1054,7 +1054,7 @@ public class ChanPerformer
 	/**
 	 * <p>Captcha states for {@link #onReadCaptcha(ReadCaptchaData)}.</p>
 	 */
-	public static enum CaptchaState
+	public enum CaptchaState
 	{
 		/**
 		 * <p>User must enter captcha.</p>
@@ -1075,7 +1075,7 @@ public class ChanPerformer
 		 * <p>User must click to load captcha.</p>
 		 */
 		NEED_LOAD
-	};
+	}
 	
 	/**
 	 * <p>Captcha result for {@link #onReadCaptcha(ReadCaptchaData)}.</p>
@@ -1586,7 +1586,7 @@ public class ChanPerformer
 	 * @param images Array of images.
 	 * @param descriptionText Description text (e.g. "Select all burgers").
 	 * @param descriptionImage Description image (e.g. example image).
-	 * @return Index of chosen image, -1 if image wasn't chosen or null if user has canceled an operation.
+	 * @return Index of chosen image, -1 if image wasn't chosen or {@code null} if user has canceled an operation.
 	 */
 	protected final Integer requireUserImageSingleChoice(int selected, Bitmap[] images, String descriptionText,
 			Bitmap descriptionImage)
@@ -1601,7 +1601,7 @@ public class ChanPerformer
 	 * @param images Array of images.
 	 * @param descriptionText Description text (e.g. "Select all burgers").
 	 * @param descriptionImage Description image (e.g. example image).
-	 * @return Array of selected indexes or null if user has canceled an operation.
+	 * @return Array of selected indexes or {@code null} if user has canceled an operation.
 	 */
 	protected final boolean[] requireUserImageMultipleChoice(boolean[] selected, Bitmap[] images,
 			String descriptionText, Bitmap descriptionImage)

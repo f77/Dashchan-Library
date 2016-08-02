@@ -188,7 +188,7 @@ public class ChanConfiguration
 	 * 
 	 * @see ChanConfiguration#setBumpLimitMode(BumpLimitMode)
 	 */
-	public static enum BumpLimitMode
+	public enum BumpLimitMode
 	{
 		/**
 		 * <p>Default mode. If bump limit if {@code 500}, posts from {@code 501} won't bump a thread.</p>
@@ -267,7 +267,7 @@ public class ChanConfiguration
 		/**
 		 * <p>Captcha input mode.</p>
 		 */
-		public static enum Input
+		public enum Input
 		{
 			/**
 			 * <p>Captcha may contain any letters and numbers.</p>
@@ -283,12 +283,12 @@ public class ChanConfiguration
 			 * <p>Captcha may contain only numbers.</p>
 			 */
 			NUMERIC
-		};
+		}
 		
 		/**
 		 * <p>Captcha validity mode.</p>
 		 */
-		public static enum Validity
+		public enum Validity
 		{
 			/**
 			 * <p>Short lifetime captcha. Client will request new captcha every time user opens posting activity.</p>
@@ -318,7 +318,7 @@ public class ChanConfiguration
 			 * <p>Long lifetime captcha. Client will use old captcha when user opens posting activity.</p>
 			 */
 			LONG_LIFETIME
-		};
+		}
 		
 		/**
 		 * <p>Captcha title. This title may be shown in application preferences.</p>

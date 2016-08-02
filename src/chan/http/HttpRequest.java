@@ -10,9 +10,9 @@ import java.io.OutputStream;
 public final class HttpRequest
 {
 	/**
-	 * <p>Client's preset with timeout settings, listeners, etc.</p>
+	 * <p>Client's preset with timeout settings, listeners, etc. You should never implement this interface.</p>
 	 */
-	public static interface Preset
+	public interface Preset
 	{
 		
 	}
@@ -22,12 +22,12 @@ public final class HttpRequest
 	 * 
 	 * @see HttpRequest#setRedirectHandler(RedirectHandler)
 	 */
-	public static interface RedirectHandler
+	public interface RedirectHandler
 	{
 		/**
 		 * <p>Redirection handler result.</p>
 		 */
-		public static enum Action
+		public enum Action
 		{
 			/**
 			 * <p>Cancel redirect handling.</p>
@@ -51,7 +51,7 @@ public final class HttpRequest
 			{
 				throw new IllegalAccessError();
 			}
-		};
+		}
 		
 		/**
 		 * <p>HTTP client will call this method every time it reaches redirect response code.
@@ -91,10 +91,10 @@ public final class HttpRequest
 	
 	/**
 	 * <p>Constructor for {@link HttpRequest}.</p>
-	 * 
+	 *
 	 * @param uri URI for request.
-	 * @param preset Preset with configuration.
 	 * @param holder {@link HttpHolder} instance. May be null.
+	 * @param preset Preset with configuration.
 	 */
 	public HttpRequest(Uri uri, HttpHolder holder, Preset preset)
 	{
@@ -237,7 +237,7 @@ public final class HttpRequest
 	/**
 	 * <p>Sets the delay before opening previous and this connection.
 	 * May be helpful in adjusting connection frequency.</p>
-	 * 
+	 *
 	 * @param delay Delay in milliseconds.
 	 * @return This builder.
 	 */

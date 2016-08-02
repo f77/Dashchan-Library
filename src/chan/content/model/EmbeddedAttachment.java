@@ -12,7 +12,7 @@ public final class EmbeddedAttachment implements Attachment
 	/**
 	 * Embedded file content type.
 	 */
-	public static enum ContentType
+	public enum ContentType
 	{
 		/**
 		 * Audio file.
