@@ -100,6 +100,29 @@ public final class HttpRequest
 	}
 	
 	/**
+	 * <p>Constructor for {@link HttpRequest} without preset.</p>
+	 *
+	 * @param uri URI for request.
+	 * @param holder {@link HttpHolder} instance. May be null.
+	 */
+	public HttpRequest(Uri uri, HttpHolder holder)
+	{
+		throw new IllegalAccessError();
+	}
+	
+	/**
+	 * <p>Constructor for {@link HttpRequest}. In most cases {@link Preset} can provide it's own {@link HttpException},
+	 * so you can use this constructor.</p>
+	 *
+	 * @param uri URI for request.
+	 * @param preset Preset with configuration.
+	 */
+	public HttpRequest(Uri uri, Preset preset)
+	{
+		throw new IllegalAccessError();
+	}
+	
+	/**
 	 * <p>Sets HTTP request method to GET.</p>
 	 * 
 	 * @return This builder.
