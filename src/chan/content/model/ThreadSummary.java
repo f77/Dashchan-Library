@@ -46,28 +46,6 @@ public final class ThreadSummary
 	}
 	
 	/**
-	 * <p>Returns attachment thumbnail URI.</p>
-	 * 
-	 * @param locator {@link ChanLocator} instance to decode URI in model.
-	 */
-	public Uri getThumbnailUri(ChanLocator locator)
-	{
-		throw new IllegalAccessError();
-	}
-	
-	/**
-	 * <p>Encodes and stores attachment thumbnail URI in this model.</p>
-	 * 
-	 * @param locator {@link ChanLocator} instance to encode URI in model.
-	 * @param thumbnailUri Attachment thumbnail URI.
-	 * @return This model.
-	 */
-	public ThreadSummary setThumbnailUri(ChanLocator locator, Uri thumbnailUri)
-	{
-		throw new IllegalAccessError();
-	}
-	
-	/**
 	 * <p>Returns posts count.</p>
 	 */
 	public int getPostsCount()
@@ -79,22 +57,6 @@ public final class ThreadSummary
 	 * <p>Stores posts count in this model.</p>
 	 */
 	public ThreadSummary setPostsCount(int postsCount)
-	{
-		throw new IllegalAccessError();
-	}
-	
-	/**
-	 * <p>Returns thread views count.</p>
-	 */
-	public int getViewsCount()
-	{
-		throw new IllegalAccessError();
-	}
-	
-	/**
-	 * <p>Stores thread views count in this model.</p>
-	 */
-	public ThreadSummary setViewsCount(int viewsCount)
 	{
 		throw new IllegalAccessError();
 	}
