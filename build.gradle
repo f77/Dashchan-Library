@@ -20,8 +20,8 @@ apply plugin: 'com.android.library'
 
 def Properties privateProperties = new Properties()
 
-if (new File("private.properties").exists()) {
-	privateProperties.load(new FileInputStream(file("private.properties")))
+if (new File('private.properties').exists()) {
+	privateProperties.load(new FileInputStream(file('private.properties')))
 }
 
 android {
@@ -58,13 +58,13 @@ android {
 
 android.libraryVariants.all { variant ->
 	def name = variant.buildType.name
-	def task = project.tasks.create 'jarRelease', Jar
+	def task = project.tasks.create 'jar', Jar
 	task.dependsOn variant.javaCompile
 	task.from variant.javaCompile.destinationDir
 	task.exclude '**/BuildConfig.class'
 	task.exclude '**/R.class'
 	task.exclude '**/R$*.class'
-	artifacts.add('archives', task);
+	artifacts.add('archives', task)
 }
 
 task javadocDoclavaCleanup(type: Delete) {
@@ -109,21 +109,19 @@ def bintrayUser = privateProperties.getProperty('bintray.user')
 def bintrayApiKey = privateProperties.getProperty('bintray.apikey')
 
 if (bintrayUser != null && bintrayApiKey != null) {
-	ext {
-		publishedGroupId = 'com.github.mishiranu'
-		libraryVersion = '1.1'
+	def publishedGroupId = 'com.github.mishiranu'
+	def libraryVersion = '1.2'
 
-		libraryDescription = 'Dashchan public API.\nUse "provided" instead of "compile" to add this library!'
-		gitUrl = 'https://github.com/Mishiranu/DashchanLibrary'
+	def libraryDescription = 'Dashchan public API.\nUse "provided" instead of "compile" to add this library!'
+	def gitUrl = 'https://github.com/Mishiranu/DashchanLibrary'
 
-		developerId = 'mishiranu'
-		developerName = 'Fukurou Mishiranu'
-		developerEmail = 'fukurou.mishiranu@gmail.com'
+	def developerId = 'mishiranu'
+	def developerName = 'Fukurou Mishiranu'
+	def developerEmail = 'fukurou.mishiranu@gmail.com'
 
-		licenseName = 'The Apache Software License, Version 2.0'
-		licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-		allLicenses = ['Apache-2.0']
-	}
+	def licenseName = 'The Apache Software License, Version 2.0'
+	def licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+	def allLicenses = ['Apache-2.0']
 
 	apply plugin: 'com.jfrog.bintray'
 
@@ -146,42 +144,50 @@ if (bintrayUser != null && bintrayApiKey != null) {
 		}
 	}
 
+	task retainJarArtifacts(type: RetainJarArtifacts)
+
+	bintrayUpload.dependsOn retainJarArtifacts
+
 	apply plugin: 'com.github.dcendents.android-maven'
 
 	group = publishedGroupId
 
-	install {
-		repositories.mavenInstaller {
-			pom {
-				project {
-					packaging 'jar'
-					groupId publishedGroupId
-					artifactId rootProject.name
+	install.repositories.mavenInstaller.pom.project {
+		packaging 'jar'
+		groupId publishedGroupId
+		artifactId rootProject.name
 
-					name rootProject.name
-					description libraryDescription
+		name rootProject.name
+		description libraryDescription
 
-					licenses {
-						license {
-							name licenseName
-							url licenseUrl
-						}
-					}
-
-					developers {
-						developer {
-							id developerId
-							name developerName
-							email developerEmail
-						}
-					}
-
-					scm {
-						connection gitUrl
-						developerConnection gitUrl
-					}
-				}
+		licenses {
+			license {
+				name licenseName
+				url licenseUrl
 			}
+		}
+
+		developers {
+			developer {
+				id developerId
+				name developerName
+				email developerEmail
+			}
+		}
+
+		scm {
+			connection gitUrl
+			developerConnection gitUrl
+		}
+	}
+}
+
+class RetainJarArtifacts extends DefaultTask {
+	@TaskAction
+	def action() {
+		def artifacts = project.configurations.archives.artifacts;
+		artifacts.retainAll artifacts.findAll {
+			it.type == 'jar'
 		}
 	}
 }
