@@ -13,7 +13,6 @@ import chan.content.model.BoardCategory;
 import chan.content.model.Post;
 import chan.content.model.Posts;
 import chan.content.model.ThreadSummary;
-import chan.content.model.Threads;
 import chan.http.HttpException;
 import chan.http.HttpHolder;
 import chan.http.HttpRequest;
@@ -426,17 +425,6 @@ public class ChanPerformer
 		/**
 		 * <p>Constructor for {@link ReadThreadsResult}.</p>
 		 * 
-		 * @param threads {@link Threads} model instance.
-		 */
-		public ReadThreadsResult(Threads threads)
-		{
-			throw new IllegalAccessError();
-		}
-		
-		/**
-		 * <p>Constructor for {@link ReadThreadsResult}. Will create {@link Threads} instance from your
-		 * array of {@link Posts}.</p>
-		 * 
 		 * @param threads Array of {@link Posts}.
 		 */
 		public ReadThreadsResult(Posts... threads)
@@ -445,8 +433,7 @@ public class ChanPerformer
 		}
 		
 		/**
-		 * <p>Constructor for {@link ReadThreadsResult}. Will create {@link Threads} instance from your
-		 * collection of {@link Posts}.</p>
+		 * <p>Constructor for {@link ReadThreadsResult}.</p>
 		 * 
 		 * @param threads Collection of {@link Posts}.
 		 */
@@ -456,7 +443,18 @@ public class ChanPerformer
 		}
 		
 		/**
-		 * <p>Stores {@code validator} in this cache. By default client will call {@link HttpHolder#getValidator()}
+		 * <p>Stores board speed value (number of posts per hour) in this result.</p>
+		 * 
+		 * @param boardSpeed Number of posts per hour.
+		 * @return This object.
+		 */
+		public ReadThreadsResult setBoardSpeed(int boardSpeed)
+		{
+			throw new IllegalAccessError();
+		}
+		
+		/**
+		 * <p>Stores {@code validator} in this result. By default client will call {@link HttpHolder#getValidator()}
 		 * after the last request. This can be useful if you want to store validator from intermediate request.</p>
 		 * 
 		 * @param validator {@link HttpValidator} instance.
