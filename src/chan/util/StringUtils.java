@@ -1,5 +1,8 @@
 package chan.util;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * <p>Provides some utilities to work with strings.</p>
  */
@@ -85,6 +88,56 @@ public class StringUtils
 	 * @return True if strings are equals.
 	 */
 	public static int nearestIndexOf(String string, int start, char... what)
+	{
+		throw new IllegalAccessError();
+	}
+	
+	/**
+	 * <p>Replacement callback for {@code replaceAll} methods.</p>
+	 */
+	public interface ReplacementCallback
+	{
+		/**
+		 * <p>Provides a replacement for found result.</p>
+		 * 
+		 * <p>Use {@code group()} and {@code group(int)} methods of given {@code matcher} to extract necessary values.
+		 * Don't modify this matcher's state!</p>
+		 * 
+		 * <p>You can't use group references like {@code $1} in replacement.</p>
+		 * 
+		 * @param matcher Match result holder.
+		 * @return Replacement string.
+		 */
+		public String getReplacement(Matcher matcher);
+	}
+	
+	/**
+	 * <p>Replaces all matches for {@code regularExpression} within given {@code string} with the replacement
+	 * provided by {@code replacementCallback}.</p>
+	 * 
+	 * <p>If the same regular expression is to be used for multiple operations, it may be more efficient to
+	 * use {@link #replaceAll(String, Pattern, ReplacementCallback)} method with compiled {@code Pattern}.</p>
+	 * 
+	 * @param string Source string.
+	 * @param regularExpression Regular expression string.
+	 * @param replacementCallback {@link ReplacementCallback} instance.
+	 * @return Resulting string.
+	 */
+	public static String replaceAll(String string, String regularExpression, ReplacementCallback replacementCallback)
+	{
+		throw new IllegalAccessError();
+	}
+	
+	/**
+	 * <p>Replaces all matches for compiled {@code pattern} within given {@code string} with the replacement
+	 * provided by {@code replacementCallback}.</p>
+	 *
+	 * @param string Source string.
+	 * @param pattern Compiled regular expression.
+	 * @param replacementCallback {@link ReplacementCallback} instance.
+	 * @return Resulting string.
+	 */
+	public static String replaceAll(String string, Pattern pattern, ReplacementCallback replacementCallback)
 	{
 		throw new IllegalAccessError();
 	}
