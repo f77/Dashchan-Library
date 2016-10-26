@@ -12,7 +12,7 @@ public final class Board implements Comparable<Board>
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns title of this board. For example {@code Random}.</p>
 	 */
@@ -20,7 +20,7 @@ public final class Board implements Comparable<Board>
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns description of this board.</p>
 	 */
@@ -28,10 +28,10 @@ public final class Board implements Comparable<Board>
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Constructor for {@link Board}.</p>
-	 * 
+	 *
 	 * @param boardName Board name.
 	 * @param title Board title.
 	 */
@@ -39,10 +39,10 @@ public final class Board implements Comparable<Board>
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Constructor for {@link Board}.</p>
-	 * 
+	 *
 	 * @param boardName Board name.
 	 * @param title Board title.
 	 * @param description Board description.
@@ -51,7 +51,7 @@ public final class Board implements Comparable<Board>
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	@Override
 	public int compareTo(Board another)
 	{

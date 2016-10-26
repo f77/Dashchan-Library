@@ -12,10 +12,10 @@ import android.net.Uri;
 public final class Icon implements Serializable
 {
 	private static final long serialVersionUID = 1L;
-	
+
 	/**
 	 * <p>Constructor for {@link Icon}.</p>
-	 * 
+	 *
 	 * @param locator {@link ChanLocator} instance to encode URI in model.
 	 * @param uri Icon URI.
 	 * @param title Icon title.
@@ -24,17 +24,17 @@ public final class Icon implements Serializable
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns icon URI.</p>
-	 * 
+	 *
 	 * @param locator {@link ChanLocator} instance to decode URI in model.
 	 */
 	public Uri getUri(ChanLocator locator)
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns icon title.</p>
 	 */

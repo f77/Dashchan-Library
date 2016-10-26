@@ -6,7 +6,7 @@ package chan.content;
 public final class InvalidResponseException extends Exception
 {
 	private static final long serialVersionUID = 1L;
-	
+
 	/**
 	 * <p>Default constructor for an {@link InvalidResponseException}.</p>
 	 */
@@ -14,10 +14,10 @@ public final class InvalidResponseException extends Exception
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Constructor for an {@link InvalidResponseException} with specified cause.</p>
-	 * 
+	 *
 	 * @param throwable The cause of this exception.
 	 */
 	public InvalidResponseException(Throwable throwable)

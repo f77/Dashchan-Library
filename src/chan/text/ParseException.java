@@ -7,7 +7,7 @@ package chan.text;
 public class ParseException extends Exception
 {
 	private static final long serialVersionUID = 1L;
-	
+
 	/**
 	 * <p>Default constructor for a {@link ParseException}.</p>
 	 */
@@ -15,10 +15,10 @@ public class ParseException extends Exception
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Constructor for a {@link ParseException} with specified cause.</p>
-	 * 
+	 *
 	 * @param throwable The cause of this exception.
 	 */
 	public ParseException(Throwable throwable)

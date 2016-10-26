@@ -17,7 +17,7 @@ public final class RedirectException extends Exception
 
 	/**
 	 * <p>Creates a new instance of {@link RedirectException} that causes client to follow the URI.</p>
-	 * 
+	 *
 	 * @param uri Redirected URI.
 	 */
 	public static RedirectException toUri(Uri uri)
@@ -27,7 +27,7 @@ public final class RedirectException extends Exception
 
 	/**
 	 * <p>Creates a new instance of {@link RedirectException} that causes client to follow the board.</p>
-	 * 
+	 *
 	 * @param boardName Redirected board name.
 	 */
 	public static RedirectException toBoard(String boardName)
@@ -37,7 +37,7 @@ public final class RedirectException extends Exception
 
 	/**
 	 * <p>Creates a new instance of {@link RedirectException} that causes client to follow the thread.</p>
-	 * 
+	 *
 	 * @param boardName Redirected board name.
 	 * @param threadNumber Redirected thread number.
 	 * @param postNumber Redirected post number.

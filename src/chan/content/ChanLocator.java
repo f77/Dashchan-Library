@@ -6,15 +6,15 @@ import android.net.Uri;
 
 /**
  * <p>Provides URI handling and building.</p>
- * 
+ *
  * <p>In the first you must declare chan hosts. You can do this using {@link ChanLocator#addChanHost(String)} method.
  * If you add more than one host, user can choice one of them in preferences.</p>
- * 
+ *
  * <p>If you want to add special host that user might not choice, use {@link ChanLocator#addSpecialChanHost(String)}.
  * This method is used for special hosts like JSON API or host for static data, for example.</p>
- * 
+ *
  * <p>There is the list of methods you <strong>must</strong> override:</p>
- * 
+ *
  * <ul>
  * <li>{@link ChanLocator#isBoardUri(Uri)}</li>
  * <li>{@link ChanLocator#isThreadUri(Uri)}</li>
@@ -26,9 +26,9 @@ import android.net.Uri;
  * <li>{@link ChanLocator#createThreadUri(String, String)}</li>
  * <li>{@link ChanLocator#createPostUri(String, String, String)}</li>
  * </ul>
- * 
+ *
  * <p>URI building with preferred configuration provided by the following methods:</p>
- * 
+ *
  * <ul>
  * <li>{@link ChanLocator#buildPath(String...)}</li>
  * <li>{@link ChanLocator#buildPathWithHost(String, String...)}</li>
@@ -49,18 +49,18 @@ public class ChanLocator
 		 * <p>HTTPS is not used. All URI's will be built with HTTP scheme by default.</p>
 		 */
 		NO_HTTPS,
-		
+
 		/**
 		 * <p>HTTPS is enabled. All URI's will be built with HTTPS scheme by default.</p>
 		 */
 		HTTPS_ONLY,
-		
+
 		/**
 		 * <p>User can change HTTPS mode in preferences.</p>
 		 */
 		CONFIGURABLE
 	}
-	
+
 	/**
 	 * <p>Navigation data holder. Used in {@link #handleUriClickSpecial(Uri)} method.</p>
 	 */
@@ -70,23 +70,23 @@ public class ChanLocator
 		 * <p>Target to list of threads.</p>
 		 */
 		public static final int TARGET_THREADS;
-		
+
 		/**
 		 * <p>Target to list of posts.</p>
 		 */
 		public static final int TARGET_POSTS;
-		
+
 		/**
 		 * <p>Target to list of search results. You <strong>must</strong> enable
 		 * {@link ChanConfiguration.Board#allowSearch} option for specified board to use this target.</p>
 		 */
 		public static final int TARGET_SEARCH;
-		
+
 		static
 		{
 			if (true) throw new IllegalAccessError();
 		}
-		
+
 		/**
 		 * @param target Can take the values {@link #TARGET_THREADS}, {@link #TARGET_POSTS} or {@link #TARGET_SEARCH}.
 		 * @param boardName Board name.
@@ -99,10 +99,10 @@ public class ChanLocator
 			throw new IllegalAccessError();
 		}
 	}
-	
+
 	/**
 	 * <p>Return linked {@link ChanLocator} instance.
-	 * 
+	 *
 	 * @param object Linked object: {@link ChanConfiguration}, {@link ChanPerformer},
 	 * {@link ChanLocator} or {@link ChanMarkup}.
 	 * @return {@link ChanLocator} instance.
@@ -111,12 +111,12 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Declares host as chan host. This host might be default host in {@link #buildPath(String...)} and
 	 * {@link #buildQuery(String, String...)} methods. If you declare multiple hosts, user can choice one of them
 	 * in preferences. The first declared host will be chosen by default.</p>
-	 * 
+	 *
 	 * <p>For example, a chan has 3 addresses: {@code addr1.com}, {@code addr2.com}, {@code addr3.com}. If user choose
 	 * {@code addr2.com} in preferences, URIs with the rest addresses will be converted to {@code addr2.com}.</p>
 	 */
@@ -124,7 +124,7 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Declares host as chan host. Unlike {@link #addChanHost(String)} user can't choice this host in preferences,
 	 * but it still can be converted. For example, it can be useful for old domains that don't work now.</p>
@@ -133,7 +133,7 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Declares host as chan host. Unlike {@link #addChanHost(String)} user can't choice this host in preferences
 	 * and and can't be converted. For example, it can be useful for special hosts like JSON API or static data.</p>
@@ -142,42 +142,42 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Changes default HTTPS mode. By default it equals {@link HttpsMode#NO_HTTPS}.</p>
-	 * 
+	 *
 	 * @see HttpsMode
 	 */
 	public final void setHttpsMode(HttpsMode httpsMode)
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns whether HTTPS enabled in preferences.</p>
-	 * 
+	 *
 	 * @return True if HTTPS enabled.
 	 */
 	public final boolean isUseHttps()
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns whether URI's host is chan host or URI is relative (URI without scheme and host). This method will
 	 * return true for all URI's with hosts declared with {@link #addChanHost(String)} or
 	 * {@link #addSpecialChanHost(String)} methods and all relative URIs.</p>
-	 * 
+	 *
 	 * @return True if host is chan host or relative.
 	 */
 	public final boolean isChanHostOrRelative(Uri uri)
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns whether URI is board URI. You <strong>must</strong> override this method.</p>
-	 * 
+	 *
 	 * @param uri URI to inspect.
 	 * @return True if URI is board URI.
 	 */
@@ -185,10 +185,10 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns whether URI is thread URI. You <strong>must</strong> override this method.</p>
-	 * 
+	 *
 	 * @param uri URI to inspect.
 	 * @return True if URI is thread URI.
 	 */
@@ -196,10 +196,10 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns whether URI is attachment URI. You <strong>must</strong> override this method.</p>
-	 * 
+	 *
 	 * @param uri URI to inspect.
 	 * @return True if URI is attachment URI.
 	 */
@@ -207,10 +207,10 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns board name from given URI. You <strong>must</strong> override this method.</p>
-	 * 
+	 *
 	 * @param uri URI to inspect.
 	 * @return Board name.
 	 */
@@ -218,10 +218,10 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns thread number from given URI. You <strong>must</strong> override this method.</p>
-	 * 
+	 *
 	 * @param uri URI to inspect.
 	 * @return Thread number.
 	 */
@@ -229,10 +229,10 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns post number from given URI. You <strong>must</strong> override this method.</p>
-	 * 
+	 *
 	 * @param uri URI to inspect.
 	 * @return Posts number.
 	 */
@@ -240,10 +240,10 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Calls when client intend to create board URI. You <strong>must</strong> override this method.</p>
-	 * 
+	 *
 	 * @param boardName Board name.
 	 * @param pageNumber Number of page, might be {@link ChanPerformer.ReadThreadsData#PAGE_NUMBER_CATALOG}.
 	 * @return Board URI.
@@ -252,10 +252,10 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Calls when client intend to create thread URI. You <strong>must</strong> override this method.</p>
-	 * 
+	 *
 	 * @param boardName Board name.
 	 * @param threadNumber Thread number.
 	 * @return Thread URI.
@@ -264,11 +264,11 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Calls when client intend to create thread URI with anchor to post.
 	 * You <strong>must</strong> override this method.</p>
-	 * 
+	 *
 	 * @param boardName Board name.
 	 * @param threadNumber Thread number.
 	 * @param postNumber Post number.
@@ -278,11 +278,11 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Calls when client intend to obtain a file name from URI. By default client obtains a name from last
 	 * path segment of URI. You can override this behavior using this method.</p>
-	 * 
+	 *
 	 * @param fileUri file URI
 	 * @return File name.
 	 */
@@ -290,55 +290,55 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Calls when client intend to handle link click. You can return {@link NavigationData} instance
 	 * with necessary navigation information.</p>
-	 * 
-	 * @param uri URI to inspect. 
+	 *
+	 * @param uri URI to inspect.
 	 * @return {@link NavigationData} instance or null.
 	 */
 	public NavigationData handleUriClickSpecial(Uri uri)
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns whether path has image extension.</p>
-	 * 
-	 * @param path Path to inspect. 
+	 *
+	 * @param path Path to inspect.
 	 * @return True if extension is image's.
 	 */
 	public final boolean isImageExtension(String path)
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns whether path has audio extension.</p>
-	 * 
-	 * @param path Path to inspect. 
+	 *
+	 * @param path Path to inspect.
 	 * @return True if extension is audio's.
 	 */
 	public final boolean isAudioExtension(String path)
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns whether path has video extension.</p>
-	 * 
-	 * @param path Path to inspect. 
+	 *
+	 * @param path Path to inspect.
 	 * @return True if extension is video's.
 	 */
 	public final boolean isVideoExtension(String path)
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns extension of file with given path.</p>
-	 * 
+	 *
 	 * @param path Path to inspect.
 	 * @return File extension in lower case.
 	 */
@@ -346,10 +346,10 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Builds URI with given path segments and preferred host and scheme.</p>
-	 * 
+	 *
 	 * @param segments Path segments.
 	 * @return URI.
 	 */
@@ -357,10 +357,10 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Builds URI with given host and path segments and preferred scheme.</p>
-	 * 
+	 *
 	 * @param host URI host.
 	 * @param segments Path segments.
 	 * @return URI.
@@ -369,10 +369,10 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Builds URI with given scheme, host and path segments.</p>
-	 * 
+	 *
 	 * @param useHttps Defines whether use HTTPS or not.
 	 * @param host URI host.
 	 * @param segments Path segments.
@@ -382,10 +382,10 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Builds URI with given path and parameters and preferred host and scheme.</p>
-	 * 
+	 *
 	 * @param path URI path.
 	 * @param alternation Alternation of param's names and values (name, value, name, value...).
 	 * @return URI.
@@ -394,10 +394,10 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Builds URI with given host, path and parameters and preferred scheme.</p>
-	 * 
+	 *
 	 * @param host URI host.
 	 * @param path URI path.
 	 * @param alternation Alternation of param's names and values (name, value, name, value...).
@@ -407,10 +407,10 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Builds URI with given scheme, host, path and parameters.</p>
-	 * 
+	 *
 	 * @param useHttps Defines whether use HTTPS or not.
 	 * @param host URI host.
 	 * @param path URI path.
@@ -421,10 +421,10 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns whether URI's path matches to given pattern.</p>
-	 * 
+	 *
 	 * @param uri URI to inspect.
 	 * @param pattern Pattern to match.
 	 * @return True if URI's path matches to pattern.
@@ -433,10 +433,10 @@ public class ChanLocator
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Finds given pattern in string and returns group by index.</p>
-	 * 
+	 *
 	 * @param from String to inspect.
 	 * @param pattern Pattern to find.
 	 * @param groupIndex Index of group.

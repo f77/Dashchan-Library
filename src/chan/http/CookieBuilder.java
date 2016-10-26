@@ -7,7 +7,7 @@ public final class CookieBuilder
 {
 	/**
 	 * <p>Append cookie with given {@code name} and {@code value}.</p>
-	 * 
+	 *
 	 * @param name Cookie name.
 	 * @param value Cookie value.
 	 * @return This builder.
@@ -16,10 +16,10 @@ public final class CookieBuilder
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Constructs cookie string.</p>
-	 * 
+	 *
 	 * @return Cookie string.
 	 */
 	public String build()

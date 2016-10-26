@@ -8,7 +8,7 @@ import android.net.Uri;
 public final class EmbeddedAttachment implements Attachment
 {
 	private static final long serialVersionUID = 1L;
-	
+
 	/**
 	 * Embedded file content type.
 	 */
@@ -18,19 +18,19 @@ public final class EmbeddedAttachment implements Attachment
 		 * Audio file.
 		 */
 		AUDIO,
-		
+
 		/**
 		 * Video file.
 		 */
 		VIDEO
 	}
-	
+
 	/**
 	 * <p>Constructor for {@link EmbeddedAttachment}.</p>
-	 * 
+	 *
 	 * <p>By default file name will be obtain from the last path segment of file URI. You can override this name
 	 * with {@code forcedName} argument.</p>
-	 * 
+	 *
 	 * @param fileUri File or page URI.
 	 * @param thumbnailUri Thumbnail URI.
 	 * @param embeddedType Embedded file type string. For example, "YouTube".
@@ -43,7 +43,7 @@ public final class EmbeddedAttachment implements Attachment
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns attachment file URI.</p>
 	 */
@@ -51,7 +51,7 @@ public final class EmbeddedAttachment implements Attachment
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns attachment thumbnail URI.</p>
 	 */
@@ -59,7 +59,7 @@ public final class EmbeddedAttachment implements Attachment
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns attachment embedded type.</p>
 	 */
@@ -67,7 +67,7 @@ public final class EmbeddedAttachment implements Attachment
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns attachment content type.</p>
 	 */
@@ -75,7 +75,7 @@ public final class EmbeddedAttachment implements Attachment
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns whether attachment could be downloaded by it's file URI.</p>
 	 */
@@ -83,7 +83,7 @@ public final class EmbeddedAttachment implements Attachment
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns forced file name.</p>
 	 */
@@ -91,21 +91,21 @@ public final class EmbeddedAttachment implements Attachment
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns {@link EmbeddedAttachment} if client support this type by itself.</p>
-	 * 
+	 *
 	 * <p>List of supported embedded types:</p>
-	 * 
+	 *
 	 * <ul>
 	 * <li>YouTube</li>
 	 * <li>Vimeo</li>
 	 * <li>Vocaroo</li>
 	 * </ul>
-	 * 
+	 *
 	 * <p>You can pass any string as {@code data} argument that contains links from the list above including strings
 	 * with {@code embed} or {@code iframe} HTML tags. Application will try to find links by itself.</p>
-	 * 
+	 *
 	 * @param data String with URI.
 	 * @return {@link EmbeddedAttachment} instance or {@code null} if embedded link is not supported.
 	 */

@@ -10,27 +10,27 @@ public final class BoardCategory implements Iterable<Board>
 {
 	/**
 	 * <p>Returns board category title.</p>
-	 * 
+	 *
 	 * @return Title string.
 	 */
 	public String getTitle()
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Return array of {@link Board} under this category.</p>
-	 * 
+	 *
 	 * @return Array of {@link Board}.
 	 */
 	public Board[] getBoards()
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Constructor for {@link BoardCategory}.</p>
-	 * 
+	 *
 	 * @param title Board category title.
 	 * @param boards Array of {@link Board}.
 	 */
@@ -38,10 +38,10 @@ public final class BoardCategory implements Iterable<Board>
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Constructor for {@link BoardCategory}. Collection will be transformed to array.</p>
-	 * 
+	 *
 	 * @param title Board category title.
 	 * @param boards Collection of {@link Board}.
 	 */
@@ -49,7 +49,7 @@ public final class BoardCategory implements Iterable<Board>
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	@Override
 	public Iterator<Board> iterator()
 	{

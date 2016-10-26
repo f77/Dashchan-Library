@@ -11,7 +11,7 @@ public final class ThreadSummary
 {
 	/**
 	 * <p>Constructor for {@link ThreadSummary}.</p>
-	 * 
+	 *
 	 * @param boardName Board name.
 	 * @param threadNumber Thread number.
 	 * @param description Short description, may be subject or some first sentences of comment.
@@ -20,7 +20,7 @@ public final class ThreadSummary
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns board name.</p>
 	 */
@@ -28,7 +28,7 @@ public final class ThreadSummary
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns thread number.</p>
 	 */
@@ -36,7 +36,7 @@ public final class ThreadSummary
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns thread short description.</p>
 	 */
@@ -44,7 +44,7 @@ public final class ThreadSummary
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Returns posts count.</p>
 	 */
@@ -52,7 +52,7 @@ public final class ThreadSummary
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Stores posts count in this model.</p>
 	 */

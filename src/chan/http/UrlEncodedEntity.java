@@ -15,33 +15,33 @@ public class UrlEncodedEntity implements RequestEntity
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Constructor for an {@link UrlEncodedEntity}.</p>
-	 * 
+	 *
 	 * @param alternation Alternation of string field's names and values (name, value, name, value...).
 	 */
 	public UrlEncodedEntity(String... alternation)
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	/**
 	 * <p>Changes encoding type for this entity. By default UTF-8 is used.</p>
-	 * 
+	 *
 	 * @param charsetName Charset name.
 	 */
 	public void setEncoding(String charsetName)
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	@Override
 	public void add(String name, String value)
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	@Override
 	public String getContentType()
 	{
@@ -59,7 +59,7 @@ public class UrlEncodedEntity implements RequestEntity
 	{
 		throw new IllegalAccessError();
 	}
-	
+
 	@Override
 	public RequestEntity copy()
 	{
