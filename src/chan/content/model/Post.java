@@ -504,6 +504,25 @@ public final class Post implements Serializable, Comparable<Post>
 	{
 		throw new IllegalAccessError();
 	}
+
+	/**
+	 * <p>Returns whether bump limit reached.</p>
+	 */
+	public boolean isBumpLimitReached()
+	{
+		throw new IllegalAccessError();
+	}
+
+	/**
+	 * <p>Stores whether thread reached a bump limit. In this case user will see an icon.</p>
+	 *
+	 * @param bumpLimitReached True if bump limit reached, false otherwise.
+	 * @return This model.
+	 */
+	public Post setBumpLimitReached(boolean bumpLimitReached)
+	{
+		throw new IllegalAccessError();
+	}
 	
 	@Override
 	public int compareTo(Post another)

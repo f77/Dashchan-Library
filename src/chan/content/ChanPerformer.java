@@ -93,8 +93,10 @@ public class ChanPerformer
 	 * @return {@link ReadThreadsResult} instance.
 	 * @throws HttpException if HTTP or another error with message occurred.
 	 * @throws InvalidResponseException if server returned an invalid data.
+	 * @throws RedirectException if server returned data that can be considered as redirect.
 	 */
-	public ReadThreadsResult onReadThreads(ReadThreadsData data) throws HttpException, InvalidResponseException
+	public ReadThreadsResult onReadThreads(ReadThreadsData data) throws HttpException, InvalidResponseException,
+			RedirectException
 	{
 		throw new IllegalAccessError();
 	}
@@ -111,11 +113,11 @@ public class ChanPerformer
 	 * @param data {@link ReadPostsData} instance with arguments.
 	 * @return {@link ReadPostsResult} instance.
 	 * @throws HttpException if HTTP or another error with message occurred.
-	 * @throws ThreadRedirectException if server returned data that can be considered as redirect to another thread.
 	 * @throws InvalidResponseException if server returned an invalid data.
+	 * @throws RedirectException if server returned data that can be considered as redirect.
 	 */
-	public ReadPostsResult onReadPosts(ReadPostsData data) throws HttpException, ThreadRedirectException,
-			InvalidResponseException
+	public ReadPostsResult onReadPosts(ReadPostsData data) throws HttpException, InvalidResponseException,
+			RedirectException
 	{
 		throw new IllegalAccessError();
 	}
@@ -992,16 +994,6 @@ public class ChanPerformer
 	 */
 	public static class ReadCaptchaData implements HttpRequest.Preset
 	{
-		/**
-		 * <p>{@code requirement} value when user makes a new thread.</p>
-		 */
-		public static final String REQUIREMENT_NEW_THREAD;
-		
-		/**
-		 * <p>{@code requirement} value when user make a reply to thread.</p>
-		 */
-		public static final String REQUIREMENT_REPLY_TO_THREAD;
-		
 		/**
 		 * <p>Captcha type argument.</p>
 		 */
