@@ -8,8 +8,7 @@ import android.graphics.Bitmap;
 /**
  * <p>Provides some utilities to work with JSON objects, bitmaps and logging.</p>
  */
-public class CommonUtils
-{
+public class CommonUtils {
 	/**
 	 * <p>Wait time = {@code interval} - (current time - {@code startTime}).
 	 * Returns whether thread was interrupted during sleep.</p>
@@ -18,8 +17,7 @@ public class CommonUtils
 	 * @param interval Minimum time for operation.
 	 * @return True if thread was interrupted.
 	 */
-	public static boolean sleepMaxTime(long startTime, long interval)
-	{
+	public static boolean sleepMaxTime(long startTime, long interval) {
 		throw new IllegalAccessError();
 	}
 
@@ -31,8 +29,7 @@ public class CommonUtils
 	 * @param name Field name.
 	 * @return Value mapped by name.
 	 */
-	public static String optJsonString(JSONObject jsonObject, String name)
-	{
+	public static String optJsonString(JSONObject jsonObject, String name) {
 		throw new IllegalAccessError();
 	}
 
@@ -44,8 +41,7 @@ public class CommonUtils
 	 * @param name Field name.
 	 * @return Value mapped by name.
 	 */
-	public static String optJsonString(JSONObject jsonObject, String name, String fallback)
-	{
+	public static String optJsonString(JSONObject jsonObject, String name, String fallback) {
 		throw new IllegalAccessError();
 	}
 
@@ -58,8 +54,7 @@ public class CommonUtils
 	 * @return Value mapped by name.
 	 * @throws JSONException If no such mapping exists.
 	 */
-	public static String getJsonString(JSONObject jsonObject, String name) throws JSONException
-	{
+	public static String getJsonString(JSONObject jsonObject, String name) throws JSONException {
 		throw new IllegalAccessError();
 	}
 
@@ -69,8 +64,7 @@ public class CommonUtils
 	 * @param string HTML string.
 	 * @return HTML string with restored emails.
 	 */
-	public static String restoreCloudFlareProtectedEmails(String string)
-	{
+	public static String restoreCloudFlareProtectedEmails(String string) {
 		throw new IllegalAccessError();
 	}
 
@@ -82,8 +76,7 @@ public class CommonUtils
 	 * @param backgroundColor Background color.
 	 * @return Trimmed bitmap.
 	 */
-	public static Bitmap trimBitmap(Bitmap bitmap, int backgroundColor)
-	{
+	public static Bitmap trimBitmap(Bitmap bitmap, int backgroundColor) {
 		throw new IllegalAccessError();
 	}
 
@@ -92,8 +85,7 @@ public class CommonUtils
 	 *
 	 * @param data Array of objects to write.
 	 */
-	public static void writeLog(Object... data)
-	{
+	public static void writeLog(Object... data) {
 		throw new IllegalAccessError();
 	}
 }

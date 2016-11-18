@@ -5,15 +5,11 @@ import android.net.Uri;
 /**
  * <p>This class can handle some embedded links. See {@link EmbeddedAttachment#obtain(String)}.</p>
  */
-public final class EmbeddedAttachment implements Attachment
-{
-	private static final long serialVersionUID = 1L;
-
+public final class EmbeddedAttachment implements Attachment {
 	/**
 	 * Embedded file content type.
 	 */
-	public enum ContentType
-	{
+	public enum ContentType {
 		/**
 		 * Audio file.
 		 */
@@ -39,56 +35,49 @@ public final class EmbeddedAttachment implements Attachment
 	 * @param forcedName Overridden file name.
 	 */
 	public EmbeddedAttachment(Uri fileUri, Uri thumbnailUri, String embeddedType, ContentType contentType,
-			boolean canDownload, String forcedName)
-	{
+			boolean canDownload, String forcedName) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns attachment file URI.</p>
 	 */
-	public Uri getFileUri()
-	{
+	public Uri getFileUri() {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns attachment thumbnail URI.</p>
 	 */
-	public Uri getThumbnailUri()
-	{
+	public Uri getThumbnailUri() {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns attachment embedded type.</p>
 	 */
-	public String getEmbeddedType()
-	{
+	public String getEmbeddedType() {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns attachment content type.</p>
 	 */
-	public ContentType getContentType()
-	{
+	public ContentType getContentType() {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns whether attachment could be downloaded by it's file URI.</p>
 	 */
-	public boolean isCanDownload()
-	{
+	public boolean isCanDownload() {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns forced file name.</p>
 	 */
-	public String getForcedName()
-	{
+	public String getForcedName() {
 		throw new IllegalAccessError();
 	}
 
@@ -109,8 +98,7 @@ public final class EmbeddedAttachment implements Attachment
 	 * @param data String with URI.
 	 * @return {@link EmbeddedAttachment} instance or {@code null} if embedded link is not supported.
 	 */
-	public static EmbeddedAttachment obtain(String data)
-	{
+	public static EmbeddedAttachment obtain(String data) {
 		throw new IllegalAccessError();
 	}
 }

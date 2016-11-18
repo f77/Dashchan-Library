@@ -5,7 +5,4 @@ import java.io.Serializable;
 /**
  * <p>Basic attachment interface.</p>
  */
-public interface Attachment extends Serializable
-{
-
-}
+public interface Attachment extends Serializable {}

@@ -6,16 +6,14 @@ import java.util.regex.Pattern;
 /**
  * <p>Provides some utilities to work with strings.</p>
  */
-public class StringUtils
-{
+public class StringUtils {
 	/**
 	 * <p>Returns whether {@code string} is {@code null} or empty.</p>
 	 *
 	 * @param string String instance.
 	 * @return True if string is empty.
 	 */
-	public static boolean isEmpty(CharSequence string)
-	{
+	public static boolean isEmpty(CharSequence string) {
 		throw new IllegalAccessError();
 	}
 
@@ -25,8 +23,7 @@ public class StringUtils
 	 * @param string String instance.
 	 * @return True if string is empty or whitespace.
 	 */
-	public static boolean isEmptyOrWhitespace(CharSequence string)
-	{
+	public static boolean isEmptyOrWhitespace(CharSequence string) {
 		throw new IllegalAccessError();
 	}
 
@@ -37,8 +34,7 @@ public class StringUtils
 	 * @return Not null string.
 	 * @see #isEmpty(CharSequence)
 	 */
-	public static String emptyIfNull(CharSequence string)
-	{
+	public static String emptyIfNull(CharSequence string) {
 		throw new IllegalAccessError();
 	}
 
@@ -49,8 +45,7 @@ public class StringUtils
 	 * @return Null string if {@code s} is empty.
 	 * @see #isEmpty(CharSequence)
 	 */
-	public static String nullIfEmpty(String string)
-	{
+	public static String nullIfEmpty(String string) {
 		throw new IllegalAccessError();
 	}
 
@@ -61,8 +56,7 @@ public class StringUtils
 	 * @param second String instance.
 	 * @return True if strings are equals.
 	 */
-	public static boolean equals(String first, String second)
-	{
+	public static boolean equals(String first, String second) {
 		throw new IllegalAccessError();
 	}
 
@@ -74,8 +68,7 @@ public class StringUtils
 	 * @param what String array to search.
 	 * @return True if strings are equals.
 	 */
-	public static int nearestIndexOf(String string, int start, String... what)
-	{
+	public static int nearestIndexOf(String string, int start, String... what) {
 		throw new IllegalAccessError();
 	}
 
@@ -87,16 +80,14 @@ public class StringUtils
 	 * @param what Char array to search.
 	 * @return True if strings are equals.
 	 */
-	public static int nearestIndexOf(String string, int start, char... what)
-	{
+	public static int nearestIndexOf(String string, int start, char... what) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Replacement callback for {@code replaceAll} methods.</p>
 	 */
-	public interface ReplacementCallback
-	{
+	public interface ReplacementCallback {
 		/**
 		 * <p>Provides a replacement for found result.</p>
 		 *
@@ -123,8 +114,7 @@ public class StringUtils
 	 * @param replacementCallback {@link ReplacementCallback} instance.
 	 * @return Resulting string.
 	 */
-	public static String replaceAll(String string, String regularExpression, ReplacementCallback replacementCallback)
-	{
+	public static String replaceAll(String string, String regularExpression, ReplacementCallback replacementCallback) {
 		throw new IllegalAccessError();
 	}
 
@@ -137,8 +127,7 @@ public class StringUtils
 	 * @param replacementCallback {@link ReplacementCallback} instance.
 	 * @return Resulting string.
 	 */
-	public static String replaceAll(String string, Pattern pattern, ReplacementCallback replacementCallback)
-	{
+	public static String replaceAll(String string, Pattern pattern, ReplacementCallback replacementCallback) {
 		throw new IllegalAccessError();
 	}
 
@@ -148,8 +137,7 @@ public class StringUtils
 	 * @param string Text to append links.
 	 * @return Text with links.
 	 */
-	public static String linkify(String string)
-	{
+	public static String linkify(String string) {
 		throw new IllegalAccessError();
 	}
 
@@ -159,8 +147,7 @@ public class StringUtils
 	 * @param string Source string.
 	 * @return Cleared {@code source} string.
 	 */
-	public static String clearHtml(String string)
-	{
+	public static String clearHtml(String string) {
 		throw new IllegalAccessError();
 	}
 
@@ -170,8 +157,7 @@ public class StringUtils
 	 * @param string Source string.
 	 * @return Escaped {@code source} string.
 	 */
-	public static String unescapeHtml(String string)
-	{
+	public static String unescapeHtml(String string) {
 		throw new IllegalAccessError();
 	}
 }

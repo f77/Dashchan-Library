@@ -10,13 +10,11 @@ package chan.text;
  * <p>In group mode parser will handle all text inside started tag. Then it call
  * {@link Callback#onGroupComplete(GroupParser, String)} with all text inside tag.</p>
  */
-public final class GroupParser
-{
+public final class GroupParser {
 	/**
 	 * <p>Callback for {@link GroupParser}.</p>
 	 */
-	public interface Callback
-	{
+	public interface Callback {
 		/**
 		 * <p>This method will be called in linear mode every time parser reaches new tag.</p>
 		 *
@@ -58,9 +56,8 @@ public final class GroupParser
 		public void onGroupComplete(GroupParser parser, String text) throws ParseException;
 	}
 
-	GroupParser()
-	{
-
+	GroupParser() {
+		throw new IllegalAccessError();
 	}
 
 	/**
@@ -70,24 +67,21 @@ public final class GroupParser
 	 * @param callback Callback to handle parsed data.
 	 * @throws ParseException when parsing process was interrupted.
 	 */
-	public static void parse(String source, Callback callback) throws ParseException
-	{
+	public static void parse(String source, Callback callback) throws ParseException {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Stores parser's position. Later you can come back with {@link #reset()} method.</p>
 	 */
-	public void mark()
-	{
+	public void mark() {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Resets parser's position to last marked one.</p>
 	 */
-	public void reset()
-	{
+	public void reset() {
 		throw new IllegalAccessError();
 	}
 
@@ -99,8 +93,7 @@ public final class GroupParser
 	 * @param attr Attribute name.
 	 * @return Attribute value if it exists or {@code null}.
 	 */
-	public String getAttr(String attrs, String attr)
-	{
+	public String getAttr(String attrs, String attr) {
 		throw new IllegalAccessError();
 	}
 }

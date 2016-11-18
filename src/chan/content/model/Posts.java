@@ -39,13 +39,11 @@ import android.net.Uri;
  * and {@link #addPostsWithFilesCount(int)} in the second case. If your chan supports only one
  * image per post, it's better to use {@link #addPostsWithFilesCount(int)} because it's more usual.</p>
  */
-public final class Posts
-{
+public final class Posts {
 	/**
 	 * <p>Returns array of post models this model holds.</p>
 	 */
-	public Post[] getPosts()
-	{
+	public Post[] getPosts() {
 		throw new IllegalAccessError();
 	}
 
@@ -55,8 +53,7 @@ public final class Posts
 	 * @param posts Array of {@link Post}.
 	 * @return This model.
 	 */
-	public Posts setPosts(Post... posts)
-	{
+	public Posts setPosts(Post... posts) {
 		throw new IllegalAccessError();
 	}
 
@@ -66,16 +63,14 @@ public final class Posts
 	 * @param posts Collection of {@link Post}.
 	 * @return This model.
 	 */
-	public Posts setPosts(Collection<? extends Post> posts)
-	{
+	public Posts setPosts(Collection<? extends Post> posts) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns archived thread URI.</p>
 	 */
-	public Uri getArchivedThreadUri()
-	{
+	public Uri getArchivedThreadUri() {
 		throw new IllegalAccessError();
 	}
 
@@ -85,16 +80,14 @@ public final class Posts
 	 * @param uri Original URI of archived thread.
 	 * @return This model.
 	 */
-	public Posts setArchivedThreadUri(Uri uri)
-	{
+	public Posts setArchivedThreadUri(Uri uri) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns unique posters count.</p>
 	 */
-	public int getUniquePosters()
-	{
+	public int getUniquePosters() {
 		throw new IllegalAccessError();
 	}
 
@@ -104,16 +97,14 @@ public final class Posts
 	 * @param uniquePosters Number of unique posters in thread.
 	 * @return This model.
 	 */
-	public Posts setUniquePosters(int uniquePosters)
-	{
+	public Posts setUniquePosters(int uniquePosters) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns posts count in thread.</p>
 	 */
-	public int getPostsCount()
-	{
+	public int getPostsCount() {
 		throw new IllegalAccessError();
 	}
 
@@ -123,16 +114,14 @@ public final class Posts
 	 * @param postsCount Number of posts in thread including original post and last replies.
 	 * @return This model.
 	 */
-	public Posts addPostsCount(int postsCount)
-	{
+	public Posts addPostsCount(int postsCount) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns files count in thread.</p>
 	 */
-	public int getFilesCount()
-	{
+	public int getFilesCount() {
 		throw new IllegalAccessError();
 	}
 
@@ -142,16 +131,14 @@ public final class Posts
 	 * @param filesCount Number of files in thread including original post and last replies.
 	 * @return This model.
 	 */
-	public Posts addFilesCount(int filesCount)
-	{
+	public Posts addFilesCount(int filesCount) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns posts count with files.</p>
 	 */
-	public int getPostsWithFilesCount()
-	{
+	public int getPostsWithFilesCount() {
 		throw new IllegalAccessError();
 	}
 
@@ -161,17 +148,15 @@ public final class Posts
 	 * @param postsWithFilesCount Number of posts with files in thread including original post and last replies.
 	 * @return This model.
 	 */
-	public Posts addPostsWithFilesCount(int postsWithFilesCount)
-	{
+	public Posts addPostsWithFilesCount(int postsWithFilesCount) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Default constructor for {@link Posts}.</p>
 	 */
-	public Posts()
-	{
-
+	public Posts() {
+		throw new IllegalAccessError();
 	}
 
 	/**
@@ -179,8 +164,7 @@ public final class Posts
 	 *
 	 * @param posts Array of {@link Post}.
 	 */
-	public Posts(Post... posts)
-	{
+	public Posts(Post... posts) {
 		throw new IllegalAccessError();
 	}
 
@@ -189,8 +173,7 @@ public final class Posts
 	 *
 	 * @param posts Collection of {@link Post}.
 	 */
-	public Posts(Collection<? extends Post> posts)
-	{
+	public Posts(Collection<? extends Post> posts) {
 		throw new IllegalAccessError();
 	}
 }

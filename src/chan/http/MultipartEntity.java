@@ -7,13 +7,11 @@ import java.io.OutputStream;
 /**
  * <p>Multipart Form Data implementation of {@link RequestEntity}.</p>
  */
-public class MultipartEntity implements RequestEntity
-{
+public class MultipartEntity implements RequestEntity {
 	/**
 	 * <p>Default constructor for a {@link MultipartEntity}.</p>
 	 */
-	public MultipartEntity()
-	{
+	public MultipartEntity() {
 		throw new IllegalAccessError();
 	}
 
@@ -22,8 +20,7 @@ public class MultipartEntity implements RequestEntity
 	 *
 	 * @param alternation Alternation of string field's names and values (name, value, name, value...).
 	 */
-	public MultipartEntity(String... alternation)
-	{
+	public MultipartEntity(String... alternation) {
 		throw new IllegalAccessError();
 	}
 
@@ -32,14 +29,12 @@ public class MultipartEntity implements RequestEntity
 	 *
 	 * @param charsetName Charset name.
 	 */
-	public void setEncoding(String charsetName)
-	{
+	public void setEncoding(String charsetName) {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public void add(String name, String value)
-	{
+	public void add(String name, String value) {
 		throw new IllegalAccessError();
 	}
 
@@ -49,32 +44,27 @@ public class MultipartEntity implements RequestEntity
 	 * @param name Field name.
 	 * @param file File to write.
 	 */
-	public void add(String name, File file)
-	{
+	public void add(String name, File file) {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public String getContentType()
-	{
+	public String getContentType() {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public long getContentLength()
-	{
+	public long getContentLength() {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public void write(OutputStream output) throws IOException
-	{
+	public void write(OutputStream output) throws IOException {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public RequestEntity copy()
-	{
+	public RequestEntity copy() {
 		throw new IllegalAccessError();
 	}
 }

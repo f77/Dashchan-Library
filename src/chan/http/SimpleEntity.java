@@ -8,11 +8,9 @@ import java.io.OutputStream;
  *
  * <p>Method {@link SimpleEntity#add(String, String)} is not supported for this entity.</p>
  */
-public class SimpleEntity implements RequestEntity
-{
+public class SimpleEntity implements RequestEntity {
 	@Override
-	public void add(String name, String value)
-	{
+	public void add(String name, String value) {
 		throw new IllegalAccessError();
 	}
 
@@ -21,8 +19,7 @@ public class SimpleEntity implements RequestEntity
 	 *
 	 * @param data String data.
 	 */
-	public void setData(String data)
-	{
+	public void setData(String data) {
 		throw new IllegalAccessError();
 	}
 
@@ -32,8 +29,7 @@ public class SimpleEntity implements RequestEntity
 	 * @param data String data.
 	 * @param charsetName Charset name.
 	 */
-	public void setData(String data, String charsetName)
-	{
+	public void setData(String data, String charsetName) {
 		throw new IllegalAccessError();
 	}
 
@@ -42,8 +38,7 @@ public class SimpleEntity implements RequestEntity
 	 *
 	 * @param data Byte array data.
 	 */
-	public void setData(byte[] data)
-	{
+	public void setData(byte[] data) {
 		throw new IllegalAccessError();
 	}
 
@@ -52,32 +47,27 @@ public class SimpleEntity implements RequestEntity
 	 *
 	 * @param contentType Content type.
 	 */
-	public void setContentType(String contentType)
-	{
+	public void setContentType(String contentType) {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public String getContentType()
-	{
+	public String getContentType() {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public long getContentLength()
-	{
+	public long getContentLength() {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public void write(OutputStream output) throws IOException
-	{
+	public void write(OutputStream output) throws IOException {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public RequestEntity copy()
-	{
+	public RequestEntity copy() {
 		throw new IllegalAccessError();
 	}
 }

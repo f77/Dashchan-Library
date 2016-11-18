@@ -4,15 +4,11 @@ package chan.text;
  * <p>Thrown when parsing exception occurred.
  * Usually thrown by {@link GroupParser#parse(String, chan.text.GroupParser.Callback)} method.</p>
  */
-public class ParseException extends Exception
-{
-	private static final long serialVersionUID = 1L;
-
+public class ParseException extends Exception {
 	/**
 	 * <p>Default constructor for a {@link ParseException}.</p>
 	 */
-	public ParseException()
-	{
+	public ParseException() {
 		throw new IllegalAccessError();
 	}
 
@@ -21,8 +17,7 @@ public class ParseException extends Exception
 	 *
 	 * @param throwable The cause of this exception.
 	 */
-	public ParseException(Throwable throwable)
-	{
+	public ParseException(Throwable throwable) {
 		throw new IllegalAccessError();
 	}
 }

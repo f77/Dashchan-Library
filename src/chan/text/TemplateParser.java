@@ -26,16 +26,14 @@ package chan.text;
  * <p>After defining parsing rules you should call {@link #prepare()} method. Then you can use your parsing
  * calling {@link #parse(String, Object)} method.</p>
  */
-public final class TemplateParser<H>
-{
+public final class TemplateParser<H> {
 	/**
 	 * <p>Indicates the parser to react on {@code tagName} tags.</p>
 	 *
 	 * @param tagName Tag name.
 	 * @return This parser.
 	 */
-	public TemplateParser<H> name(String tagName)
-	{
+	public TemplateParser<H> name(String tagName) {
 		throw new IllegalAccessError();
 	}
 
@@ -48,8 +46,7 @@ public final class TemplateParser<H>
 	 * @param value Attribute value.
 	 * @return This parser.
 	 */
-	public TemplateParser<H> equals(String tagName, String attribute, String value)
-	{
+	public TemplateParser<H> equals(String tagName, String attribute, String value) {
 		throw new IllegalAccessError();
 	}
 
@@ -62,8 +59,7 @@ public final class TemplateParser<H>
 	 * @param value Attribute value.
 	 * @return This parser.
 	 */
-	public TemplateParser<H> starts(String tagName, String attribute, String value)
-	{
+	public TemplateParser<H> starts(String tagName, String attribute, String value) {
 		throw new IllegalAccessError();
 	}
 
@@ -76,8 +72,7 @@ public final class TemplateParser<H>
 	 * @param value Attribute value.
 	 * @return This parser.
 	 */
-	public TemplateParser<H> contains(String tagName, String attribute, String value)
-	{
+	public TemplateParser<H> contains(String tagName, String attribute, String value) {
 		throw new IllegalAccessError();
 	}
 
@@ -90,8 +85,7 @@ public final class TemplateParser<H>
 	 * @param value Attribute value.
 	 * @return This parser.
 	 */
-	public TemplateParser<H> ends(String tagName, String attribute, String value)
-	{
+	public TemplateParser<H> ends(String tagName, String attribute, String value) {
 		throw new IllegalAccessError();
 	}
 
@@ -104,8 +98,7 @@ public final class TemplateParser<H>
 	 * @return This parser.
 	 * @see GroupParser.Callback#onStartElement(GroupParser, String, String)
 	 */
-	public TemplateParser<H> open(OpenCallback<H> openCallback)
-	{
+	public TemplateParser<H> open(OpenCallback<H> openCallback) {
 		throw new IllegalAccessError();
 	}
 
@@ -117,8 +110,7 @@ public final class TemplateParser<H>
 	 * @return This parser.
 	 * @see GroupParser.Callback#onGroupComplete(GroupParser, String)
 	 */
-	public TemplateParser<H> content(ContentCallback<H> contentCallback)
-	{
+	public TemplateParser<H> content(ContentCallback<H> contentCallback) {
 		throw new IllegalAccessError();
 	}
 
@@ -129,8 +121,7 @@ public final class TemplateParser<H>
 	 * @return This parser.
 	 * @see GroupParser.Callback#onEndElement(GroupParser, String)
 	 */
-	public TemplateParser<H> close(CloseCallback<H> closeCallback)
-	{
+	public TemplateParser<H> close(CloseCallback<H> closeCallback) {
 		throw new IllegalAccessError();
 	}
 
@@ -141,8 +132,7 @@ public final class TemplateParser<H>
 	 * @return This parser.
 	 * @see GroupParser.Callback#onText(GroupParser, String, int, int)
 	 */
-	public TemplateParser<H> text(TextCallback<H> textCallback)
-	{
+	public TemplateParser<H> text(TextCallback<H> textCallback) {
 		throw new IllegalAccessError();
 	}
 
@@ -152,8 +142,7 @@ public final class TemplateParser<H>
 	 *
 	 * @return This parser.
 	 */
-	public TemplateParser<H> prepare()
-	{
+	public TemplateParser<H> prepare() {
 		throw new IllegalAccessError();
 	}
 
@@ -164,18 +153,15 @@ public final class TemplateParser<H>
 	 * @param holder Intermediate data holder during parsing process.
 	 * @throws ParseException when parsing process was interrupted.
 	 */
-	public void parse(String source, H holder) throws ParseException
-	{
+	public void parse(String source, H holder) throws ParseException {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Attributes holder and parser.</p>
 	 */
-	public static final class Attributes
-	{
-		Attributes()
-		{
+	public static final class Attributes {
+		Attributes() {
 			throw new IllegalAccessError();
 		}
 
@@ -185,8 +171,7 @@ public final class TemplateParser<H>
 		 * @param attribute Attribute name.
 		 * @return Attribute value.
 		 */
-		public String get(String attribute)
-		{
+		public String get(String attribute) {
 			throw new IllegalAccessError();
 		}
 	}
@@ -194,18 +179,15 @@ public final class TemplateParser<H>
 	/**
 	 * <p>Parsing process holder.</p>
 	 */
-	public static final class Instance
-	{
-		Instance()
-		{
+	public static final class Instance {
+		Instance() {
 			throw new IllegalAccessError();
 		}
 
 		/**
 		 * <p>Finishes a parsing process. Calling this method doesn't interrupt your working callback.</p>
 		 */
-		public void finish()
-		{
+		public void finish() {
 			throw new IllegalAccessError();
 		}
 	}
@@ -213,8 +195,7 @@ public final class TemplateParser<H>
 	/**
 	 * <p>Tag open callback.</p>
 	 */
-	public interface OpenCallback<H>
-	{
+	public interface OpenCallback<H> {
 		/**
 		 * <p>Tag open callback method. See {@link #open(OpenCallback)}.</p>
 		 *
@@ -231,8 +212,7 @@ public final class TemplateParser<H>
 	/**
 	 * <p>Tag full content callback.</p>
 	 */
-	public interface ContentCallback<H>
-	{
+	public interface ContentCallback<H> {
 		/**
 		 * <p>Tag full content method. See {@link #content(ContentCallback)}.</p>
 		 *
@@ -247,8 +227,7 @@ public final class TemplateParser<H>
 	/**
 	 * <p>Tag close callback.</p>
 	 */
-	public interface CloseCallback<H>
-	{
+	public interface CloseCallback<H> {
 		/**
 		 * <p>Tag close callback method. See {@link #close(CloseCallback)}.</p>
 		 *
@@ -263,8 +242,7 @@ public final class TemplateParser<H>
 	/**
 	 * <p>Text between tags callback.</p>
 	 */
-	public interface TextCallback<H>
-	{
+	public interface TextCallback<H> {
 		/**
 		 * <p>Text between tags callback method. See {@link #text(TextCallback)}.</p>
 		 *

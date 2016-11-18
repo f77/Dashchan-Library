@@ -6,13 +6,11 @@ import java.io.OutputStream;
 /**
  * <p>URL Encoded implementation of {@link RequestEntity}.</p>
  */
-public class UrlEncodedEntity implements RequestEntity
-{
+public class UrlEncodedEntity implements RequestEntity {
 	/**
 	 * <p>Default constructor for an {@link UrlEncodedEntity}.</p>
 	 */
-	public UrlEncodedEntity()
-	{
+	public UrlEncodedEntity() {
 		throw new IllegalAccessError();
 	}
 
@@ -21,8 +19,7 @@ public class UrlEncodedEntity implements RequestEntity
 	 *
 	 * @param alternation Alternation of string field's names and values (name, value, name, value...).
 	 */
-	public UrlEncodedEntity(String... alternation)
-	{
+	public UrlEncodedEntity(String... alternation) {
 		throw new IllegalAccessError();
 	}
 
@@ -31,38 +28,32 @@ public class UrlEncodedEntity implements RequestEntity
 	 *
 	 * @param charsetName Charset name.
 	 */
-	public void setEncoding(String charsetName)
-	{
+	public void setEncoding(String charsetName) {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public void add(String name, String value)
-	{
+	public void add(String name, String value) {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public String getContentType()
-	{
+	public String getContentType() {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public long getContentLength()
-	{
+	public long getContentLength() {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public void write(OutputStream output) throws IOException
-	{
+	public void write(OutputStream output) throws IOException {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public RequestEntity copy()
-	{
+	public RequestEntity copy() {
 		throw new IllegalAccessError();
 	}
 }

@@ -3,8 +3,7 @@ package chan.http;
 /**
  * <p>Provides easy cookie building.</p>
  */
-public final class CookieBuilder
-{
+public final class CookieBuilder {
 	/**
 	 * <p>Append cookie with given {@code name} and {@code value}.</p>
 	 *
@@ -12,8 +11,7 @@ public final class CookieBuilder
 	 * @param value Cookie value.
 	 * @return This builder.
 	 */
-	public CookieBuilder append(String name, String value)
-	{
+	public CookieBuilder append(String name, String value) {
 		throw new IllegalAccessError();
 	}
 
@@ -22,8 +20,7 @@ public final class CookieBuilder
 	 *
 	 * @return Cookie string.
 	 */
-	public String build()
-	{
+	public String build() {
 		throw new IllegalAccessError();
 	}
 }

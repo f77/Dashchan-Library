@@ -38,13 +38,11 @@ import android.net.Uri;
  * <li>{@link ChanLocator#buildQueryWithSchemeHost(boolean, String, String, String...)}</li>
  * </ul>
  */
-public class ChanLocator
-{
+public class ChanLocator {
 	/**
 	 * <p>HTTPS mode, used in {@link #setHttpsMode(HttpsMode)} method.</p>
 	 */
-	public enum HttpsMode
-	{
+	public enum HttpsMode {
 		/**
 		 * <p>HTTPS is not used. All URI's will be built with HTTP scheme by default.</p>
 		 */
@@ -64,8 +62,7 @@ public class ChanLocator
 	/**
 	 * <p>Navigation data holder. Used in {@link #handleUriClickSpecial(Uri)} method.</p>
 	 */
-	public static final class NavigationData
-	{
+	public static final class NavigationData {
 		/**
 		 * <p>Target to list of threads.</p>
 		 */
@@ -82,9 +79,11 @@ public class ChanLocator
 		 */
 		public static final int TARGET_SEARCH;
 
-		static
-		{
-			if (true) throw new IllegalAccessError();
+		static {
+			// noinspection ConstantIfStatement, ConstantConditions
+			if (true) {
+				throw new IllegalAccessError();
+			}
 		}
 
 		/**
@@ -94,8 +93,8 @@ public class ChanLocator
 		 * @param postNumber Post number.
 		 * @param searchQuery Search query (must be not null for target == {@link #TARGET_SEARCH}).
 		 */
-		public NavigationData(int target, String boardName, String threadNumber, String postNumber, String searchQuery)
-		{
+		public NavigationData(int target, String boardName, String threadNumber, String postNumber,
+				String searchQuery) {
 			throw new IllegalAccessError();
 		}
 	}
@@ -107,8 +106,7 @@ public class ChanLocator
 	 * {@link ChanLocator} or {@link ChanMarkup}.
 	 * @return {@link ChanLocator} instance.
 	 */
-	public static <T extends ChanLocator> T get(Object object)
-	{
+	public static <T extends ChanLocator> T get(Object object) {
 		throw new IllegalAccessError();
 	}
 
@@ -120,8 +118,7 @@ public class ChanLocator
 	 * <p>For example, a chan has 3 addresses: {@code addr1.com}, {@code addr2.com}, {@code addr3.com}. If user choose
 	 * {@code addr2.com} in preferences, URIs with the rest addresses will be converted to {@code addr2.com}.</p>
 	 */
-	public final void addChanHost(String host)
-	{
+	public final void addChanHost(String host) {
 		throw new IllegalAccessError();
 	}
 
@@ -129,8 +126,7 @@ public class ChanLocator
 	 * <p>Declares host as chan host. Unlike {@link #addChanHost(String)} user can't choice this host in preferences,
 	 * but it still can be converted. For example, it can be useful for old domains that don't work now.</p>
 	 */
-	public final void addConvertableChanHost(String host)
-	{
+	public final void addConvertableChanHost(String host) {
 		throw new IllegalAccessError();
 	}
 
@@ -138,8 +134,7 @@ public class ChanLocator
 	 * <p>Declares host as chan host. Unlike {@link #addChanHost(String)} user can't choice this host in preferences
 	 * and and can't be converted. For example, it can be useful for special hosts like JSON API or static data.</p>
 	 */
-	public final void addSpecialChanHost(String host)
-	{
+	public final void addSpecialChanHost(String host) {
 		throw new IllegalAccessError();
 	}
 
@@ -148,8 +143,7 @@ public class ChanLocator
 	 *
 	 * @see HttpsMode
 	 */
-	public final void setHttpsMode(HttpsMode httpsMode)
-	{
+	public final void setHttpsMode(HttpsMode httpsMode) {
 		throw new IllegalAccessError();
 	}
 
@@ -158,8 +152,7 @@ public class ChanLocator
 	 *
 	 * @return True if HTTPS enabled.
 	 */
-	public final boolean isUseHttps()
-	{
+	public final boolean isUseHttps() {
 		throw new IllegalAccessError();
 	}
 
@@ -170,8 +163,7 @@ public class ChanLocator
 	 *
 	 * @return True if host is chan host or relative.
 	 */
-	public final boolean isChanHostOrRelative(Uri uri)
-	{
+	public final boolean isChanHostOrRelative(Uri uri) {
 		throw new IllegalAccessError();
 	}
 
@@ -181,8 +173,7 @@ public class ChanLocator
 	 * @param uri URI to inspect.
 	 * @return True if URI is board URI.
 	 */
-	public boolean isBoardUri(Uri uri)
-	{
+	public boolean isBoardUri(Uri uri) {
 		throw new IllegalAccessError();
 	}
 
@@ -192,8 +183,7 @@ public class ChanLocator
 	 * @param uri URI to inspect.
 	 * @return True if URI is thread URI.
 	 */
-	public boolean isThreadUri(Uri uri)
-	{
+	public boolean isThreadUri(Uri uri) {
 		throw new IllegalAccessError();
 	}
 
@@ -203,8 +193,7 @@ public class ChanLocator
 	 * @param uri URI to inspect.
 	 * @return True if URI is attachment URI.
 	 */
-	public boolean isAttachmentUri(Uri uri)
-	{
+	public boolean isAttachmentUri(Uri uri) {
 		throw new IllegalAccessError();
 	}
 
@@ -214,8 +203,7 @@ public class ChanLocator
 	 * @param uri URI to inspect.
 	 * @return Board name.
 	 */
-	public String getBoardName(Uri uri)
-	{
+	public String getBoardName(Uri uri) {
 		throw new IllegalAccessError();
 	}
 
@@ -225,8 +213,7 @@ public class ChanLocator
 	 * @param uri URI to inspect.
 	 * @return Thread number.
 	 */
-	public String getThreadNumber(Uri uri)
-	{
+	public String getThreadNumber(Uri uri) {
 		throw new IllegalAccessError();
 	}
 
@@ -236,8 +223,7 @@ public class ChanLocator
 	 * @param uri URI to inspect.
 	 * @return Posts number.
 	 */
-	public String getPostNumber(Uri uri)
-	{
+	public String getPostNumber(Uri uri) {
 		throw new IllegalAccessError();
 	}
 
@@ -248,8 +234,7 @@ public class ChanLocator
 	 * @param pageNumber Number of page, might be {@link ChanPerformer.ReadThreadsData#PAGE_NUMBER_CATALOG}.
 	 * @return Board URI.
 	 */
-	public Uri createBoardUri(String boardName, int pageNumber)
-	{
+	public Uri createBoardUri(String boardName, int pageNumber) {
 		throw new IllegalAccessError();
 	}
 
@@ -260,8 +245,7 @@ public class ChanLocator
 	 * @param threadNumber Thread number.
 	 * @return Thread URI.
 	 */
-	public Uri createThreadUri(String boardName, String threadNumber)
-	{
+	public Uri createThreadUri(String boardName, String threadNumber) {
 		throw new IllegalAccessError();
 	}
 
@@ -274,8 +258,7 @@ public class ChanLocator
 	 * @param postNumber Post number.
 	 * @return Post URI.
 	 */
-	public Uri createPostUri(String boardName, String threadNumber, String postNumber)
-	{
+	public Uri createPostUri(String boardName, String threadNumber, String postNumber) {
 		throw new IllegalAccessError();
 	}
 
@@ -286,8 +269,7 @@ public class ChanLocator
 	 * @param fileUri file URI
 	 * @return File name.
 	 */
-	public String createAttachmentForcedName(Uri fileUri)
-	{
+	public String createAttachmentForcedName(Uri fileUri) {
 		throw new IllegalAccessError();
 	}
 
@@ -298,8 +280,7 @@ public class ChanLocator
 	 * @param uri URI to inspect.
 	 * @return {@link NavigationData} instance or null.
 	 */
-	public NavigationData handleUriClickSpecial(Uri uri)
-	{
+	public NavigationData handleUriClickSpecial(Uri uri) {
 		throw new IllegalAccessError();
 	}
 
@@ -309,8 +290,7 @@ public class ChanLocator
 	 * @param path Path to inspect.
 	 * @return True if extension is image's.
 	 */
-	public final boolean isImageExtension(String path)
-	{
+	public final boolean isImageExtension(String path) {
 		throw new IllegalAccessError();
 	}
 
@@ -320,8 +300,7 @@ public class ChanLocator
 	 * @param path Path to inspect.
 	 * @return True if extension is audio's.
 	 */
-	public final boolean isAudioExtension(String path)
-	{
+	public final boolean isAudioExtension(String path) {
 		throw new IllegalAccessError();
 	}
 
@@ -331,8 +310,7 @@ public class ChanLocator
 	 * @param path Path to inspect.
 	 * @return True if extension is video's.
 	 */
-	public final boolean isVideoExtension(String path)
-	{
+	public final boolean isVideoExtension(String path) {
 		throw new IllegalAccessError();
 	}
 
@@ -342,8 +320,7 @@ public class ChanLocator
 	 * @param path Path to inspect.
 	 * @return File extension in lower case.
 	 */
-	public final String getFileExtension(String path)
-	{
+	public final String getFileExtension(String path) {
 		throw new IllegalAccessError();
 	}
 
@@ -353,8 +330,7 @@ public class ChanLocator
 	 * @param segments Path segments.
 	 * @return URI.
 	 */
-	public final Uri buildPath(String... segments)
-	{
+	public final Uri buildPath(String... segments) {
 		throw new IllegalAccessError();
 	}
 
@@ -365,8 +341,7 @@ public class ChanLocator
 	 * @param segments Path segments.
 	 * @return URI.
 	 */
-	public final Uri buildPathWithHost(String host, String... segments)
-	{
+	public final Uri buildPathWithHost(String host, String... segments) {
 		throw new IllegalAccessError();
 	}
 
@@ -378,8 +353,7 @@ public class ChanLocator
 	 * @param segments Path segments.
 	 * @return URI.
 	 */
-	public final Uri buildPathWithSchemeHost(boolean useHttps, String host, String... segments)
-	{
+	public final Uri buildPathWithSchemeHost(boolean useHttps, String host, String... segments) {
 		throw new IllegalAccessError();
 	}
 
@@ -390,8 +364,7 @@ public class ChanLocator
 	 * @param alternation Alternation of param's names and values (name, value, name, value...).
 	 * @return URI.
 	 */
-	public final Uri buildQuery(String path, String... alternation)
-	{
+	public final Uri buildQuery(String path, String... alternation) {
 		throw new IllegalAccessError();
 	}
 
@@ -403,8 +376,7 @@ public class ChanLocator
 	 * @param alternation Alternation of param's names and values (name, value, name, value...).
 	 * @return URI.
 	 */
-	public final Uri buildQueryWithHost(String host, String path, String... alternation)
-	{
+	public final Uri buildQueryWithHost(String host, String path, String... alternation) {
 		throw new IllegalAccessError();
 	}
 
@@ -417,8 +389,7 @@ public class ChanLocator
 	 * @param alternation Alternation of param's names and values (name, value, name, value...).
 	 * @return URI.
 	 */
-	public final Uri buildQueryWithSchemeHost(boolean useHttps, String host, String path, String... alternation)
-	{
+	public final Uri buildQueryWithSchemeHost(boolean useHttps, String host, String path, String... alternation) {
 		throw new IllegalAccessError();
 	}
 
@@ -429,8 +400,7 @@ public class ChanLocator
 	 * @param pattern Pattern to match.
 	 * @return True if URI's path matches to pattern.
 	 */
-	public final boolean isPathMatches(Uri uri, Pattern pattern)
-	{
+	public final boolean isPathMatches(Uri uri, Pattern pattern) {
 		throw new IllegalAccessError();
 	}
 
@@ -442,8 +412,7 @@ public class ChanLocator
 	 * @param groupIndex Index of group.
 	 * @return First found value in string by group index.
 	 */
-	public final String getGroupValue(String from, Pattern pattern, int groupIndex)
-	{
+	public final String getGroupValue(String from, Pattern pattern, int groupIndex) {
 		throw new IllegalAccessError();
 	}
 }

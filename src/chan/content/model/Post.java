@@ -16,15 +16,11 @@ import chan.content.ChanMarkup;
  * <li>{@link Post#setPostNumber(String)}</li>
  * </ul>
  */
-public final class Post implements Serializable, Comparable<Post>
-{
-	private static final long serialVersionUID = 1L;
-
+public final class Post implements Serializable, Comparable<Post> {
 	/**
 	 * <p>Returns real thread number with this post.</p>
 	 */
-	public String getThreadNumber()
-	{
+	public String getThreadNumber() {
 		throw new IllegalAccessError();
 	}
 
@@ -35,16 +31,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param threadNumber Thread number.
 	 * @return This model.
 	 */
-	public Post setThreadNumber(String threadNumber)
-	{
+	public Post setThreadNumber(String threadNumber) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns parent post number.</p>
 	 */
-	public String getParentPostNumber()
-	{
+	public String getParentPostNumber() {
 		throw new IllegalAccessError();
 	}
 
@@ -56,16 +50,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param parentPostNumber Parent post number.
 	 * @return This model.
 	 */
-	public Post setParentPostNumber(String parentPostNumber)
-	{
+	public Post setParentPostNumber(String parentPostNumber) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns post number.</p>
 	 */
-	public String getPostNumber()
-	{
+	public String getPostNumber() {
 		throw new IllegalAccessError();
 	}
 
@@ -75,16 +67,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param postNumber Post number.
 	 * @return This model.
 	 */
-	public Post setPostNumber(String postNumber)
-	{
+	public Post setPostNumber(String postNumber) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns date of post created.</p>
 	 */
-	public long getTimestamp()
-	{
+	public long getTimestamp() {
 		throw new IllegalAccessError();
 	}
 
@@ -94,16 +84,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param timestamp UNIX timestamp.
 	 * @return This model.
 	 */
-	public Post setTimestamp(long timestamp)
-	{
+	public Post setTimestamp(long timestamp) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns post subject.</p>
 	 */
-	public String getSubject()
-	{
+	public String getSubject() {
 		throw new IllegalAccessError();
 	}
 
@@ -113,16 +101,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param subject Post subject.
 	 * @return This model.
 	 */
-	public Post setSubject(String subject)
-	{
+	public Post setSubject(String subject) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns post comment.</p>
 	 */
-	public String getComment()
-	{
+	public String getComment() {
 		throw new IllegalAccessError();
 	}
 
@@ -132,8 +118,7 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param comment Post comment.
 	 * @return This model.
 	 */
-	public Post setComment(String comment)
-	{
+	public Post setComment(String comment) {
 		throw new IllegalAccessError();
 	}
 
@@ -143,8 +128,7 @@ public final class Post implements Serializable, Comparable<Post>
 	 * <p>This method calls when application want to get original comment markup. By default {@link ChanMarkup} provides
 	 * unmark operation, but you can override this method and provide more correct operation if it possible.</p>
 	 */
-	public String getCommentMarkup()
-	{
+	public String getCommentMarkup() {
 		throw new IllegalAccessError();
 	}
 
@@ -157,16 +141,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param commentMarkup Post comment markup.
 	 * @return This model.
 	 */
-	public Post setCommentMarkup(String commentMarkup)
-	{
+	public Post setCommentMarkup(String commentMarkup) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns poster name.</p>
 	 */
-	public String getName()
-	{
+	public String getName() {
 		throw new IllegalAccessError();
 	}
 
@@ -176,16 +158,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param name Poster name.
 	 * @return This model.
 	 */
-	public Post setName(String name)
-	{
+	public Post setName(String name) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns poster identifier.</p>
 	 */
-	public String getIdentifier()
-	{
+	public String getIdentifier() {
 		throw new IllegalAccessError();
 	}
 
@@ -195,16 +175,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param identifier Poster identifier.
 	 * @return This model.
 	 */
-	public Post setIdentifier(String identifier)
-	{
+	public Post setIdentifier(String identifier) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns poster tripcode.</p>
 	 */
-	public String getTripcode()
-	{
+	public String getTripcode() {
 		throw new IllegalAccessError();
 	}
 
@@ -214,16 +192,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param tripcode Poster tripcode.
 	 * @return This model.
 	 */
-	public Post setTripcode(String tripcode)
-	{
+	public Post setTripcode(String tripcode) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns poster capcode.</p>
 	 */
-	public String getCapcode()
-	{
+	public String getCapcode() {
 		throw new IllegalAccessError();
 	}
 
@@ -233,16 +209,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param capcode Poster capcode.
 	 * @return This model.
 	 */
-	public Post setCapcode(String capcode)
-	{
+	public Post setCapcode(String capcode) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns poster email.</p>
 	 */
-	public String getEmail()
-	{
+	public String getEmail() {
 		throw new IllegalAccessError();
 	}
 
@@ -253,24 +227,21 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param email Poster email.
 	 * @return This model.
 	 */
-	public Post setEmail(String email)
-	{
+	public Post setEmail(String email) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns attachments count.</p>
 	 */
-	public int getAttachmentsCount()
-	{
+	public int getAttachmentsCount() {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns attachment at given {@code index}.</p>
 	 */
-	public Attachment getAttachmentAt(int index)
-	{
+	public Attachment getAttachmentAt(int index) {
 		throw new IllegalAccessError();
 	}
 
@@ -280,8 +251,7 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param attachments Array of {@link Attachment}.
 	 * @return This model.
 	 */
-	public Post setAttachments(Attachment... attachments)
-	{
+	public Post setAttachments(Attachment... attachments) {
 		throw new IllegalAccessError();
 	}
 
@@ -291,24 +261,21 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param attachments Collection of {@link Attachment}.
 	 * @return This model.
 	 */
-	public Post setAttachments(Collection<? extends Attachment> attachments)
-	{
+	public Post setAttachments(Collection<? extends Attachment> attachments) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns icons count.</p>
 	 */
-	public int getIconsCount()
-	{
+	public int getIconsCount() {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns icon at given {@code index}.</p>
 	 */
-	public Icon getIconAt(int index)
-	{
+	public Icon getIconAt(int index) {
 		throw new IllegalAccessError();
 	}
 
@@ -318,8 +285,7 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param icons Array of {@link Icon}.
 	 * @return This model.
 	 */
-	public Post setIcons(Icon... icons)
-	{
+	public Post setIcons(Icon... icons) {
 		throw new IllegalAccessError();
 	}
 
@@ -329,16 +295,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param icons Collection of {@link Icon}.
 	 * @return This model.
 	 */
-	public Post setIcons(Collection<? extends Icon> icons)
-	{
+	public Post setIcons(Collection<? extends Icon> icons) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns whether post contains sage mark.</p>
 	 */
-	public boolean isSage()
-	{
+	public boolean isSage() {
 		throw new IllegalAccessError();
 	}
 
@@ -348,16 +312,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param sage True if post contains sage mark, false otherwise.
 	 * @return This model.
 	 */
-	public Post setSage(boolean sage)
-	{
+	public Post setSage(boolean sage) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns whether thread is sticky.</p>
 	 */
-	public boolean isSticky()
-	{
+	public boolean isSticky() {
 		throw new IllegalAccessError();
 	}
 
@@ -367,16 +329,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param sticky True if thread is sticky, false otherwise.
 	 * @return This model.
 	 */
-	public Post setSticky(boolean sticky)
-	{
+	public Post setSticky(boolean sticky) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns whether thread is closed.</p>
 	 */
-	public boolean isClosed()
-	{
+	public boolean isClosed() {
 		throw new IllegalAccessError();
 	}
 
@@ -386,16 +346,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param closed True if thread is closed, false otherwise.
 	 * @return This model.
 	 */
-	public Post setClosed(boolean closed)
-	{
+	public Post setClosed(boolean closed) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns whether thread is archived.</p>
 	 */
-	public boolean isArchived()
-	{
+	public boolean isArchived() {
 		throw new IllegalAccessError();
 	}
 
@@ -405,16 +363,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param archived True if thread is archived, false otherwise.
 	 * @return This model.
 	 */
-	public Post setArchived(boolean archived)
-	{
+	public Post setArchived(boolean archived) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns whether thread is cyclical.</p>
 	 */
-	public boolean isCyclical()
-	{
+	public boolean isCyclical() {
 		throw new IllegalAccessError();
 	}
 
@@ -424,16 +380,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param cyclical True if thread is cyclical, false otherwise.
 	 * @return This model.
 	 */
-	public Post setCyclical(boolean cyclical)
-	{
+	public Post setCyclical(boolean cyclical) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns whether poster was warned by moderator.</p>
 	 */
-	public boolean isPosterWarned()
-	{
+	public boolean isPosterWarned() {
 		throw new IllegalAccessError();
 	}
 
@@ -443,16 +397,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param posterWarned True if poster was warned, false otherwise.
 	 * @return This model.
 	 */
-	public Post setPosterWarned(boolean posterWarned)
-	{
+	public Post setPosterWarned(boolean posterWarned) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns whether poster was banned by moderator.</p>
 	 */
-	public boolean isPosterBanned()
-	{
+	public boolean isPosterBanned() {
 		throw new IllegalAccessError();
 	}
 
@@ -462,16 +414,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param posterBanned True if poster was banned, false otherwise.
 	 * @return This model.
 	 */
-	public Post setPosterBanned(boolean posterBanned)
-	{
+	public Post setPosterBanned(boolean posterBanned) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns whether post was written by original poster.</p>
 	 */
-	public boolean isOriginalPoster()
-	{
+	public boolean isOriginalPoster() {
 		throw new IllegalAccessError();
 	}
 
@@ -481,16 +431,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param originalPoster True if post was written by original poster, false otherwise.
 	 * @return This model.
 	 */
-	public Post setOriginalPoster(boolean originalPoster)
-	{
+	public Post setOriginalPoster(boolean originalPoster) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns whether poster name is default.</p>
 	 */
-	public boolean isDefaultName()
-	{
+	public boolean isDefaultName() {
 		throw new IllegalAccessError();
 	}
 
@@ -500,16 +448,14 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param defaultName True if poster name is default, false otherwise.
 	 * @return This model.
 	 */
-	public Post setDefaultName(boolean defaultName)
-	{
+	public Post setDefaultName(boolean defaultName) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns whether bump limit reached.</p>
 	 */
-	public boolean isBumpLimitReached()
-	{
+	public boolean isBumpLimitReached() {
 		throw new IllegalAccessError();
 	}
 
@@ -519,14 +465,12 @@ public final class Post implements Serializable, Comparable<Post>
 	 * @param bumpLimitReached True if bump limit reached, false otherwise.
 	 * @return This model.
 	 */
-	public Post setBumpLimitReached(boolean bumpLimitReached)
-	{
+	public Post setBumpLimitReached(boolean bumpLimitReached) {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public int compareTo(Post another)
-	{
+	public int compareTo(Post another) {
 		throw new IllegalAccessError();
 	}
 }

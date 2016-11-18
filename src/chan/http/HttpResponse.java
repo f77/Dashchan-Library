@@ -8,23 +8,20 @@ import android.graphics.Bitmap;
 /**
  * <p>HTTP response holder.</p>
  */
-public class HttpResponse
-{
+public class HttpResponse {
 	/**
 	 * <p>Constructor for {@link HttpResponse}.</p>
 	 *
 	 * @param bytes Byte array of data.
 	 */
-	public HttpResponse(byte[] bytes)
-	{
+	public HttpResponse(byte[] bytes) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Sets encoding for this instance. UTF-8 is used by default.</p>
 	 */
-	public void setEncoding(String charsetName)
-	{
+	public void setEncoding(String charsetName) {
 		throw new IllegalAccessError();
 	}
 
@@ -33,8 +30,7 @@ public class HttpResponse
 	 *
 	 * @return Byte array response.
 	 */
-	public byte[] getBytes()
-	{
+	public byte[] getBytes() {
 		throw new IllegalAccessError();
 	}
 
@@ -43,8 +39,7 @@ public class HttpResponse
 	 *
 	 * @return String response.
 	 */
-	public String getString()
-	{
+	public String getString() {
 		throw new IllegalAccessError();
 	}
 
@@ -53,8 +48,7 @@ public class HttpResponse
 	 *
 	 * @return Bitmap response or {@code null} if response is not bitmap.
 	 */
-	public Bitmap getBitmap()
-	{
+	public Bitmap getBitmap() {
 		throw new IllegalAccessError();
 	}
 
@@ -63,8 +57,7 @@ public class HttpResponse
 	 *
 	 * @return JSON object response or {@code null} if response is not JSON object.
 	 */
-	public JSONObject getJsonObject()
-	{
+	public JSONObject getJsonObject() {
 		throw new IllegalAccessError();
 	}
 
@@ -73,8 +66,7 @@ public class HttpResponse
 	 *
 	 * @return JSON array response or {@code null} if response is not JSON array.
 	 */
-	public JSONArray getJsonArray()
-	{
+	public JSONArray getJsonArray() {
 		throw new IllegalAccessError();
 	}
 }

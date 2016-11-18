@@ -6,8 +6,7 @@ import java.io.OutputStream;
 /**
  * <p>HTTP request entity. Used to pass data with HTTP POST request.</p>
  */
-public interface RequestEntity
-{
+public interface RequestEntity {
 	/**
 	 * <p>Add string field to entity with given {@code name} and {@code value}.</p>
 	 *

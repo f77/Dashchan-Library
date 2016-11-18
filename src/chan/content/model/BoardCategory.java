@@ -6,15 +6,13 @@ import java.util.Iterator;
 /**
  * <p>Model containing board category data: category title and array of {@link Board}.</p>
  */
-public final class BoardCategory implements Iterable<Board>
-{
+public final class BoardCategory implements Iterable<Board> {
 	/**
 	 * <p>Returns board category title.</p>
 	 *
 	 * @return Title string.
 	 */
-	public String getTitle()
-	{
+	public String getTitle() {
 		throw new IllegalAccessError();
 	}
 
@@ -23,8 +21,7 @@ public final class BoardCategory implements Iterable<Board>
 	 *
 	 * @return Array of {@link Board}.
 	 */
-	public Board[] getBoards()
-	{
+	public Board[] getBoards() {
 		throw new IllegalAccessError();
 	}
 
@@ -34,8 +31,7 @@ public final class BoardCategory implements Iterable<Board>
 	 * @param title Board category title.
 	 * @param boards Array of {@link Board}.
 	 */
-	public BoardCategory(String title, Board[] boards)
-	{
+	public BoardCategory(String title, Board[] boards) {
 		throw new IllegalAccessError();
 	}
 
@@ -45,14 +41,12 @@ public final class BoardCategory implements Iterable<Board>
 	 * @param title Board category title.
 	 * @param boards Collection of {@link Board}.
 	 */
-	public BoardCategory(String title, Collection<Board> boards)
-	{
+	public BoardCategory(String title, Collection<Board> boards) {
 		throw new IllegalAccessError();
 	}
 
 	@Override
-	public Iterator<Board> iterator()
-	{
+	public Iterator<Board> iterator() {
 		throw new IllegalAccessError();
 	}
 }

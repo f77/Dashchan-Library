@@ -3,15 +3,11 @@ package chan.content;
 /**
  * <p>Thrown then unknown or incorrect data read. This exceptions is thrown by {@link ChanPerformer} methods.</p>
  */
-public final class InvalidResponseException extends Exception
-{
-	private static final long serialVersionUID = 1L;
-
+public final class InvalidResponseException extends Exception {
 	/**
 	 * <p>Default constructor for an {@link InvalidResponseException}.</p>
 	 */
-	public InvalidResponseException()
-	{
+	public InvalidResponseException() {
 		throw new IllegalAccessError();
 	}
 
@@ -20,8 +16,7 @@ public final class InvalidResponseException extends Exception
 	 *
 	 * @param throwable The cause of this exception.
 	 */
-	public InvalidResponseException(Throwable throwable)
-	{
+	public InvalidResponseException(Throwable throwable) {
 		throw new IllegalAccessError();
 	}
 }

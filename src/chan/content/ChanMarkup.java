@@ -26,8 +26,7 @@ import chan.text.CommentEditor;
  * <li>{@link ChanMarkup#addColorable(String, String, String)}</li>
  * </ul>
  */
-public abstract class ChanMarkup
-{
+public abstract class ChanMarkup {
 	/**
 	 * <p>Return linked {@link ChanMarkup} instance.
 	 *
@@ -35,8 +34,7 @@ public abstract class ChanMarkup
 	 * {@link ChanLocator} or {@link ChanMarkup}.
 	 * @return {@link ChanMarkup} instance.
 	 */
-	public static <T extends ChanMarkup> T get(Object object)
-	{
+	public static <T extends ChanMarkup> T get(Object object) {
 		throw new IllegalAccessError();
 	}
 
@@ -100,9 +98,11 @@ public abstract class ChanMarkup
 	 */
 	public static final int TAG_HEADING;
 
-	static
-	{
-		if (true) throw new IllegalAccessError();
+	static {
+		// noinspection ConstantIfStatement,ConstantConditions
+		if (true) {
+			throw new IllegalAccessError();
+		}
 	}
 
 	/**
@@ -111,8 +111,7 @@ public abstract class ChanMarkup
 	 * @param boardName Board name string.
 	 * @return {@link CommentEditor} instance.
 	 */
-	public CommentEditor obtainCommentEditor(String boardName)
-	{
+	public CommentEditor obtainCommentEditor(String boardName) {
 		throw new IllegalAccessError();
 	}
 
@@ -124,8 +123,7 @@ public abstract class ChanMarkup
 	 * @param tag Tag to check.
 	 * @return True if tag is supported, false otherwise.
 	 */
-	public boolean isTagSupported(String boardName, int tag)
-	{
+	public boolean isTagSupported(String boardName, int tag) {
 		throw new IllegalAccessError();
 	}
 
@@ -135,8 +133,7 @@ public abstract class ChanMarkup
 	 * @param tagName Tag to handle.
 	 * @param tag Tag type.
 	 */
-	public void addTag(String tagName, int tag)
-	{
+	public void addTag(String tagName, int tag) {
 		throw new IllegalAccessError();
 	}
 
@@ -148,8 +145,7 @@ public abstract class ChanMarkup
 	 * @param cssClass Tag CSS class.
 	 * @param tag Tag type.
 	 */
-	public void addTag(String tagName, String cssClass, int tag)
-	{
+	public void addTag(String tagName, String cssClass, int tag) {
 		throw new IllegalAccessError();
 	}
 
@@ -162,9 +158,8 @@ public abstract class ChanMarkup
 	 * @param value Attribute value.
 	 * @param tag Tag type.
 	 */
-	public void addTag(String tagName, String attribute, String value, int tag)
-	{
-
+	public void addTag(String tagName, String attribute, String value, int tag) {
+		throw new IllegalAccessError();
 	}
 
 	/**
@@ -173,8 +168,7 @@ public abstract class ChanMarkup
 	 *
 	 * @param tagName Tag to handle.
 	 */
-	public void addColorable(String tagName)
-	{
+	public void addColorable(String tagName) {
 		throw new IllegalAccessError();
 	}
 
@@ -185,8 +179,7 @@ public abstract class ChanMarkup
 	 * @param tagName Tag to handle.
 	 * @param cssClass Tag CSS class.
 	 */
-	public void addColorable(String tagName, String cssClass)
-	{
+	public void addColorable(String tagName, String cssClass) {
 		throw new IllegalAccessError();
 	}
 
@@ -198,8 +191,7 @@ public abstract class ChanMarkup
 	 * @param attribute Tag attribute.
 	 * @param value Attribute value.
 	 */
-	public void addColorable(String tagName, String attribute, String value)
-	{
+	public void addColorable(String tagName, String attribute, String value) {
 		throw new IllegalAccessError();
 	}
 
@@ -210,8 +202,7 @@ public abstract class ChanMarkup
 	 * @param block True to enable block tag.
 	 * @param spaced True to enable spacing.
 	 */
-	public void addBlock(String tagName, boolean block, boolean spaced)
-	{
+	public void addBlock(String tagName, boolean block, boolean spaced) {
 		throw new IllegalAccessError();
 	}
 
@@ -224,8 +215,7 @@ public abstract class ChanMarkup
 	 * @param block True to enable block tag.
 	 * @param spaced True to enable spacing.
 	 */
-	public void addBlock(String tagName, String cssClass, boolean block, boolean spaced)
-	{
+	public void addBlock(String tagName, String cssClass, boolean block, boolean spaced) {
 		throw new IllegalAccessError();
 	}
 
@@ -239,8 +229,7 @@ public abstract class ChanMarkup
 	 * @param block True to enable block tag.
 	 * @param spaced True to enable spacing.
 	 */
-	public void addBlock(String tagName, String attribute, String value, boolean block, boolean spaced)
-	{
+	public void addBlock(String tagName, String attribute, String value, boolean block, boolean spaced) {
 		throw new IllegalAccessError();
 	}
 
@@ -251,8 +240,7 @@ public abstract class ChanMarkup
 	 * @param tagName Tag to handle.
 	 * @param preformatted True to enable preformatted tag.
 	 */
-	public void addPreformatted(String tagName, boolean preformatted)
-	{
+	public void addPreformatted(String tagName, boolean preformatted) {
 		throw new IllegalAccessError();
 	}
 
@@ -264,8 +252,7 @@ public abstract class ChanMarkup
 	 * @param cssClass Tag CSS class.
 	 * @param preformatted True to enable preformatted tag.
 	 */
-	public void addPreformatted(String tagName, String cssClass, boolean preformatted)
-	{
+	public void addPreformatted(String tagName, String cssClass, boolean preformatted) {
 		throw new IllegalAccessError();
 	}
 
@@ -278,8 +265,7 @@ public abstract class ChanMarkup
 	 * @param value Attribute value.
 	 * @param preformatted True to enable preformatted tag.
 	 */
-	public void addPreformatted(String tagName, String attribute, String value, boolean preformatted)
-	{
+	public void addPreformatted(String tagName, String attribute, String value, boolean preformatted) {
 		throw new IllegalAccessError();
 	}
 
@@ -296,8 +282,7 @@ public abstract class ChanMarkup
 	 * @param uriString Parsed URI string.
 	 * @return Pair of strings.
 	 */
-	public Pair<String, String> obtainPostLinkThreadPostNumbers(String uriString)
-	{
+	public Pair<String, String> obtainPostLinkThreadPostNumbers(String uriString) {
 		throw new IllegalAccessError();
 	}
 }

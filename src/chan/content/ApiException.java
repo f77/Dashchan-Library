@@ -3,10 +3,7 @@ package chan.content;
 /**
  * <p>Thrown by sending methods from {@link ChanPerformer}.</p>
  */
-public final class ApiException extends Exception
-{
-	private static final long serialVersionUID = 1L;
-
+public final class ApiException extends Exception {
 	/**
 	 * <p>Board not exists error.</p>
 	 */
@@ -156,9 +153,11 @@ public final class ApiException extends Exception
 	 */
 	public static final int FLAG_KEEP_CAPTCHA;
 
-	static
-	{
-		if (true) throw new IllegalAccessError();
+	static {
+		// noinspection ConstantIfStatement,ConstantConditions
+		if (true) {
+			throw new IllegalAccessError();
+		}
 	}
 
 	/**
@@ -166,8 +165,7 @@ public final class ApiException extends Exception
 	 *
 	 * @param errorType Error type constant value.
 	 */
-	public ApiException(int errorType)
-	{
+	public ApiException(int errorType) {
 		throw new IllegalAccessError();
 	}
 
@@ -177,8 +175,7 @@ public final class ApiException extends Exception
 	 * @param errorType Error type constant value.
 	 * @param flags Additional option flags. The following flags are available: {@link #FLAG_KEEP_CAPTCHA}.
 	 */
-	public ApiException(int errorType, int flags)
-	{
+	public ApiException(int errorType, int flags) {
 		throw new IllegalAccessError();
 	}
 
@@ -188,8 +185,7 @@ public final class ApiException extends Exception
 	 * @param errorType Error type constant value.
 	 * @param extra Additional extra data. The following types are available {@link BanExtra}, {@link WordsExtra}.
 	 */
-	public ApiException(int errorType, Object extra)
-	{
+	public ApiException(int errorType, Object extra) {
 		throw new IllegalAccessError();
 	}
 
@@ -200,8 +196,7 @@ public final class ApiException extends Exception
 	 * @param flags Additional option flags. The following flags are available: {@link #FLAG_KEEP_CAPTCHA}.
 	 * @param extra Additional extra data. The following types are available {@link BanExtra}, {@link WordsExtra}.
 	 */
-	public ApiException(int errorType, int flags, Object extra)
-	{
+	public ApiException(int errorType, int flags, Object extra) {
 		throw new IllegalAccessError();
 	}
 
@@ -210,8 +205,7 @@ public final class ApiException extends Exception
 	 *
 	 * @param detailMessage Error message.
 	 */
-	public ApiException(String detailMessage)
-	{
+	public ApiException(String detailMessage) {
 		throw new IllegalAccessError();
 	}
 
@@ -221,24 +215,21 @@ public final class ApiException extends Exception
 	 * @param detailMessage Error message.
 	 * @param flags Additional option flags. The following flags are available: {@link #FLAG_KEEP_CAPTCHA}.
 	 */
-	public ApiException(String detailMessage, int flags)
-	{
-
+	public ApiException(String detailMessage, int flags) {
+		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>{@link #SEND_ERROR_BANNED} extra holder.</p>
 	 */
-	public static final class BanExtra
-	{
+	public static final class BanExtra {
 		/**
 		 * <p>Sets ban ID.</p>
 		 *
 		 * @param id Ban ID.
 		 * @return This object.
 		 */
-		public BanExtra setId(String id)
-		{
+		public BanExtra setId(String id) {
 			throw new IllegalAccessError();
 		}
 
@@ -248,8 +239,7 @@ public final class ApiException extends Exception
 		 * @param message Ban reason message.
 		 * @return This object.
 		 */
-		public BanExtra setMessage(String message)
-		{
+		public BanExtra setMessage(String message) {
 			throw new IllegalAccessError();
 		}
 
@@ -259,8 +249,7 @@ public final class ApiException extends Exception
 		 * @param startDate Ban start date.
 		 * @return This object.
 		 */
-		public BanExtra setStartDate(long startDate)
-		{
+		public BanExtra setStartDate(long startDate) {
 			throw new IllegalAccessError();
 		}
 
@@ -270,8 +259,7 @@ public final class ApiException extends Exception
 		 * @param expireDate Ban expire date.
 		 * @return This object.
 		 */
-		public BanExtra setExpireDate(long expireDate)
-		{
+		public BanExtra setExpireDate(long expireDate) {
 			throw new IllegalAccessError();
 		}
 	}
@@ -279,16 +267,14 @@ public final class ApiException extends Exception
 	/**
 	 * <p>{@link #SEND_ERROR_SPAM_LIST} extra holder.</p>
 	 */
-	public static final class WordsExtra
-	{
+	public static final class WordsExtra {
 		/**
 		 * <p>Adds a rejected word from message.</p>
 		 *
 		 * @param word Rejected word.
 		 * @return This object.
 		 */
-		public WordsExtra addWord(String word)
-		{
+		public WordsExtra addWord(String word) {
 			throw new IllegalAccessError();
 		}
 	}

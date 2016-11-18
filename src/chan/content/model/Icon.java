@@ -9,10 +9,7 @@ import android.net.Uri;
 /**
  * <p>Model containing post icon.</p>
  */
-public final class Icon implements Serializable
-{
-	private static final long serialVersionUID = 1L;
-
+public final class Icon implements Serializable {
 	/**
 	 * <p>Constructor for {@link Icon}.</p>
 	 *
@@ -20,8 +17,7 @@ public final class Icon implements Serializable
 	 * @param uri Icon URI.
 	 * @param title Icon title.
 	 */
-	public Icon(ChanLocator locator, Uri uri, String title)
-	{
+	public Icon(ChanLocator locator, Uri uri, String title) {
 		throw new IllegalAccessError();
 	}
 
@@ -30,16 +26,14 @@ public final class Icon implements Serializable
 	 *
 	 * @param locator {@link ChanLocator} instance to decode URI in model.
 	 */
-	public Uri getUri(ChanLocator locator)
-	{
+	public Uri getUri(ChanLocator locator) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns icon title.</p>
 	 */
-	public String getTitle()
-	{
+	public String getTitle() {
 		throw new IllegalAccessError();
 	}
 }

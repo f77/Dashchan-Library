@@ -7,28 +7,22 @@ import java.io.OutputStream;
 /**
  * <p>HTTP request builder and executor.</p>
  */
-public final class HttpRequest
-{
+public final class HttpRequest {
 	/**
 	 * <p>Client's preset with timeout settings, listeners, etc. You should never implement this interface.</p>
 	 */
-	public interface Preset
-	{
-
-	}
+	public interface Preset {}
 
 	/**
 	 * <p>Redirection handler interface.</p>
 	 *
 	 * @see HttpRequest#setRedirectHandler(RedirectHandler)
 	 */
-	public interface RedirectHandler
-	{
+	public interface RedirectHandler {
 		/**
 		 * <p>Redirection handler result.</p>
 		 */
-		public enum Action
-		{
+		public enum Action {
 			/**
 			 * <p>Cancel redirect handling.</p>
 			 */
@@ -47,8 +41,7 @@ public final class HttpRequest
 			/**
 			 * <p>Overrides redirected URI.</p>
 			 */
-			public Action setRedirectedUri(Uri redirectedUri)
-			{
+			public Action setRedirectedUri(Uri redirectedUri) {
 				throw new IllegalAccessError();
 			}
 		}
@@ -84,8 +77,7 @@ public final class HttpRequest
 		public static final RedirectHandler STRICT = stub();
 	}
 
-	private static RedirectHandler stub()
-	{
+	private static RedirectHandler stub() {
 		throw new IllegalAccessError();
 	}
 
@@ -96,8 +88,7 @@ public final class HttpRequest
 	 * @param holder {@link HttpHolder} instance. May be null.
 	 * @param preset Preset with configuration.
 	 */
-	public HttpRequest(Uri uri, HttpHolder holder, Preset preset)
-	{
+	public HttpRequest(Uri uri, HttpHolder holder, Preset preset) {
 		throw new IllegalAccessError();
 	}
 
@@ -107,8 +98,7 @@ public final class HttpRequest
 	 * @param uri URI for request.
 	 * @param holder {@link HttpHolder} instance. May be null.
 	 */
-	public HttpRequest(Uri uri, HttpHolder holder)
-	{
+	public HttpRequest(Uri uri, HttpHolder holder) {
 		throw new IllegalAccessError();
 	}
 
@@ -119,8 +109,7 @@ public final class HttpRequest
 	 * @param uri URI for request.
 	 * @param preset Preset with configuration.
 	 */
-	public HttpRequest(Uri uri, Preset preset)
-	{
+	public HttpRequest(Uri uri, Preset preset) {
 		throw new IllegalAccessError();
 	}
 
@@ -129,8 +118,7 @@ public final class HttpRequest
 	 *
 	 * @return This builder.
 	 */
-	public HttpRequest setGetMethod()
-	{
+	public HttpRequest setGetMethod() {
 		throw new IllegalAccessError();
 	}
 
@@ -139,8 +127,7 @@ public final class HttpRequest
 	 *
 	 * @return This builder.
 	 */
-	public HttpRequest setHeadMethod()
-	{
+	public HttpRequest setHeadMethod() {
 		throw new IllegalAccessError();
 	}
 
@@ -150,8 +137,7 @@ public final class HttpRequest
 	 * @param entity {@link RequestEntity} instance.
 	 * @return This builder.
 	 */
-	public HttpRequest setPostMethod(RequestEntity entity)
-	{
+	public HttpRequest setPostMethod(RequestEntity entity) {
 		throw new IllegalAccessError();
 	}
 
@@ -161,8 +147,7 @@ public final class HttpRequest
 	 * @param entity {@link RequestEntity} instance.
 	 * @return This builder.
 	 */
-	public HttpRequest setPutMethod(RequestEntity entity)
-	{
+	public HttpRequest setPutMethod(RequestEntity entity) {
 		throw new IllegalAccessError();
 	}
 
@@ -172,8 +157,7 @@ public final class HttpRequest
 	 * @param entity {@link RequestEntity} instance.
 	 * @return This builder.
 	 */
-	public HttpRequest setDeleteMethod(RequestEntity entity)
-	{
+	public HttpRequest setDeleteMethod(RequestEntity entity) {
 		throw new IllegalAccessError();
 	}
 
@@ -184,8 +168,7 @@ public final class HttpRequest
 	 * @param successOnly True to enable handling, false to disable one.
 	 * @return This builder.
 	 */
-	public HttpRequest setSuccessOnly(boolean successOnly)
-	{
+	public HttpRequest setSuccessOnly(boolean successOnly) {
 		throw new IllegalAccessError();
 	}
 
@@ -195,8 +178,7 @@ public final class HttpRequest
 	 * @param redirectHandler Redirect handler interface.
 	 * @return This builder.
 	 */
-	public HttpRequest setRedirectHandler(RedirectHandler redirectHandler)
-	{
+	public HttpRequest setRedirectHandler(RedirectHandler redirectHandler) {
 		throw new IllegalAccessError();
 	}
 
@@ -206,8 +188,7 @@ public final class HttpRequest
 	 * @param validator {@link HttpValidator} instance. May be null.
 	 * @return This builder.
 	 */
-	public HttpRequest setValidator(HttpValidator validator)
-	{
+	public HttpRequest setValidator(HttpValidator validator) {
 		throw new IllegalAccessError();
 	}
 
@@ -217,8 +198,7 @@ public final class HttpRequest
 	 * @param keepAlive True to enable pooling, false to disable one.
 	 * @return This builder.
 	 */
-	public HttpRequest setKeepAlive(boolean keepAlive)
-	{
+	public HttpRequest setKeepAlive(boolean keepAlive) {
 		throw new IllegalAccessError();
 	}
 
@@ -229,8 +209,7 @@ public final class HttpRequest
 	 * @param readTimeout Max delay in milliseconds between reading data.
 	 * @return This builder.
 	 */
-	public HttpRequest setTimeouts(int connectTimeout, int readTimeout)
-	{
+	public HttpRequest setTimeouts(int connectTimeout, int readTimeout) {
 		throw new IllegalAccessError();
 	}
 
@@ -241,8 +220,7 @@ public final class HttpRequest
 	 * @param delay Delay in milliseconds.
 	 * @return This builder.
 	 */
-	public HttpRequest setDelay(int delay)
-	{
+	public HttpRequest setDelay(int delay) {
 		throw new IllegalAccessError();
 	}
 
@@ -253,8 +231,7 @@ public final class HttpRequest
 	 * @param outputStream Output stream.
 	 * @return This builder.
 	 */
-	public HttpRequest setOutputStream(OutputStream outputStream)
-	{
+	public HttpRequest setOutputStream(OutputStream outputStream) {
 		throw new IllegalAccessError();
 	}
 
@@ -265,8 +242,7 @@ public final class HttpRequest
 	 * @param value Header value.
 	 * @return This builder.
 	 */
-	public HttpRequest addHeader(String name, String value)
-	{
+	public HttpRequest addHeader(String name, String value) {
 		throw new IllegalAccessError();
 	}
 
@@ -275,8 +251,7 @@ public final class HttpRequest
 	 *
 	 * @return This builder.
 	 */
-	public HttpRequest clearHeaders()
-	{
+	public HttpRequest clearHeaders() {
 		throw new IllegalAccessError();
 	}
 
@@ -288,8 +263,7 @@ public final class HttpRequest
 	 * @return This builder.
 	 * @see CookieBuilder
 	 */
-	public HttpRequest addCookie(String name, String value)
-	{
+	public HttpRequest addCookie(String name, String value) {
 		throw new IllegalAccessError();
 	}
 
@@ -300,8 +274,7 @@ public final class HttpRequest
 	 * @return This builder.
 	 * @see CookieBuilder
 	 */
-	public HttpRequest addCookie(String cookie)
-	{
+	public HttpRequest addCookie(String cookie) {
 		throw new IllegalAccessError();
 	}
 
@@ -312,8 +285,7 @@ public final class HttpRequest
 	 * @return This builder.
 	 * @see CookieBuilder
 	 */
-	public HttpRequest addCookie(CookieBuilder builder)
-	{
+	public HttpRequest addCookie(CookieBuilder builder) {
 		throw new IllegalAccessError();
 	}
 
@@ -322,8 +294,7 @@ public final class HttpRequest
 	 *
 	 * @return This builder.
 	 */
-	public HttpRequest clearCookies()
-	{
+	public HttpRequest clearCookies() {
 		throw new IllegalAccessError();
 	}
 
@@ -332,8 +303,7 @@ public final class HttpRequest
 	 *
 	 * @return Copy of builder.
 	 */
-	public HttpRequest copy()
-	{
+	public HttpRequest copy() {
 		throw new IllegalAccessError();
 	}
 
@@ -344,8 +314,7 @@ public final class HttpRequest
 	 * @return HTTP connection holder.
 	 * @throws HttpException if HTTP exception occurred.
 	 */
-	public HttpHolder execute() throws HttpException
-	{
+	public HttpHolder execute() throws HttpException {
 		throw new IllegalAccessError();
 	}
 
@@ -356,8 +325,7 @@ public final class HttpRequest
 	 * @throws HttpException if HTTP exception occurred.
 	 * @see HttpResponse
 	 */
-	public HttpResponse read() throws HttpException
-	{
+	public HttpResponse read() throws HttpException {
 		throw new IllegalAccessError();
 	}
 }

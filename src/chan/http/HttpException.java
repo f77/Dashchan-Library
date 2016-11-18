@@ -5,18 +5,14 @@ import chan.content.ChanPerformer;
 /**
  * <p>Thrown by HTTP client and {@link ChanPerformer} methods.</p>
  */
-public final class HttpException extends Exception
-{
-	private static final long serialVersionUID = 1L;
-
+public final class HttpException extends Exception {
 	/**
 	 * <p>Constructor for a {@link HttpException} with response code and message.</p>
 	 *
 	 * @param responseCode Response code.
 	 * @param responseText Response message.
 	 */
-	public HttpException(int responseCode, String responseText)
-	{
+	public HttpException(int responseCode, String responseText) {
 		throw new IllegalAccessError();
 	}
 
@@ -25,24 +21,21 @@ public final class HttpException extends Exception
 	 *
 	 * @return Response code.
 	 */
-	public int getResponseCode()
-	{
+	public int getResponseCode() {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns whether exception is HTTP protocol exception.</p>
 	 */
-	public boolean isHttpException()
-	{
+	public boolean isHttpException() {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns whether exception is socket level exception.</p>
 	 */
-	public boolean isSocketException()
-	{
+	public boolean isSocketException() {
 		throw new IllegalAccessError();
 	}
 
@@ -52,8 +45,7 @@ public final class HttpException extends Exception
 	 *
 	 * @return Exception object.
 	 */
-	public static HttpException createNotFoundException()
-	{
+	public static HttpException createNotFoundException() {
 		throw new IllegalAccessError();
 	}
 }

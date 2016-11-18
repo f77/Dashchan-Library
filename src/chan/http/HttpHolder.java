@@ -8,21 +8,18 @@ import android.net.Uri;
 /**
  * <p>HTTP connection holder.</p>
  */
-public final class HttpHolder
-{
+public final class HttpHolder {
 	/**
 	 * <p>Disconnect from server.</p>
 	 */
-	public void disconnect()
-	{
+	public void disconnect() {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Reads {@link HttpResponse} from server.</p>
 	 */
-	public HttpResponse read() throws HttpException
-	{
+	public HttpResponse read() throws HttpException {
 		throw new IllegalAccessError();
 	}
 
@@ -30,8 +27,7 @@ public final class HttpHolder
 	 * <p>This method will throw {@link HttpException} if response code is not success ({@code 2xx}) or redirect
 	 * ({@code 301}, {@code 302}, {@code 303} or {@code 307}).</p>
 	 */
-	public void checkResponseCode() throws HttpException
-	{
+	public void checkResponseCode() throws HttpException {
 		throw new IllegalAccessError();
 	}
 
@@ -40,8 +36,7 @@ public final class HttpHolder
 	 *
 	 * @return Response code.
 	 */
-	public int getResponseCode()
-	{
+	public int getResponseCode() {
 		throw new IllegalAccessError();
 	}
 
@@ -50,8 +45,7 @@ public final class HttpHolder
 	 *
 	 * @return Response message.
 	 */
-	public String getResponseMessage()
-	{
+	public String getResponseMessage() {
 		throw new IllegalAccessError();
 	}
 
@@ -60,8 +54,7 @@ public final class HttpHolder
 	 *
 	 * @return Redirected URI.
 	 */
-	public Uri getRedirectedUri()
-	{
+	public Uri getRedirectedUri() {
 		throw new IllegalAccessError();
 	}
 
@@ -70,8 +63,7 @@ public final class HttpHolder
 	 *
 	 * @return HTTP header fields.
 	 */
-	public Map<String, List<String>> getHeaderFields()
-	{
+	public Map<String, List<String>> getHeaderFields() {
 		throw new IllegalAccessError();
 	}
 
@@ -81,8 +73,7 @@ public final class HttpHolder
 	 * @param name Name of cookie.
 	 * @return Value of cookie or {@code null} if given cookie doesn't exist.
 	 */
-	public String getCookieValue(String name)
-	{
+	public String getCookieValue(String name) {
 		throw new IllegalAccessError();
 	}
 
@@ -92,8 +83,7 @@ public final class HttpHolder
 	 * @return {@link HttpValidator} instance.
 	 * @see HttpValidator
 	 */
-	public HttpValidator getValidator()
-	{
+	public HttpValidator getValidator() {
 		throw new IllegalAccessError();
 	}
 }

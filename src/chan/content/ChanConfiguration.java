@@ -92,8 +92,7 @@ import android.util.Pair;
  *
  * <p>You can configure custom preferences using {@link #obtainStatisticsConfiguration()}.</p>
  */
-public class ChanConfiguration
-{
+public class ChanConfiguration {
 	/**
 	 * <p>Allows client to use only one board. That exempts you from obligation to override
 	 * {@link ChanPerformer#onReadBoards(chan.content.ChanPerformer.ReadBoardsData)} method.</p>
@@ -166,9 +165,11 @@ public class ChanConfiguration
 	public static final String CAPTCHA_TYPE_RECAPTCHA_2;
 	public static final String CAPTCHA_TYPE_MAILRU;
 
-	static
-	{
-		if (true) throw new IllegalAccessError();
+	static {
+		// noinspection ConstantIfStatement,ConstantConditions
+		if (true) {
+			throw new IllegalAccessError();
+		}
 	}
 
 	/**
@@ -178,8 +179,7 @@ public class ChanConfiguration
 	 * {@link ChanLocator} or {@link ChanMarkup}.
 	 * @return {@link ChanConfiguration} instance.
 	 */
-	public static <T extends ChanConfiguration> T get(Object object)
-	{
+	public static <T extends ChanConfiguration> T get(Object object) {
 		throw new IllegalAccessError();
 	}
 
@@ -188,8 +188,7 @@ public class ChanConfiguration
 	 *
 	 * @see ChanConfiguration#setBumpLimitMode(BumpLimitMode)
 	 */
-	public enum BumpLimitMode
-	{
+	public enum BumpLimitMode {
 		/**
 		 * <p>Default mode. If bump limit if {@code 500}, posts from {@code 501} won't bump a thread.</p>
 		 */
@@ -210,8 +209,7 @@ public class ChanConfiguration
 	/**
 	 * <p>Board configuration holder.</p>
 	 */
-	public static final class Board
-	{
+	public static final class Board {
 		/**
 		 * <p>Set {@code true} to allow user to search for threads and posts. You must implement
 		 * {@link ChanPerformer#onReadSearchPosts(chan.content.ChanPerformer.ReadSearchPostsData)} then.</p>
@@ -262,13 +260,11 @@ public class ChanConfiguration
 	/**
 	 * <p>Captcha configuration holder.</p>
 	 */
-	public static final class Captcha
-	{
+	public static final class Captcha {
 		/**
 		 * <p>Captcha input mode.</p>
 		 */
-		public enum Input
-		{
+		public enum Input {
 			/**
 			 * <p>Captcha may contain any letters and numbers.</p>
 			 */
@@ -288,8 +284,7 @@ public class ChanConfiguration
 		/**
 		 * <p>Captcha validity mode.</p>
 		 */
-		public enum Validity
-		{
+		public enum Validity {
 			/**
 			 * <p>Short lifetime captcha. Client will request new captcha every time user opens posting activity.</p>
 			 */
@@ -341,8 +336,7 @@ public class ChanConfiguration
 	 *
 	 * @see ChanPerformer.SendPostData
 	 */
-	public static final class Posting
-	{
+	public static final class Posting {
 		/**
 		 * <p>Set {@code true} to enable names. You will receive user's input from
 		 * {@link ChanPerformer.SendPostData#name}</p>
@@ -433,8 +427,7 @@ public class ChanConfiguration
 		/**
 		 * <p>Default constructor for {@link Posting}.</p>
 		 */
-		public Posting()
-		{
+		public Posting() {
 			throw new IllegalAccessError();
 		}
 	}
@@ -445,8 +438,7 @@ public class ChanConfiguration
 	 *
 	 * @see ChanPerformer.SendDeletePostsData
 	 */
-	public static final class Deleting
-	{
+	public static final class Deleting {
 		/**
 		 * <p>Set {@code true} to allow user to enter password.</p>
 		 */
@@ -468,8 +460,7 @@ public class ChanConfiguration
 	 *
 	 * @see ChanPerformer.SendReportPostsData
 	 */
-	public static final class Reporting
-	{
+	public static final class Reporting {
 		/**
 		 * <p>Set {@code true} to allow user to enter comment.</p>
 		 */
@@ -495,8 +486,7 @@ public class ChanConfiguration
 		/**
 		 * <p>Default constructor for {@link Reporting}.</p>
 		 */
-		public Reporting()
-		{
+		public Reporting() {
 			throw new IllegalAccessError();
 		}
 	}
@@ -506,8 +496,7 @@ public class ChanConfiguration
 	 *
 	 * @see ChanPerformer.CheckAuthorizationData
 	 */
-	public static final class Authorization
-	{
+	public static final class Authorization {
 		/**
 		 * <p>Number of text field to perform authentication.</p>
 		 */
@@ -524,8 +513,7 @@ public class ChanConfiguration
 	 *
 	 * @see ChanPerformer.SendAddToArchiveData
 	 */
-	public static final class Archivation
-	{
+	public static final class Archivation {
 		/**
 		 * <p>List of allowed chan hosts for archivation.</p>
 		 */
@@ -540,8 +528,7 @@ public class ChanConfiguration
 		/**
 		 * <p>Default constructor for {@link Archivation}.</p>
 		 */
-		public Archivation()
-		{
+		public Archivation() {
 			throw new IllegalAccessError();
 		}
 	}
@@ -549,8 +536,7 @@ public class ChanConfiguration
 	/**
 	 * <p>Statistics configuration holder.</p>
 	 */
-	public static final class Statistics
-	{
+	public static final class Statistics {
 		/**
 		 * <p>Count threads viewed. True by default.</p>
 		 */
@@ -570,8 +556,7 @@ public class ChanConfiguration
 	/**
 	 * <p>Custom preference configuration holder.</p>
 	 */
-	public static final class CustomPreference
-	{
+	public static final class CustomPreference {
 		/**
 		 * <p>Custom preference title.</p>
 		 */
@@ -591,8 +576,7 @@ public class ChanConfiguration
 	 * @param defaultValue Value to return if this preference does not exist.
 	 * @return Stored value.
 	 */
-	public final boolean get(String boardName, String key, boolean defaultValue)
-	{
+	public final boolean get(String boardName, String key, boolean defaultValue) {
 		throw new IllegalAccessError();
 	}
 
@@ -604,8 +588,7 @@ public class ChanConfiguration
 	 * @param defaultValue Value to return if this preference does not exist.
 	 * @return Stored value.
 	 */
-	public final int get(String boardName, String key, int defaultValue)
-	{
+	public final int get(String boardName, String key, int defaultValue) {
 		throw new IllegalAccessError();
 	}
 
@@ -617,8 +600,7 @@ public class ChanConfiguration
 	 * @param defaultValue Value to return if this preference does not exist.
 	 * @return Stored value.
 	 */
-	public final String get(String boardName, String key, String defaultValue)
-	{
+	public final String get(String boardName, String key, String defaultValue) {
 		throw new IllegalAccessError();
 	}
 
@@ -629,8 +611,7 @@ public class ChanConfiguration
 	 * @param key Key name.
 	 * @param value Value to store.
 	 */
-	public final void set(String boardName, String key, boolean value)
-	{
+	public final void set(String boardName, String key, boolean value) {
 		throw new IllegalAccessError();
 	}
 
@@ -641,8 +622,7 @@ public class ChanConfiguration
 	 * @param key Key name.
 	 * @param value Value to store.
 	 */
-	public final void set(String boardName, String key, int value)
-	{
+	public final void set(String boardName, String key, int value) {
 		throw new IllegalAccessError();
 	}
 
@@ -653,16 +633,14 @@ public class ChanConfiguration
 	 * @param key Key name.
 	 * @param value Value to store.
 	 */
-	public final void set(String boardName, String key, String value)
-	{
+	public final void set(String boardName, String key, String value) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns a chan title. This title is display name used in client.</p>
 	 */
-	public final String getTitle()
-	{
+	public final String getTitle() {
 		throw new IllegalAccessError();
 	}
 
@@ -671,8 +649,7 @@ public class ChanConfiguration
 	 *
 	 * @param option Option to request.
 	 */
-	public final void request(String option)
-	{
+	public final void request(String option) {
 		throw new IllegalAccessError();
 	}
 
@@ -682,8 +659,7 @@ public class ChanConfiguration
 	 *
 	 * @param boardName Default board name string.
 	 */
-	public final void setSingleBoardName(String boardName)
-	{
+	public final void setSingleBoardName(String boardName) {
 		throw new IllegalAccessError();
 	}
 
@@ -693,8 +669,7 @@ public class ChanConfiguration
 	 * @param boardName Board name.
 	 * @param title Board title.
 	 */
-	public final void setBoardTitle(String boardName, String title)
-	{
+	public final void setBoardTitle(String boardName, String title) {
 		throw new IllegalAccessError();
 	}
 
@@ -704,8 +679,7 @@ public class ChanConfiguration
 	 * @param boardName Board name.
 	 * @param title Board title.
 	 */
-	public final void storeBoardTitle(String boardName, String title)
-	{
+	public final void storeBoardTitle(String boardName, String title) {
 		throw new IllegalAccessError();
 	}
 
@@ -715,8 +689,7 @@ public class ChanConfiguration
 	 * @param boardName Board name.
 	 * @param description Board description.
 	 */
-	public final void setBoardDescription(String boardName, String description)
-	{
+	public final void setBoardDescription(String boardName, String description) {
 		throw new IllegalAccessError();
 	}
 
@@ -726,8 +699,7 @@ public class ChanConfiguration
 	 * @param boardName Board name.
 	 * @param description Board description.
 	 */
-	public final void storeBoardDescription(String boardName, String description)
-	{
+	public final void storeBoardDescription(String boardName, String description) {
 		throw new IllegalAccessError();
 	}
 
@@ -736,8 +708,7 @@ public class ChanConfiguration
 	 *
 	 * @param defaultName Default name.
 	 */
-	public final void setDefaultName(String defaultName)
-	{
+	public final void setDefaultName(String defaultName) {
 		throw new IllegalAccessError();
 	}
 
@@ -747,8 +718,7 @@ public class ChanConfiguration
 	 * @param boardName Board name.
 	 * @param defaultName Default name.
 	 */
-	public final void setDefaultName(String boardName, String defaultName)
-	{
+	public final void setDefaultName(String boardName, String defaultName) {
 		throw new IllegalAccessError();
 	}
 
@@ -758,8 +728,7 @@ public class ChanConfiguration
 	 * @param boardName Board name.
 	 * @param defaultName Default name.
 	 */
-	public final void storeDefaultName(String boardName, String defaultName)
-	{
+	public final void storeDefaultName(String boardName, String defaultName) {
 		throw new IllegalAccessError();
 	}
 
@@ -768,8 +737,7 @@ public class ChanConfiguration
 	 *
 	 * @param bumpLimit Bump limit value.
 	 */
-	public final void setBumpLimit(int bumpLimit)
-	{
+	public final void setBumpLimit(int bumpLimit) {
 		throw new IllegalAccessError();
 	}
 
@@ -779,8 +747,7 @@ public class ChanConfiguration
 	 * @param boardName Board name.
 	 * @param bumpLimit Bump limit value.
 	 */
-	public final void setBumpLimit(String boardName, int bumpLimit)
-	{
+	public final void setBumpLimit(String boardName, int bumpLimit) {
 		throw new IllegalAccessError();
 	}
 
@@ -790,8 +757,7 @@ public class ChanConfiguration
 	 * @param boardName Board name.
 	 * @param bumpLimit Bump limit value.
 	 */
-	public final void storeBumpLimit(String boardName, int bumpLimit)
-	{
+	public final void storeBumpLimit(String boardName, int bumpLimit) {
 		throw new IllegalAccessError();
 	}
 
@@ -800,8 +766,7 @@ public class ChanConfiguration
 	 *
 	 * @param mode Bump limit mode.
 	 */
-	public final void setBumpLimitMode(BumpLimitMode mode)
-	{
+	public final void setBumpLimitMode(BumpLimitMode mode) {
 		throw new IllegalAccessError();
 	}
 
@@ -811,8 +776,7 @@ public class ChanConfiguration
 	 * @param boardName Board name.
 	 * @param pagesCount Pages count value.
 	 */
-	public final void setPagesCount(String boardName, int pagesCount)
-	{
+	public final void setPagesCount(String boardName, int pagesCount) {
 		throw new IllegalAccessError();
 	}
 
@@ -822,8 +786,7 @@ public class ChanConfiguration
 	 * @param boardName Board name.
 	 * @param pagesCount Pages count value.
 	 */
-	public final void storePagesCount(String boardName, int pagesCount)
-	{
+	public final void storePagesCount(String boardName, int pagesCount) {
 		throw new IllegalAccessError();
 	}
 
@@ -837,8 +800,7 @@ public class ChanConfiguration
 	 *
 	 * @param captchaType Captcha type string.
 	 */
-	public final void addCaptchaType(String captchaType)
-	{
+	public final void addCaptchaType(String captchaType) {
 		throw new IllegalAccessError();
 	}
 
@@ -850,8 +812,7 @@ public class ChanConfiguration
 	 * @param key Custom preference key.
 	 * @param defaultValue Default value.
 	 */
-	public final void addCustomPreference(String key, boolean defaultValue)
-	{
+	public final void addCustomPreference(String key, boolean defaultValue) {
 		throw new IllegalAccessError();
 	}
 
@@ -864,8 +825,7 @@ public class ChanConfiguration
 	 *
 	 * @param boardName Board name string.
 	 */
-	public Board obtainBoardConfiguration(String boardName)
-	{
+	public Board obtainBoardConfiguration(String boardName) {
 		throw new IllegalAccessError();
 	}
 
@@ -875,8 +835,7 @@ public class ChanConfiguration
 	 *
 	 * @param captchaType Captcha type string.
 	 */
-	public Captcha obtainCustomCaptchaConfiguration(String captchaType)
-	{
+	public Captcha obtainCustomCaptchaConfiguration(String captchaType) {
 		throw new IllegalAccessError();
 	}
 
@@ -890,8 +849,7 @@ public class ChanConfiguration
 	 * @param boardName Board name string.
 	 * @param newThread True if user starts new thread.
 	 */
-	public Posting obtainPostingConfiguration(String boardName, boolean newThread)
-	{
+	public Posting obtainPostingConfiguration(String boardName, boolean newThread) {
 		throw new IllegalAccessError();
 	}
 
@@ -904,8 +862,7 @@ public class ChanConfiguration
 	 *
 	 * @param boardName Board name string.
 	 */
-	public Deleting obtainDeletingConfiguration(String boardName)
-	{
+	public Deleting obtainDeletingConfiguration(String boardName) {
 		throw new IllegalAccessError();
 	}
 
@@ -918,8 +875,7 @@ public class ChanConfiguration
 	 *
 	 * @param boardName Board name string.
 	 */
-	public Reporting obtainReportingConfiguration(String boardName)
-	{
+	public Reporting obtainReportingConfiguration(String boardName) {
 		throw new IllegalAccessError();
 	}
 
@@ -927,8 +883,7 @@ public class ChanConfiguration
 	 * <p>Calls every time client requests captcha pass configuration. You must return new instance of
 	 * {@link Authorization} with captcha pass configuration.</p>
 	 */
-	public Authorization obtainCaptchaPassConfiguration()
-	{
+	public Authorization obtainCaptchaPassConfiguration() {
 		throw new IllegalAccessError();
 	}
 
@@ -936,8 +891,7 @@ public class ChanConfiguration
 	 * <p>Calls every time client requests user authorization configuration. You must return new instance of
 	 * {@link Authorization} with user authorization configuration.</p>
 	 */
-	public Authorization obtainUserAuthorizationConfiguration()
-	{
+	public Authorization obtainUserAuthorizationConfiguration() {
 		throw new IllegalAccessError();
 	}
 
@@ -945,8 +899,7 @@ public class ChanConfiguration
 	 * <p>Calls every time client requests archivation configuration. You must return new instance of
 	 * {@link Archivation} with archivation configuration.</p>
 	 */
-	public Archivation obtainArchivationConfiguration()
-	{
+	public Archivation obtainArchivationConfiguration() {
 		throw new IllegalAccessError();
 	}
 
@@ -954,8 +907,7 @@ public class ChanConfiguration
 	 * <p>Calls every time client requests statistics configuration. You must return new instance of
 	 * {@link Statistics} with statistics configuration.</p>
 	 */
-	public Statistics obtainStatisticsConfiguration()
-	{
+	public Statistics obtainStatisticsConfiguration() {
 		throw new IllegalAccessError();
 	}
 
@@ -965,24 +917,21 @@ public class ChanConfiguration
 	 *
 	 * @param key Custom preference key.
 	 */
-	public CustomPreference obtainCustomPreferenceConfiguration(String key)
-	{
+	public CustomPreference obtainCustomPreferenceConfiguration(String key) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns application context.</p>
 	 */
-	public final Context getContext()
-	{
+	public final Context getContext() {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns resources from chan APK file.</p>
 	 */
-	public final Resources getResources()
-	{
+	public final Resources getResources() {
 		throw new IllegalAccessError();
 	}
 
@@ -992,8 +941,7 @@ public class ChanConfiguration
 	 * @param cookie Cookie name.
 	 * @return Cookie value or null if cookie not found.
 	 */
-	public final String getCookie(String cookie)
-	{
+	public final String getCookie(String cookie) {
 		throw new IllegalAccessError();
 	}
 
@@ -1006,8 +954,7 @@ public class ChanConfiguration
 	 * @param value Cookie value. Set this argument to {@code null} to remove the cookie.
 	 * @param displayName Human-friendly name of cookie. May be {@code null} if value is {@code null} too.
 	 */
-	public final void storeCookie(String cookie, String value, String displayName)
-	{
+	public final void storeCookie(String cookie, String value, String displayName) {
 		throw new IllegalAccessError();
 	}
 
@@ -1017,16 +964,14 @@ public class ChanConfiguration
 	 *
 	 * @return User authorization fields values.
 	 */
-	public final String[] getUserAuthorizationData()
-	{
+	public final String[] getUserAuthorizationData() {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns download directory.</p>
 	 */
-	public final File getDownloadDirectory()
-	{
+	public final File getDownloadDirectory() {
 		throw new IllegalAccessError();
 	}
 }

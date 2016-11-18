@@ -8,10 +8,8 @@ import android.net.Uri;
  * {@link ChanPerformer#onReadPosts(chan.content.ChanPerformer.ReadPostsData)} when
  * data returned from server might be considered as redirect.</p>
  */
-public final class RedirectException extends Exception
-{
-	private RedirectException()
-	{
+public final class RedirectException extends Exception {
+	private RedirectException() {
 		throw new IllegalAccessError();
 	}
 
@@ -20,8 +18,7 @@ public final class RedirectException extends Exception
 	 *
 	 * @param uri Redirected URI.
 	 */
-	public static RedirectException toUri(Uri uri)
-	{
+	public static RedirectException toUri(Uri uri) {
 		throw new IllegalAccessError();
 	}
 
@@ -30,8 +27,7 @@ public final class RedirectException extends Exception
 	 *
 	 * @param boardName Redirected board name.
 	 */
-	public static RedirectException toBoard(String boardName)
-	{
+	public static RedirectException toBoard(String boardName) {
 		throw new IllegalAccessError();
 	}
 
@@ -42,8 +38,7 @@ public final class RedirectException extends Exception
 	 * @param threadNumber Redirected thread number.
 	 * @param postNumber Redirected post number.
 	 */
-	public static RedirectException toThread(String boardName, String threadNumber, String postNumber)
-	{
+	public static RedirectException toThread(String boardName, String threadNumber, String postNumber) {
 		throw new IllegalAccessError();
 	}
 }

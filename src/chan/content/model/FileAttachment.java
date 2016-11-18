@@ -16,17 +16,13 @@ import chan.content.ChanLocator;
  *
  * <p>If this file is embedded frame like YouTube or Vocaroo, use {@link EmbeddedAttachment} class.</p>
  */
-public final class FileAttachment implements Attachment
-{
-	private static final long serialVersionUID = 1L;
-
+public final class FileAttachment implements Attachment {
 	/**
 	 * <p>Returns attachment file URI.</p>
 	 *
 	 * @param locator {@link ChanLocator} instance to decode URI in model.
 	 */
-	public Uri getFileUri(ChanLocator locator)
-	{
+	public Uri getFileUri(ChanLocator locator) {
 		throw new IllegalAccessError();
 	}
 
@@ -37,8 +33,7 @@ public final class FileAttachment implements Attachment
 	 * @param fileUri Attachment file URI.
 	 * @return This model.
 	 */
-	public FileAttachment setFileUri(ChanLocator locator, Uri fileUri)
-	{
+	public FileAttachment setFileUri(ChanLocator locator, Uri fileUri) {
 		throw new IllegalAccessError();
 	}
 
@@ -47,8 +42,7 @@ public final class FileAttachment implements Attachment
 	 *
 	 * @param locator {@link ChanLocator} instance to decode URI in model.
 	 */
-	public Uri getThumbnailUri(ChanLocator locator)
-	{
+	public Uri getThumbnailUri(ChanLocator locator) {
 		throw new IllegalAccessError();
 	}
 
@@ -59,16 +53,14 @@ public final class FileAttachment implements Attachment
 	 * @param thumbnailUri Attachment thumbnail URI.
 	 * @return This model.
 	 */
-	public FileAttachment setThumbnailUri(ChanLocator locator, Uri thumbnailUri)
-	{
+	public FileAttachment setThumbnailUri(ChanLocator locator, Uri thumbnailUri) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns original file name (file name before uploading).</p>
 	 */
-	public String getOriginalName()
-	{
+	public String getOriginalName() {
 		throw new IllegalAccessError();
 	}
 
@@ -78,16 +70,14 @@ public final class FileAttachment implements Attachment
 	 * @param originalName Original file name.
 	 * @return This model.
 	 */
-	public FileAttachment setOriginalName(String originalName)
-	{
+	public FileAttachment setOriginalName(String originalName) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns file size in bytes.</p>
 	 */
-	public int getSize()
-	{
+	public int getSize() {
 		throw new IllegalAccessError();
 	}
 
@@ -97,16 +87,14 @@ public final class FileAttachment implements Attachment
 	 * @param size File size in bytes.
 	 * @return This model.
 	 */
-	public FileAttachment setSize(int size)
-	{
+	public FileAttachment setSize(int size) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns file width in pixels.</p>
 	 */
-	public int getWidth()
-	{
+	public int getWidth() {
 		throw new IllegalAccessError();
 	}
 
@@ -116,16 +104,14 @@ public final class FileAttachment implements Attachment
 	 * @param width File width in pixels.
 	 * @return This model.
 	 */
-	public FileAttachment setWidth(int width)
-	{
+	public FileAttachment setWidth(int width) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns file height in pixels.</p>
 	 */
-	public int getHeight()
-	{
+	public int getHeight() {
 		throw new IllegalAccessError();
 	}
 
@@ -135,16 +121,14 @@ public final class FileAttachment implements Attachment
 	 * @param height File height in pixels.
 	 * @return This model.
 	 */
-	public FileAttachment setHeight(int height)
-	{
+	public FileAttachment setHeight(int height) {
 		throw new IllegalAccessError();
 	}
 
 	/**
 	 * <p>Returns whether file is spoiler.</p>
 	 */
-	public boolean isSpoiler()
-	{
+	public boolean isSpoiler() {
 		throw new IllegalAccessError();
 	}
 
@@ -154,8 +138,7 @@ public final class FileAttachment implements Attachment
 	 * @param spoiler True if file is spoiler, false otherwise.
 	 * @return This model.
 	 */
-	public FileAttachment setSpoiler(boolean spoiler)
-	{
+	public FileAttachment setSpoiler(boolean spoiler) {
 		throw new IllegalAccessError();
 	}
 }

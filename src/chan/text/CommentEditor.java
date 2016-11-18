@@ -5,8 +5,7 @@ import chan.content.ChanMarkup;
 /**
  * <p>This class is used to handle comment input when user writes new post.</p>
  */
-public class CommentEditor
-{
+public class CommentEditor {
 	/**
 	 * <p>Flag for tags that work only being in one line.</p>
 	 */
@@ -19,8 +18,7 @@ public class CommentEditor
 	 * @param open Open tag string.
 	 * @param close Close tag string.
 	 */
-	public final void addTag(int what, String open, String close)
-	{
+	public final void addTag(int what, String open, String close) {
 		throw new IllegalAccessError();
 	}
 
@@ -32,8 +30,7 @@ public class CommentEditor
 	 * @param close Close tag string.
 	 * @param flags Tag handling flags.
 	 */
-	public final void addTag(int what, String open, String close, int flags)
-	{
+	public final void addTag(int what, String open, String close, int flags) {
 		throw new IllegalAccessError();
 	}
 
@@ -43,8 +40,7 @@ public class CommentEditor
 	 *
 	 * @param mark Unordered list mark.
 	 */
-	public final void setUnorderedListMark(String mark)
-	{
+	public final void setUnorderedListMark(String mark) {
 		throw new IllegalAccessError();
 	}
 
@@ -54,8 +50,7 @@ public class CommentEditor
 	 *
 	 * @param mark Ordered list mark.
 	 */
-	public final void setOrderedListMark(String mark)
-	{
+	public final void setOrderedListMark(String mark) {
 		throw new IllegalAccessError();
 	}
 
@@ -78,10 +73,8 @@ public class CommentEditor
 	 * <tr><td>{@link ChanMarkup#TAG_ASCII_ART}</td><td>{@code [aa]}</td><td>{@code [/aa]}</td></tr>
 	 * </table>
 	 */
-	public static class BulletinBoardCodeCommentEditor extends CommentEditor
-	{
-		public BulletinBoardCodeCommentEditor()
-		{
+	public static class BulletinBoardCodeCommentEditor extends CommentEditor {
+		public BulletinBoardCodeCommentEditor() {
 			throw new IllegalAccessError();
 		}
 	}
@@ -102,16 +95,16 @@ public class CommentEditor
 	 * <p>Also this editor can handle {@link ChanMarkup#TAG_STRIKE} with appending multiple {@code ^H}
 	 * after end selection position.</p>
 	 */
-	public static class WakabaMarkCommentEditor extends CommentEditor
-	{
-		public WakabaMarkCommentEditor()
-		{
+	public static class WakabaMarkCommentEditor extends CommentEditor {
+		public WakabaMarkCommentEditor() {
 			throw new IllegalAccessError();
 		}
 	}
 
-	static
-	{
-		if (true) throw new IllegalAccessError();
+	static {
+		// noinspection ConstantIfStatement, ConstantConditions
+		if (true) {
+			throw new IllegalAccessError();
+		}
 	}
 }
