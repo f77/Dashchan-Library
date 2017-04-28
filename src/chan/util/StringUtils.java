@@ -7,6 +7,10 @@ import java.util.regex.Pattern;
  * <p>Provides some utilities to work with strings.</p>
  */
 public class StringUtils {
+	StringUtils() {
+		throw new IllegalAccessError();
+	}
+
 	/**
 	 * <p>Returns whether {@code string} is {@code null} or empty.</p>
 	 *

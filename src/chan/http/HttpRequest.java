@@ -103,8 +103,8 @@ public final class HttpRequest {
 	}
 
 	/**
-	 * <p>Constructor for {@link HttpRequest}. In most cases {@link Preset} can provide it's own {@link HttpException},
-	 * so you can use this constructor.</p>
+	 * <p>Constructor for {@link HttpRequest}. In most cases {@link Preset} can provide it's own
+	 * {@link HttpHolder}, so you can use this constructor.</p>
 	 *
 	 * @param uri URI for request.
 	 * @param preset Preset with configuration.

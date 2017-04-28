@@ -9,6 +9,10 @@ import android.graphics.Bitmap;
  * <p>Provides some utilities to work with JSON objects, bitmaps and logging.</p>
  */
 public class CommonUtils {
+	CommonUtils() {
+		throw new IllegalAccessError();
+	}
+
 	/**
 	 * <p>Wait time = {@code interval} - (current time - {@code startTime}).
 	 * Returns whether thread was interrupted during sleep.</p>
