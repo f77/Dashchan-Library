@@ -1089,9 +1089,14 @@ public class ChanPerformer {
 		public static final String INPUT;
 
 		/**
-		 * <p>Captcha api key. May be used for default captcha handler.</p>
+		 * <p>Captcha API key. May be used for default captcha handler.</p>
 		 */
 		public static final String API_KEY;
+
+		/**
+		 * <p>Referer header for captcha requests. May be useful with reCAPTCHA 2.</p>
+		 */
+		public static final String REFERER;
 
 		/**
 		 * <p>Put captcha data to map.</p>
