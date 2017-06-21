@@ -1260,6 +1260,16 @@ public class ChanPerformer {
 			}
 
 			/**
+			 * <p>Opens {@code InputStream} for this attachment. This stream will update the progress
+			 * dialog. It can be useful with custom entities or with web sockets.</p>
+			 *
+			 * @throws IOException If an error occurs while initializing a stream.
+			 */
+			public InputStream openInputSteamForSending() throws IOException {
+				throw new IllegalAccessError();
+			}
+
+			/**
 			 * <p>Returns attachment file size.</p>
 			 */
 			public long getSize() {
