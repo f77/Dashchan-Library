@@ -7,6 +7,7 @@ import java.util.List;
 
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.util.Pair;
 
 import chan.content.model.Board;
 import chan.content.model.BoardCategory;
@@ -1262,6 +1263,13 @@ public class ChanPerformer {
 			 * <p>Returns attachment file size.</p>
 			 */
 			public long getSize() {
+				throw new IllegalAccessError();
+			}
+
+			/**
+			 * <p>Returns a pair of image demensions for image files or {@code null} for other files.</p>
+			 */
+			public Pair<Integer, Integer> getImageSize() {
 				throw new IllegalAccessError();
 			}
 		}
