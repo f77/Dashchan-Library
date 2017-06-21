@@ -2,6 +2,8 @@ package chan.http;
 
 import android.net.Uri;
 
+import java.io.InputStream;
+
 /**
  * <p>Web socket request builder and executor.</p>
  */
@@ -177,6 +179,87 @@ public final class WebSocket {
 	}
 
 	/**
+	 * <p>A builder for complex binary data.</p>
+	 */
+	public static class ComplexBinaryBuilder {
+		ComplexBinaryBuilder(Connection connection) {
+			throw new IllegalAccessError();
+		}
+
+		/**
+		 * <p>Appends bytes to builder.</p>
+		 *
+		 * @param bytes Array of bytes to send.
+		 * @return This builder.
+		 */
+		public ComplexBinaryBuilder bytes(byte... bytes) {
+			throw new IllegalAccessError();
+		}
+
+		/**
+		 * <p>Appends bytes to builder.</p>
+		 *
+		 * @param bytes Array of bytes to send.
+		 * @return This builder.
+		 */
+		public ComplexBinaryBuilder bytes(int... bytes) {
+			throw new IllegalAccessError();
+		}
+
+		/**
+		 * <p>Appends string to builder.</p>
+		 *
+		 * @param string String to send.
+		 * @return This builder.
+		 */
+		public ComplexBinaryBuilder string(String string) {
+			throw new IllegalAccessError();
+		}
+
+		/**
+		 * <p>Appends input stream to builder with specified bytes {@code count} read.</p>
+		 *
+		 * @param inputStream Stream to read from.
+		 * @param count Bytes count to read.
+		 * @return This builder.
+		 */
+		public ComplexBinaryBuilder stream(InputStream inputStream, int count) {
+			throw new IllegalAccessError();
+		}
+
+		/**
+		 * <p>Appends data provided by wrapper callback.</p>
+		 *
+		 * @param wrapper Callback which performs modifying the builder.
+		 * @return This builder.
+		 */
+		public ComplexBinaryBuilder wrap(Wrapper wrapper) {
+			return wrapper.apply(this);
+		}
+
+		/**
+		 * <p>Sends a binary data from this builder to socket.</p>
+		 *
+		 * @return Connection instance.
+		 * @throws HttpException if HTTP exception occurred.
+		 */
+		public Connection send() throws HttpException {
+			throw new IllegalAccessError();
+		}
+
+		/* <p>Callback to modify the builder.</p> */
+		public interface Wrapper {
+			/**
+			 * <p>Modifies the {@code builder}.</p>
+			 *
+			 * @param builder Initial builder.
+			 * @return Modified builder.
+			 */
+			public ComplexBinaryBuilder apply(ComplexBinaryBuilder builder);
+		}
+	}
+
+	/**
 	 * <p>WebSocker connection instance.</p>
 	 */
 	public class Connection {
@@ -199,6 +282,16 @@ public final class WebSocket {
 		 * @throws HttpException if HTTP exception occurred.
 		 */
 		public Connection sendBinary(byte[] data) throws HttpException {
+			throw new IllegalAccessError();
+		}
+
+		/**
+		 * <p>Sends a binary data to socket provided by {@link CompexBinaryBuilder}.</p>
+		 *
+		 * @return {@link CompexBinaryBuilder} instance.
+		 * @throws HttpException if HTTP exception occurred.
+		 */
+		public ComplexBinaryBuilder sendComplexBinary() throws HttpException {
 			throw new IllegalAccessError();
 		}
 
