@@ -168,6 +168,26 @@ public class ChanLocator {
 	}
 
 	/**
+	 * <p>Overriding this method allows developer to handle multiple subdomains.</p>
+	 *
+	 * <p>For example, {@code myimageboard.org} is a primary domain and {@code images.myimageboard.org} is used
+	 * to store posted images. User set the domain in settings to {@code alternativedomain.org} which also uses
+	 * {@code images.alternativedomain.org} for images. Extension's developer can handle this situation overriging
+	 * this method.</p>
+	 *
+	 * <p>In this example {@code chanHost} will be {@code alternativedomain.org}, but {@code requiredHost} may be
+	 * {@code images.myimageboard.org} or {@code images.alternativedomain.org}. Developer should take into account
+	 * all these cases.</p>
+	 *
+	 * @param chanHost Host set by user.
+	 * @param requiredHost A host to transit from.
+	 * @return Resulting host or {@code null}.
+	 */
+	public String getHostTransition(String chanHost, String requiredHost) {
+		throw new IllegalAccessError();
+	}
+
+	/**
 	 * <p>Returns whether URI is board URI. You <strong>must</strong> override this method.</p>
 	 *
 	 * @param uri URI to inspect.
