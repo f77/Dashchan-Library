@@ -247,7 +247,9 @@ public final class WebSocket {
 			throw new IllegalAccessError();
 		}
 
-		/* <p>Callback to modify the builder.</p> */
+		/**
+		 * <p>Callback to modify the builder.</p>
+		 */
 		public interface Wrapper {
 			/**
 			 * <p>Modifies the {@code builder}.</p>
@@ -286,9 +288,9 @@ public final class WebSocket {
 		}
 
 		/**
-		 * <p>Sends a binary data to socket provided by {@link CompexBinaryBuilder}.</p>
+		 * <p>Sends a binary data to socket provided by {@link ComplexBinaryBuilder}.</p>
 		 *
-		 * @return {@link CompexBinaryBuilder} instance.
+		 * @return {@link ComplexBinaryBuilder} instance.
 		 * @throws HttpException if HTTP exception occurred.
 		 */
 		public ComplexBinaryBuilder sendComplexBinary() throws HttpException {
