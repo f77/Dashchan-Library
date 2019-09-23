@@ -11,8 +11,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Security
 
 
-## [1.0.0] - 2019-09-23
+## [1.6.2] - 2019-09-23
+### Changed
+- The files have been uploaded to the github.
+
+## [1.6.1] - 2019-09-23
 ### Added
 - Added this changelog.
 - Rebuilded to a new Android SDK (29).
-- Тестируем автодеплой на bintray.
+- Test bintray autodeploy.
