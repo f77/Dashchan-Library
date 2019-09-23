@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Security
 
 
+## [1.7.0] - 2019-09-23
+### Added
+- Вручную добавил заглушки методов из обновленного пакета Dashchan.
+
 ## [1.6.2] - 2019-09-23
 ### Changed
 - The files have been uploaded to the github.

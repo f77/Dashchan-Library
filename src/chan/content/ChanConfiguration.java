@@ -255,6 +255,18 @@ public class ChanConfiguration {
 		 * reporting with {@link ChanConfiguration#obtainReportingConfiguration(String)} then.</p>
 		 */
 		public boolean allowReporting;
+
+		/**
+		 * Set {@code true} to allow user to watch post's rating. You must implement
+		 * {@link ChanPerformer#onChangePostRating(boolean)}.
+		 */
+		public boolean allowWatchRating = false;
+
+		/**
+		 * Set {@code true} to allow user to change post's rating. You must implement
+		 * {@link ChanPerformer#onChangePostRating(boolean)}.
+		 */
+		public boolean allowChangeRating = false;
 	}
 
 	/**

@@ -18,6 +18,34 @@ import chan.content.ChanMarkup;
  */
 public final class Post implements Serializable, Comparable<Post> {
 	/**
+	 * Returns the positive rating of this post.
+	 */
+	public int getLikes() {
+		throw new IllegalAccessError();
+	}
+
+	/**
+	 * Sets the positive rating of this post.
+	 */
+	public void setLikes(int likes) {
+		throw new IllegalAccessError();
+	}
+
+	/**
+	 * Returns the negative rating of this post.
+	 */
+	public int getDislikes() {
+		throw new IllegalAccessError();
+	}
+
+	/**
+	 * Sets the negative rating of this post.
+	 */
+	public void setDislikes(int dislikes) {
+		throw new IllegalAccessError();
+	}
+
+	/**
 	 * <p>Returns real thread number with this post.</p>
 	 */
 	public String getThreadNumber() {

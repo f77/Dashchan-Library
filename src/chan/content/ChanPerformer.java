@@ -359,6 +359,20 @@ public class ChanPerformer {
 	}
 
 	/**
+	 * Calls when application requests chan to change the rating of a post.
+	 *
+	 * @param is_up Increase the rating?
+	 * @return {@link SendChangePostRatingResult} instance.
+	 * @throws HttpException if HTTP or another error with message occurred.
+     * @throws ApiException if reporting wasn't complete due to user errors.
+	 * @throws InvalidResponseException if server returns an invalid data.
+	 */
+	protected SendChangePostRatingResult onChangePostRating(boolean is_up) throws HttpException, ApiException,
+			InvalidResponseException {
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 * <p>Arguments holder for {@link #onReadThreads(ReadThreadsData)}. Notify that this class
 	 * might be used as {@link HttpRequest.Preset}.</p>
 	 */
@@ -1445,6 +1459,15 @@ public class ChanPerformer {
 		 * @param threadNumber Resulting thread number in archive.
 		 */
 		public SendAddToArchiveResult(String boardName, String threadNumber) {
+			throw new IllegalAccessError();
+		}
+	}
+
+	/**
+	 * <p>Result for {@link #onChangePostRating(boolean)}.</p>
+	 */
+	public static class SendChangePostRatingResult {
+		public SendChangePostRatingResult() {
 			throw new IllegalAccessError();
 		}
 	}
