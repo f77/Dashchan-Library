@@ -258,13 +258,13 @@ public class ChanConfiguration {
 
 		/**
 		 * Set {@code true} to allow user to watch post's rating. You must implement
-		 * {@link ChanPerformer#onChangePostRating(boolean)}.
+		 * {@link ChanPerformer#onChangePostRating(chan.content.ChanPerformer.SendChangePostRatingData)}.
 		 */
 		public boolean allowWatchRating = false;
 
 		/**
 		 * Set {@code true} to allow user to change post's rating. You must implement
-		 * {@link ChanPerformer#onChangePostRating(boolean)}.
+		 * {@link ChanPerformer#onChangePostRating(chan.content.ChanPerformer.SendChangePostRatingData)}.
 		 */
 		public boolean allowChangeRating = false;
 	}

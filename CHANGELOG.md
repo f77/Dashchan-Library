@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Security
 
 
+## [1.7.4] - 2019-09-24
+### Fixed
+- Fixed a DroidDoc issue.
+
 ## [1.7.3] - 2019-09-24
 ### Added
 - Changed for compatibility with the newest main app version.
