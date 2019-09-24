@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Security
 
 
+## [1.7.6] - 2019-09-24
+### Fixed
+- Fixed SendChangePostRatingData declaration.
+
 ## [1.7.5] - 2019-09-24
 ### Added
 - Changed for compatibility with the newest main app version.

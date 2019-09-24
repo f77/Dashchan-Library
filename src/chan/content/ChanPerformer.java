@@ -1467,7 +1467,7 @@ public class ChanPerformer {
 	 * <p>Arguments holder for {@link #onChangePostRating(SendChangePostRatingData)}. Notify that this class
 	 * might be used as {@link HttpRequest.Preset}.</p>
 	 */
-	public static class SendChangePostRatingData {
+	public static class SendChangePostRatingData implements HttpRequest.Preset {
 		/**
 		 * <p>HTTP holder. You must use it when building new {@link HttpRequest}.</p>
 		 */
