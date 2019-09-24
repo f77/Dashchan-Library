@@ -361,13 +361,13 @@ public class ChanPerformer {
 	/**
 	 * Calls when application requests chan to change the rating of a post.
 	 *
-	 * @param is_up Increase the rating?
+	 * @param data {@link SendChangePostRatingData} instance with arguments.
 	 * @return {@link SendChangePostRatingResult} instance.
 	 * @throws HttpException if HTTP or another error with message occurred.
      * @throws ApiException if reporting wasn't complete due to user errors.
 	 * @throws InvalidResponseException if server returns an invalid data.
 	 */
-	protected SendChangePostRatingResult onChangePostRating(boolean is_up) throws HttpException, ApiException,
+	protected SendChangePostRatingResult onChangePostRating(SendChangePostRatingData data) throws HttpException, ApiException,
 			InvalidResponseException {
 		throw new UnsupportedOperationException();
 	}
@@ -1464,7 +1464,32 @@ public class ChanPerformer {
 	}
 
 	/**
-	 * <p>Result for {@link #onChangePostRating(boolean)}.</p>
+	 * <p>Arguments holder for {@link #onChangePostRating(SendChangePostRatingData)}. Notify that this class
+	 * might be used as {@link HttpRequest.Preset}.</p>
+	 */
+	public static class SendChangePostRatingData {
+		/**
+		 * <p>HTTP holder. You must use it when building new {@link HttpRequest}.</p>
+		 */
+		public final HttpHolder holder;
+
+		/**
+		 * {@link Post} model instance.
+		 */
+		public final Post post;
+
+		/**
+		 * Increase rating?
+		 */
+		public final boolean is_up;
+
+		public SendChangePostRatingData() {
+			throw new IllegalAccessError();
+		}
+	}
+
+	/**
+	 * <p>Result for {@link #onChangePostRating(SendChangePostRatingData)}.</p>
 	 */
 	public static class SendChangePostRatingResult {
 		public SendChangePostRatingResult() {
