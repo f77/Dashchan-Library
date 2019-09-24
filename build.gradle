@@ -113,7 +113,7 @@ def bintrayApiKey = privateProperties.getProperty('bintray.apikey')
 
 if (bintrayUser != null && bintrayApiKey != null) {
     def publishedGroupId = 'com.github.f77'
-    def libraryVersion = '1.7.4'
+    def libraryVersion = '1.7.5'
 
     def libraryDescription = 'Dashchan public API.\nUse "provided" instead of "compile" to add this library!'
     def gitUrl = 'https://github.com/f77/DashchanLibrary'

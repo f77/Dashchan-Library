@@ -1474,6 +1474,11 @@ public class ChanPerformer {
 		public final HttpHolder holder;
 
 		/**
+		 * <p>Board name argument.</p>
+		 */
+		public final String boardName;
+
+		/**
 		 * {@link Post} model instance.
 		 */
 		public final Post post;
