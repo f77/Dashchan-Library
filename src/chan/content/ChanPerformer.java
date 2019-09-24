@@ -1496,8 +1496,14 @@ public class ChanPerformer {
 	/**
 	 * <p>Result for {@link #onChangePostRating(SendChangePostRatingData)}.</p>
 	 */
-	public static class SendChangePostRatingResult {
-		public SendChangePostRatingResult() {
+	public static final class SendChangePostRatingResult {
+		/**
+		 * <p>Constructor for {@link SendChangePostRatingResult}.</p>
+		 *
+		 * @param isSuccess Is the query was successful?
+		 * @param message Toast message to user.
+		 */
+		public SendChangePostRatingResult(boolean isSuccess, String message) {
 			throw new IllegalAccessError();
 		}
 	}

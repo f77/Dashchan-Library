@@ -2,7 +2,7 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+### [Unreleased]
 ### Added
 ### Changed
 ### Deprecated
@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 ### Security
 
+
+## [1.7.8] - 2019-09-24
+### Changed
+- The SendChangePostRatingResult declaration updated for the compatibility with the newest main app version.
 
 ## [1.7.7] - 2019-09-24
 ### Fixed
