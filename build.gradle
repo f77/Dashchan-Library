@@ -113,7 +113,7 @@ def bintrayApiKey = privateProperties.getProperty('bintray.apikey')
 
 if (bintrayUser != null && bintrayApiKey != null) {
     def publishedGroupId = 'com.github.f77'
-    def libraryVersion = '1.7.1'
+    def libraryVersion = '1.7.2'
 
     def libraryDescription = 'Dashchan public API.\nUse "provided" instead of "compile" to add this library!'
     def gitUrl = 'https://github.com/f77/DashchanLibrary'
@@ -175,6 +175,11 @@ if (bintrayUser != null && bintrayApiKey != null) {
                 id developerId
                 name developerName
                 email developerEmail
+            }
+            developer {
+                id 'mishiranu'
+                name 'Fukurou Mishiranu'
+                email 'fukurou.mishiranu@gmail.com'
             }
         }
 
