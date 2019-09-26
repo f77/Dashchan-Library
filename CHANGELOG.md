@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Security
 
 
+## [1.7.10] - 2019-09-26
+- Added the forgotten chan.text.TemplateParser methods.
+
 ## [1.7.9] - 2019-09-26
 ### Changed
 - Library version is takes from git now.

@@ -41,6 +41,46 @@ public final class TemplateParser<H> {
 		throw new IllegalAccessError();
 	}
 
+	public TemplateParser<H> name(String tagName) {
+		throw new IllegalAccessError();
+	}
+
+	public TemplateParser<H> equals(String tagName, String attribute, String value) {
+		throw new IllegalAccessError();
+	}
+
+	public TemplateParser<H> starts(String tagName, String attribute, String value) {
+		throw new IllegalAccessError();
+	}
+
+	public TemplateParser<H> contains(String tagName, String attribute, String value) {
+		throw new IllegalAccessError();
+	}
+
+	public TemplateParser<H> ends(String tagName, String attribute, String value) {
+		throw new IllegalAccessError();
+	}
+
+	public TemplateParser<H> open(OpenCallback<H> openCallback) {
+		throw new IllegalAccessError();
+	}
+
+	public TemplateParser<H> content(ContentCallback<H> contentCallback) {
+		throw new IllegalAccessError();
+	}
+
+	public TemplateParser<H> close(CloseCallback<H> closeCallback) {
+		throw new IllegalAccessError();
+	}
+
+	public TemplateParser<H> text(TextCallback<H> textCallback) {
+		throw new IllegalAccessError();
+	}
+
+	public TemplateParser<H> prepare() {
+		throw new IllegalAccessError();
+	}
+
 	/**
 	 * <p>Starts a new parsing process.</p>
 	 *
