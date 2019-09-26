@@ -27,7 +27,7 @@ package chan.text;
  * Then you can use your parsing calling {@link #parse(String, Object)} method.</p>
  */
 public final class TemplateParser<H> {
-	TemplateParser() {
+	public TemplateParser() {
 		throw new IllegalAccessError();
 	}
 

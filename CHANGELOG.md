@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Security
 
 
+## [1.7.9] - 2019-09-26
+### Changed
+- Library version is takes from git now.
+### Fixed
+- Fixed the chan.text.TemplateParser declaration.
+
 ## [1.7.8] - 2019-09-24
 ### Changed
 - The SendChangePostRatingResult declaration updated for the compatibility with the newest main app version.

@@ -13,6 +13,10 @@ buildscript {
     }
 }
 
+plugins {
+    id 'com.gladed.androidgitversion' version '0.4.10'
+}
+
 allprojects {
     repositories {
         google()
@@ -113,7 +117,7 @@ def bintrayApiKey = privateProperties.getProperty('bintray.apikey')
 
 if (bintrayUser != null && bintrayApiKey != null) {
     def publishedGroupId = 'com.github.f77'
-    def libraryVersion = '1.7.8'
+    def libraryVersion = androidGitVersion.name()
 
     def libraryDescription = 'Dashchan public API.\nUse "provided" instead of "compile" to add this library!'
     def gitUrl = 'https://github.com/f77/DashchanLibrary'
